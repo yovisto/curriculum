@@ -13,7 +13,6 @@
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
-                               owl:imports <http://www.w3.org/2004/02/skos/core> ;
                                terms:created "2023-07-26" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description "This ontology on educational curricula is a formal representation that captures the fundamental concepts and their interrelationships within the domain of curriculum design and implementation. It offers a structured framework for organizing and comprehending the key elements that constitute a curriculum. This ontology encompasses several important concepts that collectively shape the educational experience."@en ;
@@ -29,13 +28,37 @@
 terms:created rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/creator
+terms:creator rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/description
+terms:description rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/title
+terms:title rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#example
+skos:example rdf:type owl:AnnotationProperty .
 
 
 #################################################################
 #    Object Properties
 #################################################################
+
+###  http://www.w3.org/2004/02/skos/core#broader
+skos:broader rdf:type owl:ObjectProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrower
+skos:narrower rdf:type owl:ObjectProperty .
+
 
 ###  https://w3id.org/curriculum/hasCompetence
 g:hasCompetence rdf:type owl:ObjectProperty ;
@@ -125,6 +148,14 @@ g:uri rdf:type owl:DatatypeProperty .
 #################################################################
 #    Classes
 #################################################################
+
+###  http://www.w3.org/2004/02/skos/core#Concept
+skos:Concept rdf:type owl:Class .
+
+
+###  http://www.w3.org/2004/02/skos/core#ConceptScheme
+skos:ConceptScheme rdf:type owl:Class .
+
 
 ###  https://w3id.org/curriculum/AdditionalMaterial
 g:AdditionalMaterial rdf:type owl:Class ;
