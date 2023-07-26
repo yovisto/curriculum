@@ -12,9 +12,29 @@
 @base <https://w3id.org/curriculum/> .
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
-                               owl:versionIRI <https://w3id.org/curriculum/1.0.0> ;
+                               owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
                                owl:imports <http://www.w3.org/2004/02/skos/core> ;
-                               rdfs:comment "An ontology to describe curricula."@en .
+                               <http://purl.org/dc/elements/1.1/date> "2023-07-26" ;
+                               <http://purl.org/dc/elements/1.1/description> "This ontology on educational curricula is a formal representation that captures the fundamental concepts and their interrelationships within the domain of curriculum design and implementation. It offers a structured framework for organizing and comprehending the key elements that constitute a curriculum. This ontology encompasses several important concepts that collectively shape the educational experience."@en ;
+                               <http://purl.org/dc/elements/1.1/title> "Curriculum Ontology"@en ;
+                               rdfs:comment "An ontology to describe curricula."@en ;
+                               owl:versionInfo "v1.0.0a" .
+
+#################################################################
+#    Annotation properties
+#################################################################
+
+###  http://purl.org/dc/elements/1.1/date
+<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/description
+<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/elements/1.1/title
+<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+
 
 #################################################################
 #    Object Properties
