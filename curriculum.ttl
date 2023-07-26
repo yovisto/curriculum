@@ -14,30 +14,23 @@
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
                                owl:imports <http://www.w3.org/2004/02/skos/core> ;
-                               <http://purl.org/dc/elements/1.1/creator> <https://orcid.org/0000-0001-7192-7143> ;
-                               <http://purl.org/dc/elements/1.1/date> "2023-07-26" ;
-                               <http://purl.org/dc/elements/1.1/description> "This ontology on educational curricula is a formal representation that captures the fundamental concepts and their interrelationships within the domain of curriculum design and implementation. It offers a structured framework for organizing and comprehending the key elements that constitute a curriculum. This ontology encompasses several important concepts that collectively shape the educational experience."@en ;
-                               <http://purl.org/dc/elements/1.1/title> "Curriculum Ontology"@en ;
+                               terms:created "2023-07-26" ;
+                               terms:creator <https://orcid.org/0000-0001-7192-7143> ;
+                               terms:description "This ontology on educational curricula is a formal representation that captures the fundamental concepts and their interrelationships within the domain of curriculum design and implementation. It offers a structured framework for organizing and comprehending the key elements that constitute a curriculum. This ontology encompasses several important concepts that collectively shape the educational experience."@en ;
+                               terms:license <http://creativecommons.org/licenses/by/4.0/> ;
+                               terms:title "Curriculum Ontology"@en ;
                                owl:versionInfo "v1.0.0a" .
 
 #################################################################
 #    Annotation properties
 #################################################################
 
-###  http://purl.org/dc/elements/1.1/creator
-<http://purl.org/dc/elements/1.1/creator> rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/created
+terms:created rdf:type owl:AnnotationProperty .
 
 
-###  http://purl.org/dc/elements/1.1/date
-<http://purl.org/dc/elements/1.1/date> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/description
-<http://purl.org/dc/elements/1.1/description> rdf:type owl:AnnotationProperty .
-
-
-###  http://purl.org/dc/elements/1.1/title
-<http://purl.org/dc/elements/1.1/title> rdf:type owl:AnnotationProperty .
+###  http://purl.org/dc/terms/license
+terms:license rdf:type owl:AnnotationProperty .
 
 
 #################################################################
