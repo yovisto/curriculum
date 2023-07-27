@@ -36,16 +36,36 @@ terms:creator rdf:type owl:AnnotationProperty .
 terms:description rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/identifier
+terms:identifier rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/subject
+terms:subject rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/title
 terms:title rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#altLabel
+skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#definition
+skos:definition rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 skos:example rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#prefLabel
+skos:prefLabel rdf:type owl:AnnotationProperty .
 
 
 #################################################################
@@ -62,31 +82,37 @@ skos:narrower rdf:type owl:ObjectProperty .
 
 ###  https://w3id.org/curriculum/hasCompetence
 g:hasCompetence rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf skos:narrower .
+                rdfs:subPropertyOf skos:narrower ;
+                rdfs:range g:Competence .
 
 
 ###  https://w3id.org/curriculum/hasCompetenceArea
 g:hasCompetenceArea rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf skos:narrower .
+                    rdfs:subPropertyOf skos:narrower ;
+                    rdfs:range g:CompetenceArea .
 
 
 ###  https://w3id.org/curriculum/hasContent
 g:hasContent rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:narrower .
+             rdfs:subPropertyOf skos:narrower ;
+             rdfs:range g:Content .
 
 
 ###  https://w3id.org/curriculum/hasExercise
 g:hasExercise rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower .
+              rdfs:subPropertyOf skos:narrower ;
+              rdfs:range g:Exercise .
 
 
 ###  https://w3id.org/curriculum/hasLevel
-g:hasLevel rdf:type owl:ObjectProperty .
+g:hasLevel rdf:type owl:ObjectProperty ;
+           rdfs:range g:Level .
 
 
 ###  https://w3id.org/curriculum/hasMaterial
 g:hasMaterial rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower .
+              rdfs:subPropertyOf skos:narrower ;
+              rdfs:range g:Material .
 
 
 ###  https://w3id.org/curriculum/hasParentCompetenceArea
@@ -97,44 +123,42 @@ g:hasParentCompetenceArea rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/curriculum/hasStandard
 g:hasStandard rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower .
+              rdfs:subPropertyOf skos:narrower ;
+              rdfs:range g:Standard .
 
 
 ###  https://w3id.org/curriculum/hasSubCompetenceArea
 g:hasSubCompetenceArea rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf skos:narrower .
+                       rdfs:subPropertyOf skos:narrower ;
+                       rdfs:range g:CompetenceArea .
 
 
 ###  https://w3id.org/curriculum/hasSubject
-g:hasSubject rdf:type owl:ObjectProperty .
+g:hasSubject rdf:type owl:ObjectProperty ;
+             rdfs:range g:Subject .
 
 
 ###  https://w3id.org/curriculum/hasTopic
 g:hasTopic rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf skos:narrower .
+           rdfs:subPropertyOf skos:narrower ;
+           rdfs:range g:Topic .
 
 
 ###  https://w3id.org/curriculum/hasTopicArea
 g:hasTopicArea rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf skos:narrower .
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:TopicArea .
 
 
 ###  https://w3id.org/curriculum/hasTopicItem
 g:hasTopicItem rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf skos:narrower .
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:TopicItem .
 
 
 #################################################################
 #    Data properties
 #################################################################
-
-###  http://www.w3.org/2004/02/skos/core#definition
-skos:definition rdf:type owl:DatatypeProperty .
-
-
-###  http://www.w3.org/2004/02/skos/core#prefLabel
-skos:prefLabel rdf:type owl:DatatypeProperty .
-
 
 ###  https://schema.org/yearBuilt
 schema:yearBuilt rdf:type owl:DatatypeProperty ;
@@ -164,77 +188,42 @@ g:AdditionalMaterial rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/BB-Level
 g:BB-Level rdf:type owl:Class ;
-           rdfs:subClassOf g:Level ;
-           skos:definition """Berlin Brandenburg grouping of educational levels: 
-
-Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
-weiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:
-
-* Schulanfangsphase = Niveaustufen A, B, in Teilen C
-* Jahrgangsstufen 3 – 4 = Niveaustufe C, in Teilen D
-* Jahrgangsstufe 5 = Niveaustufen C – D
-* Jahrgangsstufe 6 = Niveaustufe D, in Teilen E
-
-Schülerinnen und Schüler mit dem sonderpädagogischen Förderbedarf Lernen
-werden auf folgenden Niveaustufen unterrichtet:
-* Jahrgangsstufe 3 = Niveaustufe B, in Teilen C
-* Jahrgangsstufen 4 – 6 = Niveaustufe C
-* Jahrgangsstufen 7 – 8 = Niveaustufe D
-* Jahrgangsstufen 9 – 10 = Niveaustufen D – E
-
-Für die Integrierte Sekundarschule gilt:
-grundlegendes Niveau:
-* Jahrgangsstufen 7 – 8 = Niveaustufen D – E, in Teilen F
-* Jahrgangsstufen 9 – 10 = Niveaustufe F, in Teilen G
-* erweitertes Niveau:
-* Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F
-* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de ;
-           skos:prefLabel "Stufe"@de ,
-                          "bb educational level"@en .
+           rdfs:subClassOf g:Level .
 
 
 ###  https://w3id.org/curriculum/Competence
 g:Competence rdf:type owl:Class ;
-             rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+             rdfs:subClassOf g:CompetenceItems .
 
 
 ###  https://w3id.org/curriculum/CompetenceArea
 g:CompetenceArea rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+                 rdfs:subClassOf g:CompetenceItems .
+
+
+###  https://w3id.org/curriculum/CompetenceItems
+g:CompetenceItems rdf:type owl:Class ;
+                  rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
 
 
 ###  https://w3id.org/curriculum/Content
 g:Content rdf:type owl:Class ;
-          rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-          skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
-                          "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpt sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de ;
-          skos:prefLabel "Lerninhalte"@de ,
-                         "learning content"@en .
+          rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
 
 
 ###  https://w3id.org/curriculum/CurriculumForm
 g:CurriculumForm rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 skos:definition "Ausprägung des Lehrplans"@de ,
-                                 "form of curriculum"@en .
+                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
 
 
 ###  https://w3id.org/curriculum/CurriculumPart
 g:CurriculumPart rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 skos:prefLabel "Lehrplanteil"@de ,
-                                "curriculum part"@en .
+                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
 
 
 ###  https://w3id.org/curriculum/EducationalLevel
 g:EducationalLevel rdf:type owl:Class ;
-                   rdfs:subClassOf g:Level ;
-                   rdfs:comment "Klassenlevel"@de ,
-                                "the year of school"@en ;
-                   skos:example "7. Klasse"@de ,
-                                "Klasse 5"@de ;
-                   skos:prefLabel "Jahrgangsstufe"@de ,
-                                  "educational level"@en .
+                   rdfs:subClassOf g:Level .
 
 
 ###  https://w3id.org/curriculum/Exercise
@@ -244,9 +233,7 @@ g:Exercise rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/FirstForeignLanguage
 g:FirstForeignLanguage rdf:type owl:Class ;
-                       rdfs:subClassOf g:CurriculumForm ;
-                       skos:definition "Erste Fremdsprache"@de ,
-                                       "first foreign language"@en .
+                       rdfs:subClassOf g:CurriculumForm .
 
 
 ###  https://w3id.org/curriculum/Level
@@ -256,9 +243,7 @@ g:Level rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/MajorSubject
 g:MajorSubject rdf:type owl:Class ;
-               rdfs:subClassOf g:CurriculumForm ;
-               skos:definition "Hauptfach"@de ,
-                               "major subject"@en .
+               rdfs:subClassOf g:CurriculumForm .
 
 
 ###  https://w3id.org/curriculum/Material
@@ -268,54 +253,51 @@ g:Material rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/MinorSubject
 g:MinorSubject rdf:type owl:Class ;
-               rdfs:subClassOf g:CurriculumForm ;
-               skos:definition "Nebenfach"@de ,
-                               "minor subject"@en .
+               rdfs:subClassOf g:CurriculumForm .
 
 
 ###  https://w3id.org/curriculum/SecondForeignLanguage
 g:SecondForeignLanguage rdf:type owl:Class ;
-                        rdfs:subClassOf g:CurriculumForm ;
-                        skos:definition "Zweite Fremdsprache"@de ,
-                                        "second foreign language"@en .
+                        rdfs:subClassOf g:CurriculumForm .
 
 
 ###  https://w3id.org/curriculum/Standard
 g:Standard rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+           rdfs:subClassOf g:CompetenceItems .
+
+
+###  https://w3id.org/curriculum/Subject
+g:Subject rdf:type owl:Class .
 
 
 ###  https://w3id.org/curriculum/ThirdForeignLanguage
 g:ThirdForeignLanguage rdf:type owl:Class ;
-                       rdfs:subClassOf g:CurriculumForm ;
-                       skos:definition "Dritte Fremdsprache"@de ,
-                                       "third foreign language"@en .
+                       rdfs:subClassOf g:CurriculumForm .
 
 
 ###  https://w3id.org/curriculum/Topic
 g:Topic rdf:type owl:Class ;
-        rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+        rdfs:subClassOf g:TopicItems .
 
 
 ###  https://w3id.org/curriculum/TopicArea
 g:TopicArea rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+            rdfs:subClassOf g:TopicItems .
 
 
 ###  https://w3id.org/curriculum/TopicItem
 g:TopicItem rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
+            rdfs:subClassOf g:TopicItems .
+
+
+###  https://w3id.org/curriculum/TopicItems
+g:TopicItems rdf:type owl:Class ;
+             rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
 <https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
-                                           rdfs:subClassOf skos:ConceptScheme ;
-                                           rdfs:label "Curriculum"@en ,
-                                                      "Lehrplan"@de ;
-                                           skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
-The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
-                                                           """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
-Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de .
+                                           rdfs:subClassOf skos:ConceptScheme .
 
 
 ###  https://w3id.org/dini/dini-ns/CurriculumItem
@@ -330,6 +312,46 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 #################################################################
 #    Individuals
 #################################################################
+
+###  https://w3id.org/curriculum/BB-Level
+g:BB-Level rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/Content
+g:Content rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/CurriculumForm
+g:CurriculumForm rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/CurriculumPart
+g:CurriculumPart rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/EducationalLevel
+g:EducationalLevel rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/FirstForeignLanguage
+g:FirstForeignLanguage rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/MajorSubject
+g:MajorSubject rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/MinorSubject
+g:MinorSubject rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/SecondForeignLanguage
+g:SecondForeignLanguage rdf:type owl:NamedIndividual .
+
+
+###  https://w3id.org/curriculum/ThirdForeignLanguage
+g:ThirdForeignLanguage rdf:type owl:NamedIndividual .
+
 
 ###  https://w3id.org/curriculum/educationalLevel1
 g:educationalLevel1 rdf:type owl:NamedIndividual ,
@@ -394,6 +416,92 @@ g:educationalLevel8 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/curriculum/educationalLevel9
 g:educationalLevel9 rdf:type owl:NamedIndividual ,
                              g:EducationalLevel .
+
+
+###  https://w3id.org/dini/dini-ns/Curriculum
+<https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:NamedIndividual .
+
+
+#################################################################
+#    Annotations
+#################################################################
+
+g:BB-Level skos:definition """Berlin Brandenburg grouping of educational levels: 
+
+Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
+weiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:
+
+* Schulanfangsphase = Niveaustufen A, B, in Teilen C
+* Jahrgangsstufen 3 – 4 = Niveaustufe C, in Teilen D
+* Jahrgangsstufe 5 = Niveaustufen C – D
+* Jahrgangsstufe 6 = Niveaustufe D, in Teilen E
+
+Schülerinnen und Schüler mit dem sonderpädagogischen Förderbedarf Lernen
+werden auf folgenden Niveaustufen unterrichtet:
+* Jahrgangsstufe 3 = Niveaustufe B, in Teilen C
+* Jahrgangsstufen 4 – 6 = Niveaustufe C
+* Jahrgangsstufen 7 – 8 = Niveaustufe D
+* Jahrgangsstufen 9 – 10 = Niveaustufen D – E
+
+Für die Integrierte Sekundarschule gilt:
+grundlegendes Niveau:
+* Jahrgangsstufen 7 – 8 = Niveaustufen D – E, in Teilen F
+* Jahrgangsstufen 9 – 10 = Niveaustufe F, in Teilen G
+* erweitertes Niveau:
+* Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F
+* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de ;
+           skos:prefLabel "Stufe"@de ,
+                          "bb educational level"@en .
+
+
+g:Content skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
+                          "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpt sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de ;
+          skos:prefLabel "Lerninhalte"@de ,
+                         "learning content"@en .
+
+
+g:CurriculumForm skos:definition "Ausprägung des Lehrplans"@de ,
+                                 "form of curriculum"@en .
+
+
+g:CurriculumPart skos:prefLabel "Lehrplanteil"@de ,
+                                "curriculum part"@en .
+
+
+g:EducationalLevel rdfs:comment "Klassenlevel"@de ,
+                                "the year of school"@en ;
+                   skos:example "7. Klasse"@de ,
+                                "Klasse 5"@de ;
+                   skos:prefLabel "Jahrgangsstufe"@de ,
+                                  "educational level"@en .
+
+
+g:FirstForeignLanguage skos:definition "Erste Fremdsprache"@de ,
+                                       "first foreign language"@en .
+
+
+g:MajorSubject skos:definition "Hauptfach"@de ,
+                               "major subject"@en .
+
+
+g:MinorSubject skos:definition "Nebenfach"@de ,
+                               "minor subject"@en .
+
+
+g:SecondForeignLanguage skos:definition "Zweite Fremdsprache"@de ,
+                                        "second foreign language"@en .
+
+
+g:ThirdForeignLanguage skos:definition "Dritte Fremdsprache"@de ,
+                                       "third foreign language"@en .
+
+
+<https://w3id.org/dini/dini-ns/Curriculum> rdfs:label "Curriculum"@en ,
+                                                      "Lehrplan"@de ;
+                                           skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
+The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
+                                                           """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
+Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
