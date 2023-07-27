@@ -258,8 +258,8 @@ g:CompetenceItem rdf:type owl:Class ;
 
 
 ###  https://w3id.org/curriculum/Curriculum
-g:Curriculum rdf:type owl:Class ;
-             owl:equivalentClass <https://w3id.org/dini/dini-ns/Curriculum> ,
+<https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
+             owl:equivalentClass 
                                  [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
                                                           owl:onProperty g:hasCompetenceArea ;
                                                           owl:someValuesFrom g:CompetenceArea
@@ -292,8 +292,8 @@ g:CurriculumForm rdf:type owl:Class ;
 
 
 ###  https://w3id.org/curriculum/CurriculumItem
-g:CurriculumItem rdf:type owl:Class ;
-                 owl:equivalentClass <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+<https://w3id.org/dini/dini-ns/CurriculumItem> rdf:type owl:Class ;
+                
                  rdfs:subClassOf skos:Concept ;
                  skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
                                  "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
