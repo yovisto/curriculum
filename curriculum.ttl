@@ -257,11 +257,48 @@ g:CompetenceItem rdf:type owl:Class ;
                                 "competence item"@en .
 
 
+###  https://w3id.org/curriculum/Curriculum
+g:Curriculum rdf:type owl:Class ;
+             owl:equivalentClass <https://w3id.org/dini/dini-ns/Curriculum> ,
+                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                          owl:onProperty g:hasCompetenceArea ;
+                                                          owl:someValuesFrom g:CompetenceArea
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty g:hasContent ;
+                                                          owl:someValuesFrom g:LearningContent
+                                                        ]
+                                                        [ rdf:type owl:Restriction ;
+                                                          owl:onProperty g:hasSubject ;
+                                                          owl:someValuesFrom g:Subject
+                                                        ]
+                                                      ) ;
+                                   rdf:type owl:Class
+                                 ] ;
+             rdfs:subClassOf skos:ConceptScheme ;
+             skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
+The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
+                             """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
+Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de ;
+             skos:prefLabel "Lehrplan"@de ,
+                            "curriculum"@en .
+
+
 ###  https://w3id.org/curriculum/CurriculumForm
 g:CurriculumForm rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
                  skos:prefLabel "Lehrplanausprägung"@de ,
                                 "form of curriculum"@en .
+
+
+###  https://w3id.org/curriculum/CurriculumItem
+g:CurriculumItem rdf:type owl:Class ;
+                 owl:equivalentClass <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+                 rdfs:subClassOf skos:Concept ;
+                 skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
+                                 "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
+                 skos:prefLabel "Lehrplanelement"@de ,
+                                "curriculum item"@en .
 
 
 ###  https://w3id.org/curriculum/CurriculumPart
@@ -382,37 +419,12 @@ g:TopicItem rdf:type owl:Class ;
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
 <https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
-                                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasCompetenceArea ;
-                                                                                        owl:someValuesFrom g:CompetenceArea
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasContent ;
-                                                                                        owl:someValuesFrom g:LearningContent
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasSubject ;
-                                                                                        owl:someValuesFrom g:Subject
-                                                                                      ]
-                                                                                    ) ;
-                                                                 rdf:type owl:Class
-                                                               ] ;
-                                           rdfs:subClassOf skos:ConceptScheme ;
-                                           skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
-The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
-                                                           """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
-Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de ;
-                                           skos:prefLabel "Lehrplan"@de ,
-                                                          "curriculum"@en .
+                                           rdfs:subClassOf skos:ConceptScheme .
 
 
 ###  https://w3id.org/dini/dini-ns/CurriculumItem
 <https://w3id.org/dini/dini-ns/CurriculumItem> rdf:type owl:Class ;
-                                               rdfs:subClassOf skos:Concept ;
-                                               skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
-                                                               "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
-                                               skos:prefLabel "Lehrplanelement"@de ,
-                                                              "curriculum item"@en .
+                                               rdfs:subClassOf skos:Concept .
 
 
 #################################################################
