@@ -28,7 +28,7 @@ The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https
 
 An overview is shon in the following image:
 
-<img src=\"https://raw.githubusercontent.com/yovisto/curriculum/4ac8d81371776625ed2ea96cfbedb0b37c339175/docs/overview.png\"  width=\"1200\">"""@en ;
+![Overview](https://raw.githubusercontent.com/yovisto/curriculum/4ac8d81371776625ed2ea96cfbedb0b37c339175/docs/overview-1500.png)"""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                terms:title "Curriculum Ontology"@en ;
                                owl:versionInfo "v1.0.0a" .
