@@ -17,14 +17,16 @@
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
 
-The model was developed based on the structure of the framework curricula for the states of Berlin and Brandenburg in Germany (https://bildungsserver.berlin-brandenburg.de/rlp-online). It is intended to serve as a starting point for formally opening up the structures of other states' curricula and competency frameworks related to curricula. 
-
 Current development is managed via GitHub: https://github.com/yovisto/curriculum
 Feel free to contribute or raise issues.
+
+The model was developed based on the structure of the framework curricula for the states of Berlin and Brandenburg in Germany (https://bildungsserver.berlin-brandenburg.de/rlp-online). It is intended to serve as a starting point for formally opening up the structures of other states' curricula and competency frameworks related to curricula. 
 
 This ontology includes concepts that enable a high-level description of a curriculum. Thereby three main components are put in relation to each other: subjects, competencies, learning content. 
 
 The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and re-uses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a skos:ConceptScheme and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduced classes have been fitted in as sub-classes, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain compatibility.
+
+An overview is shon in the following image:
 
 ![Overview](https://raw.githubusercontent.com/yovisto/curriculum/4ac8d81371776625ed2ea96cfbedb0b37c339175/docs/overview.png  =1200x)"""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
@@ -34,6 +36,8 @@ The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https
 #################################################################
 #    Annotation properties
 #################################################################
+
+<https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
 
 ###  http://purl.org/dc/terms/created
 terms:created rdf:type owl:AnnotationProperty .
