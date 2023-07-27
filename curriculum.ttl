@@ -15,7 +15,13 @@
                                owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
                                terms:created "2023-07-26" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
-                               terms:description "This ontology on educational curricula is a formal representation that captures the fundamental concepts and their interrelationships within the domain of curriculum design and implementation. It offers a structured framework for organizing and comprehending the key elements that constitute a curriculum. This ontology encompasses several important concepts that collectively shape the educational experience."@en ;
+                               terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
+
+The model was developed based on the structure of the framework curricula for the states of Berlin and Brandenburg in Germany (https://bildungsserver.berlin-brandenburg.de/rlp-online). It is intended to serve as a starting point for formally opening up the structures of other states' curricula and competency frameworks related to curricula. 
+
+This ontology includes concepts that enable a high-level description of a curriculum. Thereby three main components are put in relation to each other: subjects, competencies, learning content. 
+
+The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and re-uses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a skos:ConceptSchema and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduces classes were fitted in as sub-classes, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain compatibility."""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                terms:title "Curriculum Ontology"@en ;
                                owl:versionInfo "v1.0.0a" .
@@ -396,78 +402,144 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 #    Individuals
 #################################################################
 
+###  https://w3id.org/curriculum/bbLevelA
+g:bbLevelA rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe A" ;
+           skos:prefLabel "A" .
+
+
+###  https://w3id.org/curriculum/bbLevelB
+g:bbLevelB rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe B" ;
+           skos:prefLabel "B" .
+
+
+###  https://w3id.org/curriculum/bbLevelC
+g:bbLevelC rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe C" ;
+           skos:prefLabel "C" .
+
+
+###  https://w3id.org/curriculum/bbLevelD
+g:bbLevelD rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe D" ;
+           skos:prefLabel "D" .
+
+
+###  https://w3id.org/curriculum/bbLevelE
+g:bbLevelE rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe E" ;
+           skos:prefLabel "E" .
+
+
+###  https://w3id.org/curriculum/bbLevelF
+g:bbLevelF rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe F" ;
+           skos:prefLabel "F" .
+
+
+###  https://w3id.org/curriculum/bbLevelG
+g:bbLevelG rdf:type owl:NamedIndividual ,
+                    g:BB-Level ;
+           skos:altLabel "Niveaustufe G" ;
+           skos:prefLabel "G" .
+
+
 ###  https://w3id.org/curriculum/educationalLevel1
 g:educationalLevel1 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "1"; skos:altLabel "Jahrgang 1"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 1" ;
+                    skos:prefLabel "1" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel10
 g:educationalLevel10 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ; skos:prefLabel "10"; skos:altLabel "Jahrgang 10"  .
+                              g:EducationalLevel ;
+                     skos:altLabel "Jahrgang 10" ;
+                     skos:prefLabel "10" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel11
 g:educationalLevel11 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ; skos:prefLabel "11"; skos:altLabel "Jahrgang 11"  .
+                              g:EducationalLevel ;
+                     skos:altLabel "Jahrgang 11" ;
+                     skos:prefLabel "11" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel12
 g:educationalLevel12 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ; skos:prefLabel "12"; skos:altLabel "Jahrgang 12"  .
+                              g:EducationalLevel ;
+                     skos:altLabel "Jahrgang 12" ;
+                     skos:prefLabel "12" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel13
 g:educationalLevel13 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ; skos:prefLabel "13"; skos:altLabel "Jahrgang 13"  .
+                              g:EducationalLevel ;
+                     skos:altLabel "Jahrgang 13" ;
+                     skos:prefLabel "13" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel2
 g:educationalLevel2 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "2"; skos:altLabel "Jahrgang 2"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 2" ;
+                    skos:prefLabel "2" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel3
 g:educationalLevel3 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "3"; skos:altLabel "Jahrgang 3"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 3" ;
+                    skos:prefLabel "3" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel4
 g:educationalLevel4 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "4"; skos:altLabel "Jahrgang 4"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 4" ;
+                    skos:prefLabel "4" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel5
 g:educationalLevel5 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "5"; skos:altLabel "Jahrgang 5"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 5" ;
+                    skos:prefLabel "5" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel6
 g:educationalLevel6 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "6"; skos:altLabel "Jahrgang 6"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 6" ;
+                    skos:prefLabel "6" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel7
 g:educationalLevel7 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel  ; skos:prefLabel "7"; skos:altLabel "Jahrgang 7"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 7" ;
+                    skos:prefLabel "7" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel8
 g:educationalLevel8 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "8"; skos:altLabel "Jahrgang 8"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 8" ;
+                    skos:prefLabel "8" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel9
 g:educationalLevel9 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ; skos:prefLabel "9"; skos:altLabel "Jahrgang 9"  .
+                             g:EducationalLevel ;
+                    skos:altLabel "Jahrgang 9" ;
+                    skos:prefLabel "9" .
 
-
-###  https://w3id.org/curriculum/educationalLevel9
-g:bbLevelA rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "A"; skos:altLabel "Niveaustufe A" .
-g:bbLevelB rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "B"; skos:altLabel "Niveaustufe B" . 
-g:bbLevelC rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "C"; skos:altLabel "Niveaustufe C" . 
-g:bbLevelD rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "D"; skos:altLabel "Niveaustufe D" . 
-g:bbLevelE rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "E"; skos:altLabel "Niveaustufe E" . 
-g:bbLevelF rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "F"; skos:altLabel "Niveaustufe F" . 
-g:bbLevelG rdf:type owl:NamedIndividual , g:BB-Level ; skos:prefLabel "G"; skos:altLabel "Niveaustufe G" . 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
