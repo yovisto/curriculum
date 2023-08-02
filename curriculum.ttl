@@ -93,6 +93,38 @@ skos:broader rdf:type owl:ObjectProperty .
 skos:narrower rdf:type owl:ObjectProperty .
 
 
+###  https://w3id.org/curriculum/competenceAreaOf
+g:competenceAreaOf rdf:type owl:ObjectProperty ;
+                   rdfs:subPropertyOf skos:broader ;
+                   owl:inverseOf g:hasCompetenceArea .
+
+
+###  https://w3id.org/curriculum/competenceOf
+g:competenceOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:hasCompetence .
+
+
+###  https://w3id.org/curriculum/contentOf
+g:contentOf rdf:type owl:ObjectProperty ;
+            rdfs:subPropertyOf skos:broader ;
+            owl:inverseOf g:hasContent .
+
+
+###  https://w3id.org/curriculum/curriculumOf
+g:curriculumOf rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               owl:inverseOf g:hasCurriculum ;
+               rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
+               rdfs:range g:FederalState .
+
+
+###  https://w3id.org/curriculum/exerciseOf
+g:exerciseOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broader ;
+             owl:inverseOf g:hasExercise .
+
+
 ###  https://w3id.org/curriculum/hasCompetence
 g:hasCompetence rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf skos:narrower ;
@@ -102,7 +134,6 @@ g:hasCompetence rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/hasCompetenceArea
 g:hasCompetenceArea rdf:type owl:ObjectProperty ;
                     rdfs:subPropertyOf skos:narrower ;
-                    owl:inverseOf g:isCompetenceAreaOf ;
                     rdfs:range g:CompetenceArea .
 
 
@@ -110,6 +141,12 @@ g:hasCompetenceArea rdf:type owl:ObjectProperty ;
 g:hasContent rdf:type owl:ObjectProperty ;
              rdfs:subPropertyOf skos:narrower ;
              rdfs:range g:LearningContent .
+
+
+###  https://w3id.org/curriculum/hasCurriculum
+g:hasCurriculum rdf:type owl:ObjectProperty ;
+                rdfs:subPropertyOf owl:topObjectProperty ;
+                rdfs:range <https://w3id.org/dini/dini-ns/Curriculum> .
 
 
 ###  https://w3id.org/curriculum/hasExercise
@@ -120,24 +157,26 @@ g:hasExercise rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/curriculum/hasLevel
 g:hasLevel rdf:type owl:ObjectProperty ;
-           rdfs:range g:Level .
+           owl:inverseOf g:levelOf .
 
 
 ###  https://w3id.org/curriculum/hasMaterial
 g:hasMaterial rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf skos:narrower ;
+              owl:inverseOf g:materialOf ;
               rdfs:range g:Material .
 
 
 ###  https://w3id.org/curriculum/hasParentCompetenceArea
 g:hasParentCompetenceArea rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf g:isCompetenceAreaOf ;
+                          rdfs:subPropertyOf g:competenceAreaOf ;
                           owl:inverseOf g:hasSubCompetenceArea .
 
 
 ###  https://w3id.org/curriculum/hasPart
 g:hasPart rdf:type owl:ObjectProperty ;
           rdfs:subPropertyOf skos:narrower ;
+          owl:inverseOf g:partOf ;
           rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
           rdfs:range g:CurriculumPart .
 
@@ -145,6 +184,7 @@ g:hasPart rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/hasStandard
 g:hasStandard rdf:type owl:ObjectProperty ;
               rdfs:subPropertyOf skos:narrower ;
+              owl:inverseOf g:standardOf ;
               rdfs:range g:Standard .
 
 
@@ -157,24 +197,57 @@ g:hasSubCompetenceArea rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/curriculum/hasSubject
 g:hasSubject rdf:type owl:ObjectProperty ;
+             owl:inverseOf g:subjectOf ;
              rdfs:range g:Subject .
 
 
 ###  https://w3id.org/curriculum/hasTopic
 g:hasTopic rdf:type owl:ObjectProperty ;
            rdfs:subPropertyOf skos:narrower ;
+           owl:inverseOf g:topicOf ;
            rdfs:range g:Topic .
 
 
 ###  https://w3id.org/curriculum/hasTopicArea
 g:hasTopicArea rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
+               owl:inverseOf g:topicAreaOf ;
                rdfs:range g:TopicArea .
 
 
-###  https://w3id.org/curriculum/isCompetenceAreaOf
-g:isCompetenceAreaOf rdf:type owl:ObjectProperty ;
-                     rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/levelOf
+g:levelOf rdf:type owl:ObjectProperty ;
+          rdfs:domain g:Level ;
+          rdfs:range g:Standard .
+
+
+###  https://w3id.org/curriculum/materialOf
+g:materialOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broader .
+
+
+###  https://w3id.org/curriculum/partOf
+g:partOf rdf:type owl:ObjectProperty ;
+         rdfs:subPropertyOf skos:broader .
+
+
+###  https://w3id.org/curriculum/standardOf
+g:standardOf rdf:type owl:ObjectProperty ;
+             rdfs:subPropertyOf skos:broader .
+
+
+###  https://w3id.org/curriculum/subjectOf
+g:subjectOf rdf:type owl:ObjectProperty .
+
+
+###  https://w3id.org/curriculum/topicAreaOf
+g:topicAreaOf rdf:type owl:ObjectProperty ;
+              rdfs:subPropertyOf skos:broader .
+
+
+###  https://w3id.org/curriculum/topicOf
+g:topicOf rdf:type owl:ObjectProperty ;
+          rdfs:subPropertyOf skos:broader .
 
 
 #################################################################
@@ -238,6 +311,10 @@ grundlegendes Niveau:
 ###  https://w3id.org/curriculum/Competence
 g:Competence rdf:type owl:Class ;
              rdfs:subClassOf g:CompetenceItem ;
+             skos:definition """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
+Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en ;
+             skos:example "analyzing astronomical problems and tasks"@en ,
+                          "relating number ranges to each other"@en ;
              skos:prefLabel "Kompetenz"@de ,
                             "competence"@en .
 
@@ -245,6 +322,10 @@ g:Competence rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/CompetenceArea
 g:CompetenceArea rdf:type owl:Class ;
                  rdfs:subClassOf g:CompetenceItem ;
+                 skos:definition "CompetenceArea is understood as a general organizational item to group specific comptences thogether. E.g. \"reading competencies\"."@en ;
+                 skos:example "dealing with expertise"@en ,
+                              "probelm solving"@en ,
+                              "reading"@en ;
                  skos:prefLabel "Kompetenzbereich"@de ,
                                 "competence area"@en .
 
@@ -257,48 +338,11 @@ g:CompetenceItem rdf:type owl:Class ;
                                 "competence item"@en .
 
 
-###  https://w3id.org/curriculum/Curriculum
-<https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
-             owl:equivalentClass 
-                                 [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                          owl:onProperty g:hasCompetenceArea ;
-                                                          owl:someValuesFrom g:CompetenceArea
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty g:hasContent ;
-                                                          owl:someValuesFrom g:LearningContent
-                                                        ]
-                                                        [ rdf:type owl:Restriction ;
-                                                          owl:onProperty g:hasSubject ;
-                                                          owl:someValuesFrom g:Subject
-                                                        ]
-                                                      ) ;
-                                   rdf:type owl:Class
-                                 ] ;
-             rdfs:subClassOf skos:ConceptScheme ;
-             skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
-The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
-                             """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
-Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de ;
-             skos:prefLabel "Lehrplan"@de ,
-                            "curriculum"@en .
-
-
 ###  https://w3id.org/curriculum/CurriculumForm
 g:CurriculumForm rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
                  skos:prefLabel "Lehrplanausprägung"@de ,
                                 "form of curriculum"@en .
-
-
-###  https://w3id.org/curriculum/CurriculumItem
-<https://w3id.org/dini/dini-ns/CurriculumItem> rdf:type owl:Class ;
-                
-                 rdfs:subClassOf skos:Concept ;
-                 skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
-                                 "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
-                 skos:prefLabel "Lehrplanelement"@de ,
-                                "curriculum item"@en .
 
 
 ###  https://w3id.org/curriculum/CurriculumPart
@@ -324,6 +368,12 @@ g:Exercise rdf:type owl:Class ;
            rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
            skos:prefLabel "exercise"@en ,
                           "Übung"@de .
+
+
+###  https://w3id.org/curriculum/FederalState
+g:FederalState rdf:type owl:Class ;
+               skos:prefLabel "Bundesland"@de ,
+                              "federal state"@en .
 
 
 ###  https://w3id.org/curriculum/FirstForeignLanguage
@@ -380,12 +430,15 @@ g:SecondForeignLanguage rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/Standard
 g:Standard rdf:type owl:Class ;
            rdfs:subClassOf g:CompetenceItem ;
+           skos:definition "The standards define the skills and knowledge regarding a particular competence that students at a particular grade level should acquire. THe grade level can be specified with the hasLevel property."@en ;
            skos:prefLabel "Standard"@de ,
                           "standard"@en .
 
 
 ###  https://w3id.org/curriculum/Subject
-g:Subject rdf:type owl:Class .
+g:Subject rdf:type owl:Class ;
+          skos:prefLabel "Fach"@de ,
+                         "Subject"@en .
 
 
 ###  https://w3id.org/curriculum/ThirdForeignLanguage
@@ -419,20 +472,56 @@ g:TopicItem rdf:type owl:Class ;
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
 <https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
-                                           rdfs:subClassOf skos:ConceptScheme .
+                                           owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty g:hasCompetenceArea ;
+                                                                                        owl:someValuesFrom g:CompetenceArea
+                                                                                      ]
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty g:hasContent ;
+                                                                                        owl:someValuesFrom g:LearningContent
+                                                                                      ]
+                                                                                      [ rdf:type owl:Restriction ;
+                                                                                        owl:onProperty g:hasSubject ;
+                                                                                        owl:someValuesFrom g:Subject
+                                                                                      ]
+                                                                                    ) ;
+                                                                 rdf:type owl:Class
+                                                               ] ;
+                                           rdfs:subClassOf skos:ConceptScheme ;
+                                           skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
+The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
+                                                           """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
+Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de ;
+                                           skos:prefLabel "Lehrplan"@de ,
+                                                          "curriculum"@en .
 
 
 ###  https://w3id.org/dini/dini-ns/CurriculumItem
 <https://w3id.org/dini/dini-ns/CurriculumItem> rdf:type owl:Class ;
-                                               rdfs:subClassOf skos:Concept .
+                                               rdfs:subClassOf skos:Concept ;
+                                               skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
+                                                               "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
+                                               skos:prefLabel "Lehrplanelement"@de ,
+                                                              "curriculum item"@en .
 
 
 #################################################################
 #    Individuals
 #################################################################
 
+###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
+<https://edu.yovisto.com/resource/bb/curriculum/Berlin> rdf:type owl:NamedIndividual ,
+                                                                 g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
+<https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> rdf:type owl:NamedIndividual ,
+                                                                      g:FederalState .
+
+
 ###  https://w3id.org/curriculum/bbLevelA
 g:bbLevelA rdf:type owl:NamedIndividual ,
+                    
                     g:BB-Level ;
            skos:altLabel "Niveaustufe A" ;
            skos:prefLabel "A" .
@@ -440,13 +529,15 @@ g:bbLevelA rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/curriculum/bbLevelB
 g:bbLevelB rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    
+                    g:BB-Level  ;
            skos:altLabel "Niveaustufe B" ;
            skos:prefLabel "B" .
 
 
 ###  https://w3id.org/curriculum/bbLevelC
 g:bbLevelC rdf:type owl:NamedIndividual ,
+                    
                     g:BB-Level ;
            skos:altLabel "Niveaustufe C" ;
            skos:prefLabel "C" .
@@ -454,6 +545,7 @@ g:bbLevelC rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/curriculum/bbLevelD
 g:bbLevelD rdf:type owl:NamedIndividual ,
+                    
                     g:BB-Level ;
            skos:altLabel "Niveaustufe D" ;
            skos:prefLabel "D" .
@@ -461,13 +553,15 @@ g:bbLevelD rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/curriculum/bbLevelE
 g:bbLevelE rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    
+                    g:BB-Level  ;
            skos:altLabel "Niveaustufe E" ;
            skos:prefLabel "E" .
 
 
 ###  https://w3id.org/curriculum/bbLevelF
 g:bbLevelF rdf:type owl:NamedIndividual ,
+                    
                     g:BB-Level ;
            skos:altLabel "Niveaustufe F" ;
            skos:prefLabel "F" .
@@ -475,7 +569,9 @@ g:bbLevelF rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/curriculum/bbLevelG
 g:bbLevelG rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    
+                    g:BB-Level 
+                     ;
            skos:altLabel "Niveaustufe G" ;
            skos:prefLabel "G" .
 
@@ -496,77 +592,78 @@ g:educationalLevel10 rdf:type owl:NamedIndividual ,
 
 ###  https://w3id.org/curriculum/educationalLevel11
 g:educationalLevel11 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EducationalLevel  ;
                      skos:altLabel "Jahrgang 11" ;
                      skos:prefLabel "11" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel12
 g:educationalLevel12 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EducationalLevel   ;
                      skos:altLabel "Jahrgang 12" ;
                      skos:prefLabel "12" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel13
 g:educationalLevel13 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EducationalLevel  ;
                      skos:altLabel "Jahrgang 13" ;
                      skos:prefLabel "13" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel2
 g:educationalLevel2 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel  ;
                     skos:altLabel "Jahrgang 2" ;
                     skos:prefLabel "2" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel3
 g:educationalLevel3 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel  ;
                     skos:altLabel "Jahrgang 3" ;
                     skos:prefLabel "3" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel4
 g:educationalLevel4 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+
+                             g:EducationalLevel  ;
                     skos:altLabel "Jahrgang 4" ;
                     skos:prefLabel "4" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel5
 g:educationalLevel5 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel  ;
                     skos:altLabel "Jahrgang 5" ;
                     skos:prefLabel "5" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel6
 g:educationalLevel6 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel  ;
                     skos:altLabel "Jahrgang 6" ;
                     skos:prefLabel "6" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel7
 g:educationalLevel7 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel   ;
                     skos:altLabel "Jahrgang 7" ;
                     skos:prefLabel "7" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel8
 g:educationalLevel8 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel   ;
                     skos:altLabel "Jahrgang 8" ;
                     skos:prefLabel "8" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel9
 g:educationalLevel9 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EducationalLevel   ;
                     skos:altLabel "Jahrgang 9" ;
                     skos:prefLabel "9" .
 
