@@ -270,11 +270,21 @@ skos:Concept rdf:type owl:Class .
 skos:ConceptScheme rdf:type owl:Class .
 
 
+###  https://w3id.org/curriculum/Abendschule
+g:Abendschule rdf:type owl:Class ;
+              rdfs:subClassOf g:SchoolType .
+
+
 ###  https://w3id.org/curriculum/AdditionalMaterial
 g:AdditionalMaterial rdf:type owl:Class ;
                      rdfs:subClassOf g:Material ;
                      skos:prefLabel "Zusatzmaterial"@de ,
                                     "additional material"@en .
+
+
+###  https://w3id.org/curriculum/AlternativeSchule
+g:AlternativeSchule rdf:type owl:Class ;
+                    rdfs:subClassOf g:SchoolType .
 
 
 ###  https://w3id.org/curriculum/BB-Level
@@ -308,6 +318,26 @@ grundlegendes Niveau:
                           "bb educational level"@en .
 
 
+###  https://w3id.org/curriculum/Berufsfachschule
+g:Berufsfachschule rdf:type owl:Class ;
+                   rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Berufsoberschule
+g:Berufsoberschule rdf:type owl:Class ;
+                   rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Berufsschule
+g:Berufsschule rdf:type owl:Class ;
+               rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/BerufsschuleDual
+g:BerufsschuleDual rdf:type owl:Class ;
+                   rdfs:subClassOf g:SchoolType .
+
+
 ###  https://w3id.org/curriculum/Competence
 g:Competence rdf:type owl:Class ;
              rdfs:subClassOf g:CompetenceItem ;
@@ -333,7 +363,7 @@ g:CompetenceArea rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/CompetenceItem
 g:CompetenceItem rdf:type owl:Class ;
                  rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 rdfs:comment "an organizational element to group competence related classes"@en ;
+                 rdfs:comment "An organizational element to group competence related classes."@en ;
                  skos:prefLabel "Kompetenzelement"@de ,
                                 "competence item"@en .
 
@@ -370,6 +400,21 @@ g:Exercise rdf:type owl:Class ;
                           "Übung"@de .
 
 
+###  https://w3id.org/curriculum/Fachakademie
+g:Fachakademie rdf:type owl:Class ;
+               rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Fachoberschule
+g:Fachoberschule rdf:type owl:Class ;
+                 rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Fachschule
+g:Fachschule rdf:type owl:Class ;
+             rdfs:subClassOf g:SchoolType .
+
+
 ###  https://w3id.org/curriculum/FederalState
 g:FederalState rdf:type owl:Class ;
                skos:prefLabel "Bundesland"@de ,
@@ -381,6 +426,41 @@ g:FirstForeignLanguage rdf:type owl:Class ;
                        rdfs:subClassOf g:CurriculumForm ;
                        skos:prefLabel "Erste Fremdsprache"@de ,
                                       "first foreign language"@en .
+
+
+###  https://w3id.org/curriculum/Foerderschule
+g:Foerderschule rdf:type owl:Class ;
+                rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Gesamtschulen
+g:Gesamtschulen rdf:type owl:Class ;
+                rdfs:subClassOf g:SchuleBesondererArt .
+
+
+###  https://w3id.org/curriculum/Grundschule
+g:Grundschule rdf:type owl:Class ;
+              rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Gymnasium
+g:Gymnasium rdf:type owl:Class ;
+            rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Hauptschule
+g:Hauptschule rdf:type owl:Class ;
+              rdfs:subClassOf g:Mittelschule .
+
+
+###  https://w3id.org/curriculum/InternationaleSchule
+g:InternationaleSchule rdf:type owl:Class ;
+                       rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Kolleg
+g:Kolleg rdf:type owl:Class ;
+         rdfs:subClassOf g:SchoolType .
 
 
 ###  https://w3id.org/curriculum/LearningContent
@@ -420,6 +500,39 @@ g:MinorSubject rdf:type owl:Class ;
                               "minor subject"@en .
 
 
+###  https://w3id.org/curriculum/Mittelschule
+g:Mittelschule rdf:type owl:Class ;
+               rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/Montessori
+g:Montessori rdf:type owl:Class ;
+             rdfs:subClassOf g:AlternativeSchule ;
+             owl:disjointWith g:Waldorfschule .
+
+
+###  https://w3id.org/curriculum/Realschule
+g:Realschule rdf:type owl:Class ;
+             rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/SchoolType
+g:SchoolType rdf:type owl:Class ;
+             skos:definition "Allgemeiner Typ der Schule"@de ;
+             skos:prefLabel "Schultyp"@de ,
+                            "school type"@en .
+
+
+###  https://w3id.org/curriculum/SchuleBesondererArt
+g:SchuleBesondererArt rdf:type owl:Class ;
+                      rdfs:subClassOf g:SchoolType .
+
+
+###  https://w3id.org/curriculum/SchuleFuerKranke
+g:SchuleFuerKranke rdf:type owl:Class ;
+                   rdfs:subClassOf g:SchoolType .
+
+
 ###  https://w3id.org/curriculum/SecondForeignLanguage
 g:SecondForeignLanguage rdf:type owl:Class ;
                         rdfs:subClassOf g:CurriculumForm ;
@@ -451,6 +564,8 @@ g:ThirdForeignLanguage rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/Topic
 g:Topic rdf:type owl:Class ;
         rdfs:subClassOf g:TopicItem ;
+        skos:definition "A concrete topic of school teaching that can be taught through particular learning content."@en ,
+                        "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de ;
         skos:prefLabel "Thema"@de ,
                        "topic"@en .
 
@@ -458,6 +573,8 @@ g:Topic rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/TopicArea
 g:TopicArea rdf:type owl:Class ;
             rdfs:subClassOf g:TopicItem ;
+            skos:definition "A topic area includes one or more topics that are subject of teaching."@en ,
+                            "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de ;
             skos:prefLabel "Themenfeld"@de ,
                            "topic area"@en .
 
@@ -465,9 +582,24 @@ g:TopicArea rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/TopicItem
 g:TopicItem rdf:type owl:Class ;
             rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-            rdfs:comment "an organizational element to group competence related classes" ;
+            rdfs:comment "An organizational element to group topic and learning content related items."@en ;
             skos:prefLabel "Themenelement"@de ,
                            "topic item"@en .
+
+
+###  https://w3id.org/curriculum/Volksschule
+g:Volksschule rdf:type owl:Class ;
+              rdfs:subClassOf g:Mittelschule .
+
+
+###  https://w3id.org/curriculum/Waldorfschule
+g:Waldorfschule rdf:type owl:Class ;
+                rdfs:subClassOf g:AlternativeSchule .
+
+
+###  https://w3id.org/curriculum/Wirtschaftsschule
+g:Wirtschaftsschule rdf:type owl:Class ;
+                    rdfs:subClassOf g:SchoolType .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
@@ -509,6 +641,16 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 #    Individuals
 #################################################################
 
+###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
+<https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> rdf:type owl:NamedIndividual ,
+                                                                             g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Bayern
+<https://edu.yovisto.com/resource/bb/curriculum/Bayern> rdf:type owl:NamedIndividual ,
+                                                                 g:FederalState .
+
+
 ###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
 <https://edu.yovisto.com/resource/bb/curriculum/Berlin> rdf:type owl:NamedIndividual ,
                                                                  g:FederalState .
@@ -517,6 +659,66 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 ###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
 <https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> rdf:type owl:NamedIndividual ,
                                                                       g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Bremen
+<https://edu.yovisto.com/resource/bb/curriculum/Bremen> rdf:type owl:NamedIndividual ,
+                                                                 g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Hamburg
+<https://edu.yovisto.com/resource/bb/curriculum/Hamburg> rdf:type owl:NamedIndividual ,
+                                                                  g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Hessen
+<https://edu.yovisto.com/resource/bb/curriculum/Hessen> rdf:type owl:NamedIndividual ,
+                                                                 g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern
+<https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern> rdf:type owl:NamedIndividual ,
+                                                                                 g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen
+<https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen> rdf:type owl:NamedIndividual ,
+                                                                        g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen
+<https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen> rdf:type owl:NamedIndividual ,
+                                                                              g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz
+<https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz> rdf:type owl:NamedIndividual ,
+                                                                          g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Saarland
+<https://edu.yovisto.com/resource/bb/curriculum/Saarland> rdf:type owl:NamedIndividual ,
+                                                                   g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen
+<https://edu.yovisto.com/resource/bb/curriculum/Sachsen> rdf:type owl:NamedIndividual ,
+                                                                  g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt
+<https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt> rdf:type owl:NamedIndividual ,
+                                                                         g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein
+<https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein> rdf:type owl:NamedIndividual ,
+                                                                             g:FederalState .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
+<https://edu.yovisto.com/resource/bb/curriculum/Thueringen> rdf:type owl:NamedIndividual ,
+                                                                     g:FederalState .
 
 
 ###  https://w3id.org/curriculum/bbLevelA
