@@ -116,7 +116,9 @@ g:curriculumOf rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
                owl:inverseOf g:hasCurriculum ;
                rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
-               rdfs:range g:FederalState .
+               rdfs:range g:FederalState ;
+               skos:prefLabel "Lehrplan von"@de ,
+                              "curriculum of"@en .
 
 
 ###  https://w3id.org/curriculum/exerciseOf
@@ -146,7 +148,8 @@ g:hasContent rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/hasCurriculum
 g:hasCurriculum rdf:type owl:ObjectProperty ;
                 rdfs:subPropertyOf owl:topObjectProperty ;
-                rdfs:range <https://w3id.org/dini/dini-ns/Curriculum> .
+                skos:prefLabel "has curriculum"@en ,
+                               "hat Lehrplan"@de .
 
 
 ###  https://w3id.org/curriculum/hasExercise
@@ -157,7 +160,9 @@ g:hasExercise rdf:type owl:ObjectProperty ;
 
 ###  https://w3id.org/curriculum/hasLevel
 g:hasLevel rdf:type owl:ObjectProperty ;
-           owl:inverseOf g:levelOf .
+           owl:inverseOf g:levelOf ;
+           skos:prefLabel "has level"@en ,
+                          "hat Stufe"@de .
 
 
 ###  https://w3id.org/curriculum/hasMaterial
@@ -198,7 +203,9 @@ g:hasSubCompetenceArea rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/hasSubject
 g:hasSubject rdf:type owl:ObjectProperty ;
              owl:inverseOf g:subjectOf ;
-             rdfs:range g:Subject .
+             rdfs:range g:Subject ;
+             skos:prefLabel "has subject"@en ,
+                            "hat Fach"@de .
 
 
 ###  https://w3id.org/curriculum/hasTopic
@@ -218,7 +225,9 @@ g:hasTopicArea rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/levelOf
 g:levelOf rdf:type owl:ObjectProperty ;
           rdfs:domain g:Level ;
-          rdfs:range g:Standard .
+          rdfs:range g:Standard ;
+          skos:prefLabel "Stufe von"@de ,
+                         "level of"@en .
 
 
 ###  https://w3id.org/curriculum/materialOf
@@ -237,7 +246,9 @@ g:standardOf rdf:type owl:ObjectProperty ;
 
 
 ###  https://w3id.org/curriculum/subjectOf
-g:subjectOf rdf:type owl:ObjectProperty .
+g:subjectOf rdf:type owl:ObjectProperty ;
+            skos:prefLabel "Fach von"@de ,
+                           "subject of"@en .
 
 
 ###  https://w3id.org/curriculum/topicAreaOf
@@ -526,7 +537,7 @@ g:Mittelschule rdf:type owl:Class ;
 g:Montessori rdf:type owl:Class ;
              rdfs:subClassOf g:AlternativeSchule ;
              owl:disjointWith g:Waldorfschule ;
-             skos:prefLabel "Montessori"@de .
+             skos:prefLabel "Montessorischule"@de .
 
 
 ###  https://w3id.org/curriculum/Realschule
@@ -617,7 +628,7 @@ g:Volksschule rdf:type owl:Class ;
 ###  https://w3id.org/curriculum/Waldorfschule
 g:Waldorfschule rdf:type owl:Class ;
                 rdfs:subClassOf g:AlternativeSchule ;
-                skos:prefLabel "Waldorf"@de .
+                skos:prefLabel "Waldorfschule"@de .
 
 
 ###  https://w3id.org/curriculum/Wirtschaftsschule
