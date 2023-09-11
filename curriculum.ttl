@@ -272,7 +272,8 @@ skos:ConceptScheme rdf:type owl:Class .
 
 ###  https://w3id.org/curriculum/Abendschule
 g:Abendschule rdf:type owl:Class ;
-              rdfs:subClassOf g:SchoolType .
+              rdfs:subClassOf g:School ;
+              skos:prefLabel "Abendschule"@de .
 
 
 ###  https://w3id.org/curriculum/AdditionalMaterial
@@ -284,7 +285,8 @@ g:AdditionalMaterial rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/AlternativeSchule
 g:AlternativeSchule rdf:type owl:Class ;
-                    rdfs:subClassOf g:SchoolType .
+                    rdfs:subClassOf g:School ;
+                    skos:prefLabel "Alternative Schule"@de .
 
 
 ###  https://w3id.org/curriculum/BB-Level
@@ -320,22 +322,26 @@ grundlegendes Niveau:
 
 ###  https://w3id.org/curriculum/Berufsfachschule
 g:Berufsfachschule rdf:type owl:Class ;
-                   rdfs:subClassOf g:SchoolType .
+                   rdfs:subClassOf g:School ;
+                   skos:prefLabel "Berufsfachschule"@de .
 
 
 ###  https://w3id.org/curriculum/Berufsoberschule
 g:Berufsoberschule rdf:type owl:Class ;
-                   rdfs:subClassOf g:SchoolType .
+                   rdfs:subClassOf g:School ;
+                   skos:prefLabel "Berufsoberschule"@de .
 
 
 ###  https://w3id.org/curriculum/Berufsschule
 g:Berufsschule rdf:type owl:Class ;
-               rdfs:subClassOf g:SchoolType .
+               rdfs:subClassOf g:School ;
+               skos:prefLabel "Berufsschule"@de .
 
 
 ###  https://w3id.org/curriculum/BerufsschuleDual
 g:BerufsschuleDual rdf:type owl:Class ;
-                   rdfs:subClassOf g:SchoolType .
+                   rdfs:subClassOf g:School ;
+                   skos:prefLabel "Berufsschule Dual"@de .
 
 
 ###  https://w3id.org/curriculum/Competence
@@ -402,17 +408,20 @@ g:Exercise rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/Fachakademie
 g:Fachakademie rdf:type owl:Class ;
-               rdfs:subClassOf g:SchoolType .
+               rdfs:subClassOf g:School ;
+               skos:prefLabel "Fachakademie"@de .
 
 
 ###  https://w3id.org/curriculum/Fachoberschule
 g:Fachoberschule rdf:type owl:Class ;
-                 rdfs:subClassOf g:SchoolType .
+                 rdfs:subClassOf g:School ;
+                 skos:prefLabel "Fachoberschule"@de .
 
 
 ###  https://w3id.org/curriculum/Fachschule
 g:Fachschule rdf:type owl:Class ;
-             rdfs:subClassOf g:SchoolType .
+             rdfs:subClassOf g:School ;
+             skos:prefLabel "Fachschule"@de .
 
 
 ###  https://w3id.org/curriculum/FederalState
@@ -430,37 +439,44 @@ g:FirstForeignLanguage rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/Foerderschule
 g:Foerderschule rdf:type owl:Class ;
-                rdfs:subClassOf g:SchoolType .
+                rdfs:subClassOf g:School ;
+                skos:prefLabel "Förderschule"@de .
 
 
 ###  https://w3id.org/curriculum/Gesamtschulen
 g:Gesamtschulen rdf:type owl:Class ;
-                rdfs:subClassOf g:SchuleBesondererArt .
+                rdfs:subClassOf g:SchuleBesondererArt ;
+                skos:prefLabel "Gesamtschule"@de .
 
 
 ###  https://w3id.org/curriculum/Grundschule
 g:Grundschule rdf:type owl:Class ;
-              rdfs:subClassOf g:SchoolType .
+              rdfs:subClassOf g:School ;
+              skos:prefLabel "Grundschule"@de .
 
 
 ###  https://w3id.org/curriculum/Gymnasium
 g:Gymnasium rdf:type owl:Class ;
-            rdfs:subClassOf g:SchoolType .
+            rdfs:subClassOf g:School ;
+            skos:prefLabel "Gymnasium"@de .
 
 
 ###  https://w3id.org/curriculum/Hauptschule
 g:Hauptschule rdf:type owl:Class ;
-              rdfs:subClassOf g:Mittelschule .
+              rdfs:subClassOf g:Mittelschule ;
+              skos:prefLabel "Hauptschule"@de .
 
 
 ###  https://w3id.org/curriculum/InternationaleSchule
 g:InternationaleSchule rdf:type owl:Class ;
-                       rdfs:subClassOf g:SchoolType .
+                       rdfs:subClassOf g:School ;
+                       skos:prefLabel "Internationale Schule"@de .
 
 
 ###  https://w3id.org/curriculum/Kolleg
 g:Kolleg rdf:type owl:Class ;
-         rdfs:subClassOf g:SchoolType .
+         rdfs:subClassOf g:School ;
+         skos:prefLabel "Kolleg"@de .
 
 
 ###  https://w3id.org/curriculum/LearningContent
@@ -502,35 +518,40 @@ g:MinorSubject rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/Mittelschule
 g:Mittelschule rdf:type owl:Class ;
-               rdfs:subClassOf g:SchoolType .
+               rdfs:subClassOf g:School ;
+               skos:prefLabel "Mittelschule"@de .
 
 
 ###  https://w3id.org/curriculum/Montessori
 g:Montessori rdf:type owl:Class ;
              rdfs:subClassOf g:AlternativeSchule ;
-             owl:disjointWith g:Waldorfschule .
+             owl:disjointWith g:Waldorfschule ;
+             skos:prefLabel "Montessori"@de .
 
 
 ###  https://w3id.org/curriculum/Realschule
 g:Realschule rdf:type owl:Class ;
-             rdfs:subClassOf g:SchoolType .
+             rdfs:subClassOf g:School ;
+             skos:prefLabel "Realschule"@de .
 
 
-###  https://w3id.org/curriculum/SchoolType
-g:SchoolType rdf:type owl:Class ;
-             skos:definition "Allgemeiner Typ der Schule"@de ;
-             skos:prefLabel "Schultyp"@de ,
-                            "school type"@en .
+###  https://w3id.org/curriculum/School
+g:School rdf:type owl:Class ;
+         skos:definition "Allgemeiner Typ der Schule"@de ;
+         skos:prefLabel "Schule"@de ,
+                        "school"@en .
 
 
 ###  https://w3id.org/curriculum/SchuleBesondererArt
 g:SchuleBesondererArt rdf:type owl:Class ;
-                      rdfs:subClassOf g:SchoolType .
+                      rdfs:subClassOf g:School ;
+                      skos:prefLabel "Schule besonderer Art"@de .
 
 
 ###  https://w3id.org/curriculum/SchuleFuerKranke
 g:SchuleFuerKranke rdf:type owl:Class ;
-                   rdfs:subClassOf g:SchoolType .
+                   rdfs:subClassOf g:School ;
+                   skos:prefLabel "Schule für Kranke"@de .
 
 
 ###  https://w3id.org/curriculum/SecondForeignLanguage
@@ -589,17 +610,20 @@ g:TopicItem rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/Volksschule
 g:Volksschule rdf:type owl:Class ;
-              rdfs:subClassOf g:Mittelschule .
+              rdfs:subClassOf g:Mittelschule ;
+              skos:prefLabel "Volksschule"@de .
 
 
 ###  https://w3id.org/curriculum/Waldorfschule
 g:Waldorfschule rdf:type owl:Class ;
-                rdfs:subClassOf g:AlternativeSchule .
+                rdfs:subClassOf g:AlternativeSchule ;
+                skos:prefLabel "Waldorf"@de .
 
 
 ###  https://w3id.org/curriculum/Wirtschaftsschule
 g:Wirtschaftsschule rdf:type owl:Class ;
-                    rdfs:subClassOf g:SchoolType .
+                    rdfs:subClassOf g:School ;
+                    skos:prefLabel "Wirtschaftsschule"@de .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
