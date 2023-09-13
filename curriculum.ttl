@@ -13,6 +13,8 @@
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
+                               owl:imports <https://raw.githubusercontent.com/dini-ag-kim/educationalLevel/main/educationalLevel.ttl> ,
+                                           <https://raw.githubusercontent.com/dini-ag-kim/schularten/main/schularten.ttl> ;
                                terms:created "2023-07-26" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
@@ -281,23 +283,11 @@ skos:Concept rdf:type owl:Class .
 skos:ConceptScheme rdf:type owl:Class .
 
 
-###  https://w3id.org/curriculum/Abendschule
-g:Abendschule rdf:type owl:Class ;
-              rdfs:subClassOf g:School ;
-              skos:prefLabel "Abendschule"@de .
-
-
 ###  https://w3id.org/curriculum/AdditionalMaterial
 g:AdditionalMaterial rdf:type owl:Class ;
                      rdfs:subClassOf g:Material ;
                      skos:prefLabel "Zusatzmaterial"@de ,
                                     "additional material"@en .
-
-
-###  https://w3id.org/curriculum/AlternativeSchule
-g:AlternativeSchule rdf:type owl:Class ;
-                    rdfs:subClassOf g:School ;
-                    skos:prefLabel "Alternative Schule"@de .
 
 
 ###  https://w3id.org/curriculum/BB-Level
@@ -329,30 +319,6 @@ grundlegendes Niveau:
 * Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de ;
            skos:prefLabel "BB Stufe"@de ,
                           "bb educational level"@en .
-
-
-###  https://w3id.org/curriculum/Berufsfachschule
-g:Berufsfachschule rdf:type owl:Class ;
-                   rdfs:subClassOf g:School ;
-                   skos:prefLabel "Berufsfachschule"@de .
-
-
-###  https://w3id.org/curriculum/Berufsoberschule
-g:Berufsoberschule rdf:type owl:Class ;
-                   rdfs:subClassOf g:School ;
-                   skos:prefLabel "Berufsoberschule"@de .
-
-
-###  https://w3id.org/curriculum/Berufsschule
-g:Berufsschule rdf:type owl:Class ;
-               rdfs:subClassOf g:School ;
-               skos:prefLabel "Berufsschule"@de .
-
-
-###  https://w3id.org/curriculum/BerufsschuleDual
-g:BerufsschuleDual rdf:type owl:Class ;
-                   rdfs:subClassOf g:School ;
-                   skos:prefLabel "Berufsschule Dual"@de .
 
 
 ###  https://w3id.org/curriculum/Competence
@@ -417,24 +383,6 @@ g:Exercise rdf:type owl:Class ;
                           "Übung"@de .
 
 
-###  https://w3id.org/curriculum/Fachakademie
-g:Fachakademie rdf:type owl:Class ;
-               rdfs:subClassOf g:School ;
-               skos:prefLabel "Fachakademie"@de .
-
-
-###  https://w3id.org/curriculum/Fachoberschule
-g:Fachoberschule rdf:type owl:Class ;
-                 rdfs:subClassOf g:School ;
-                 skos:prefLabel "Fachoberschule"@de .
-
-
-###  https://w3id.org/curriculum/Fachschule
-g:Fachschule rdf:type owl:Class ;
-             rdfs:subClassOf g:School ;
-             skos:prefLabel "Fachschule"@de .
-
-
 ###  https://w3id.org/curriculum/FederalState
 g:FederalState rdf:type owl:Class ;
                skos:prefLabel "Bundesland"@de ,
@@ -448,46 +396,10 @@ g:FirstForeignLanguage rdf:type owl:Class ;
                                       "first foreign language"@en .
 
 
-###  https://w3id.org/curriculum/Foerderschule
-g:Foerderschule rdf:type owl:Class ;
-                rdfs:subClassOf g:School ;
-                skos:prefLabel "Förderschule"@de .
-
-
-###  https://w3id.org/curriculum/Gesamtschulen
-g:Gesamtschulen rdf:type owl:Class ;
-                rdfs:subClassOf g:SchuleBesondererArt ;
-                skos:prefLabel "Gesamtschule"@de .
-
-
-###  https://w3id.org/curriculum/Grundschule
-g:Grundschule rdf:type owl:Class ;
-              rdfs:subClassOf g:School ;
-              skos:prefLabel "Grundschule"@de .
-
-
-###  https://w3id.org/curriculum/Gymnasium
-g:Gymnasium rdf:type owl:Class ;
-            rdfs:subClassOf g:School ;
-            skos:prefLabel "Gymnasium"@de .
-
-
-###  https://w3id.org/curriculum/Hauptschule
-g:Hauptschule rdf:type owl:Class ;
-              rdfs:subClassOf g:Mittelschule ;
-              skos:prefLabel "Hauptschule"@de .
-
-
-###  https://w3id.org/curriculum/InternationaleSchule
-g:InternationaleSchule rdf:type owl:Class ;
-                       rdfs:subClassOf g:School ;
-                       skos:prefLabel "Internationale Schule"@de .
-
-
-###  https://w3id.org/curriculum/Kolleg
-g:Kolleg rdf:type owl:Class ;
-         rdfs:subClassOf g:School ;
-         skos:prefLabel "Kolleg"@de .
+###  https://w3id.org/curriculum/KIM-Level
+g:KIM-Level rdf:type owl:Class ;
+            rdfs:subClassOf g:Level ;
+            skos:prefLabel "kim level" .
 
 
 ###  https://w3id.org/curriculum/LearningContent
@@ -527,42 +439,13 @@ g:MinorSubject rdf:type owl:Class ;
                               "minor subject"@en .
 
 
-###  https://w3id.org/curriculum/Mittelschule
-g:Mittelschule rdf:type owl:Class ;
-               rdfs:subClassOf g:School ;
-               skos:prefLabel "Mittelschule"@de .
-
-
-###  https://w3id.org/curriculum/Montessori
-g:Montessori rdf:type owl:Class ;
-             rdfs:subClassOf g:AlternativeSchule ;
-             owl:disjointWith g:Waldorfschule ;
-             skos:prefLabel "Montessorischule"@de .
-
-
-###  https://w3id.org/curriculum/Realschule
-g:Realschule rdf:type owl:Class ;
-             rdfs:subClassOf g:School ;
-             skos:prefLabel "Realschule"@de .
-
-
 ###  https://w3id.org/curriculum/School
 g:School rdf:type owl:Class ;
-         skos:definition "Allgemeiner Typ der Schule"@de ;
+         skos:definition "Allgemeiner Typ der Schule"@de ,
+                         "Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem."@de ,
+                         "Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."@de ;
          skos:prefLabel "Schule"@de ,
                         "school"@en .
-
-
-###  https://w3id.org/curriculum/SchuleBesondererArt
-g:SchuleBesondererArt rdf:type owl:Class ;
-                      rdfs:subClassOf g:School ;
-                      skos:prefLabel "Schule besonderer Art"@de .
-
-
-###  https://w3id.org/curriculum/SchuleFuerKranke
-g:SchuleFuerKranke rdf:type owl:Class ;
-                   rdfs:subClassOf g:School ;
-                   skos:prefLabel "Schule für Kranke"@de .
 
 
 ###  https://w3id.org/curriculum/SecondForeignLanguage
@@ -617,24 +500,6 @@ g:TopicItem rdf:type owl:Class ;
             rdfs:comment "An organizational element to group topic and learning content related items."@en ;
             skos:prefLabel "Themenelement"@de ,
                            "topic item"@en .
-
-
-###  https://w3id.org/curriculum/Volksschule
-g:Volksschule rdf:type owl:Class ;
-              rdfs:subClassOf g:Mittelschule ;
-              skos:prefLabel "Volksschule"@de .
-
-
-###  https://w3id.org/curriculum/Waldorfschule
-g:Waldorfschule rdf:type owl:Class ;
-                rdfs:subClassOf g:AlternativeSchule ;
-                skos:prefLabel "Waldorfschule"@de .
-
-
-###  https://w3id.org/curriculum/Wirtschaftsschule
-g:Wirtschaftsschule rdf:type owl:Class ;
-                    rdfs:subClassOf g:School ;
-                    skos:prefLabel "Wirtschaftsschule"@de .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
@@ -894,6 +759,114 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                              g:EducationalLevel ;
                     skos:altLabel "Jahrgang 9" ;
                     skos:prefLabel "9" .
+
+
+###  https://w3id.org/kim/educationalLevel/level_0
+<https://w3id.org/kim/educationalLevel/level_0> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_1
+<https://w3id.org/kim/educationalLevel/level_1> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_2
+<https://w3id.org/kim/educationalLevel/level_2> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_3
+<https://w3id.org/kim/educationalLevel/level_3> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_4
+<https://w3id.org/kim/educationalLevel/level_4> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_5
+<https://w3id.org/kim/educationalLevel/level_5> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_6
+<https://w3id.org/kim/educationalLevel/level_6> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_7
+<https://w3id.org/kim/educationalLevel/level_7> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_8
+<https://w3id.org/kim/educationalLevel/level_8> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_A
+<https://w3id.org/kim/educationalLevel/level_A> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_B
+<https://w3id.org/kim/educationalLevel/level_B> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/educationalLevel/level_C
+<https://w3id.org/kim/educationalLevel/level_C> rdf:type g:KIM-Level .
+
+
+###  https://w3id.org/kim/schularten/s02
+<https://w3id.org/kim/schularten/s02> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s03
+<https://w3id.org/kim/schularten/s03> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s04
+<https://w3id.org/kim/schularten/s04> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s05
+<https://w3id.org/kim/schularten/s05> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s06
+<https://w3id.org/kim/schularten/s06> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s07
+<https://w3id.org/kim/schularten/s07> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s08
+<https://w3id.org/kim/schularten/s08> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s09
+<https://w3id.org/kim/schularten/s09> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s10
+<https://w3id.org/kim/schularten/s10> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s11
+<https://w3id.org/kim/schularten/s11> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s12
+<https://w3id.org/kim/schularten/s12> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s13
+<https://w3id.org/kim/schularten/s13> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s14
+<https://w3id.org/kim/schularten/s14> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s15
+<https://w3id.org/kim/schularten/s15> rdf:type g:School .
+
+
+###  https://w3id.org/kim/schularten/s16
+<https://w3id.org/kim/schularten/s16> rdf:type g:School .
 
 
 #################################################################
