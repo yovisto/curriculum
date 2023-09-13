@@ -541,84 +541,212 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 #    Individuals
 #################################################################
 
+###  http://dbpedia.org/resource/Baden-Württemberg
+<http://dbpedia.org/resource/Baden-Württemberg> rdf:type owl:NamedIndividual ;
+                                                owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
+
+###  http://dbpedia.org/resource/Bavaria
+<http://dbpedia.org/resource/Bavaria> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Bayern> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Bayern
+
+###  http://dbpedia.org/resource/Berlin
+<http://dbpedia.org/resource/Berlin> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Berlin> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
+
+###  http://dbpedia.org/resource/Brandenburg
+<http://dbpedia.org/resource/Brandenburg> rdf:type owl:NamedIndividual ;
+                                          owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
+
+###  http://dbpedia.org/resource/Hamburg
+<http://dbpedia.org/resource/Hamburg> rdf:type owl:NamedIndividual ;
+                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Hamburg> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Hamburg
+
+###  http://dbpedia.org/resource/Hesse
+<http://dbpedia.org/resource/Hesse> rdf:type owl:NamedIndividual ;
+                                    owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Hessen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Hessen
+
+###  http://dbpedia.org/resource/Lower_Saxony
+<http://dbpedia.org/resource/Lower_Saxony> rdf:type owl:NamedIndividual ;
+                                           owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen
+
+###  http://dbpedia.org/resource/Mecklenburg-Vorpommern
+<http://dbpedia.org/resource/Mecklenburg-Vorpommern> rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern
+
+###  http://dbpedia.org/resource/North_Rhine-Westphalia
+<http://dbpedia.org/resource/North_Rhine-Westphalia> rdf:type owl:NamedIndividual ;
+                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen
+
+###  http://dbpedia.org/resource/Rhineland-Palatinate
+<http://dbpedia.org/resource/Rhineland-Palatinate> rdf:type owl:NamedIndividual ;
+                                                   owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz
+
+###  http://dbpedia.org/resource/Saarland
+<http://dbpedia.org/resource/Saarland> rdf:type owl:NamedIndividual ;
+                                       owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Saarland> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Saarland
+
+###  http://dbpedia.org/resource/Saxony
+<http://dbpedia.org/resource/Saxony> rdf:type owl:NamedIndividual ;
+                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Sachsen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen
+
+###  http://dbpedia.org/resource/Saxony-Anhalt
+<http://dbpedia.org/resource/Saxony-Anhalt> rdf:type owl:NamedIndividual ;
+                                            owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt
+
+###  http://dbpedia.org/resource/Schleswig-Holstein
+<http://dbpedia.org/resource/Schleswig-Holstein> rdf:type owl:NamedIndividual ;
+                                                 owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein
+
+###  http://dbpedia.org/resource/Thuringia
+<http://dbpedia.org/resource/Thuringia> rdf:type owl:NamedIndividual ;
+                                        owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Thueringen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
+
+###  http://dbpedia.org/resource/Bremen_(state)
+<http://dbpedia.org/resource/Bremen_(state)> rdf:type owl:NamedIndividual ;
+                                             owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Bremen> .
+
+
+###  https://edu.yovisto.com/resource/bb/curriculum/Bremen
+
 ###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
 <https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> rdf:type owl:NamedIndividual ,
-                                                                             g:FederalState .
+                                                                             g:FederalState ;
+                                                                    skos:prefLabel "Baden-Württemberg"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Bayern
 <https://edu.yovisto.com/resource/bb/curriculum/Bayern> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState .
+                                                                 g:FederalState ;
+                                                        skos:prefLabel "Bayern"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
 <https://edu.yovisto.com/resource/bb/curriculum/Berlin> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState .
+                                                                 g:FederalState ;
+                                                        skos:prefLabel "Berlin"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
 <https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> rdf:type owl:NamedIndividual ,
-                                                                      g:FederalState .
+                                                                      g:FederalState ;
+                                                             skos:prefLabel "Brandenburg"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Bremen
 <https://edu.yovisto.com/resource/bb/curriculum/Bremen> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState .
+                                                                 g:FederalState ;
+                                                        skos:prefLabel "Bremen"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Hamburg
 <https://edu.yovisto.com/resource/bb/curriculum/Hamburg> rdf:type owl:NamedIndividual ,
-                                                                  g:FederalState .
+                                                                  g:FederalState ;
+                                                         skos:prefLabel "Hamburg"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Hessen
 <https://edu.yovisto.com/resource/bb/curriculum/Hessen> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState .
+                                                                 g:FederalState ;
+                                                        skos:prefLabel "Hessen"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern
 <https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern> rdf:type owl:NamedIndividual ,
-                                                                                 g:FederalState .
+                                                                                 g:FederalState ;
+                                                                        skos:prefLabel "Mecklenburg-Vorpommern"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen
 <https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen> rdf:type owl:NamedIndividual ,
-                                                                        g:FederalState .
+                                                                        g:FederalState ;
+                                                               skos:prefLabel "Niedersachsen"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen
 <https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen> rdf:type owl:NamedIndividual ,
-                                                                              g:FederalState .
+                                                                              g:FederalState ;
+                                                                     skos:prefLabel "Nordrhein-Westfalen"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz
 <https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz> rdf:type owl:NamedIndividual ,
-                                                                          g:FederalState .
+                                                                          g:FederalState ;
+                                                                 skos:prefLabel "Rheinland-Pfalz"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Saarland
 <https://edu.yovisto.com/resource/bb/curriculum/Saarland> rdf:type owl:NamedIndividual ,
-                                                                   g:FederalState .
+                                                                   g:FederalState ;
+                                                          skos:prefLabel "Saarland"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen
 <https://edu.yovisto.com/resource/bb/curriculum/Sachsen> rdf:type owl:NamedIndividual ,
-                                                                  g:FederalState .
+                                                                  g:FederalState ;
+                                                         skos:prefLabel "Sachsen"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt
 <https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt> rdf:type owl:NamedIndividual ,
-                                                                         g:FederalState .
+                                                                         g:FederalState ;
+                                                                skos:prefLabel "Sachsen-Anhalt"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein
 <https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein> rdf:type owl:NamedIndividual ,
-                                                                             g:FederalState .
+                                                                             g:FederalState ;
+                                                                    skos:prefLabel "Schleswig-Holstein"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
 <https://edu.yovisto.com/resource/bb/curriculum/Thueringen> rdf:type owl:NamedIndividual ,
-                                                                     g:FederalState .
+                                                                     g:FederalState ;
+                                                            skos:prefLabel "Thüringen"@de .
 
 
 ###  https://w3id.org/curriculum/bbLevelA
@@ -762,111 +890,138 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
 
 
 ###  https://w3id.org/kim/educationalLevel/level_0
-<https://w3id.org/kim/educationalLevel/level_0> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_0> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_1
-<https://w3id.org/kim/educationalLevel/level_1> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_1> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_2
-<https://w3id.org/kim/educationalLevel/level_2> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_2> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_3
-<https://w3id.org/kim/educationalLevel/level_3> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_3> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_4
-<https://w3id.org/kim/educationalLevel/level_4> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_4> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_5
-<https://w3id.org/kim/educationalLevel/level_5> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_5> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_6
-<https://w3id.org/kim/educationalLevel/level_6> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_6> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_7
-<https://w3id.org/kim/educationalLevel/level_7> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_7> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_8
-<https://w3id.org/kim/educationalLevel/level_8> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_8> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_A
-<https://w3id.org/kim/educationalLevel/level_A> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_A> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_B
-<https://w3id.org/kim/educationalLevel/level_B> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_B> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_C
-<https://w3id.org/kim/educationalLevel/level_C> rdf:type g:KIM-Level .
+<https://w3id.org/kim/educationalLevel/level_C> rdf:type owl:NamedIndividual ,
+                                                         g:KIM-Level .
 
 
 ###  https://w3id.org/kim/schularten/s02
-<https://w3id.org/kim/schularten/s02> rdf:type g:School .
+<https://w3id.org/kim/schularten/s02> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s03
-<https://w3id.org/kim/schularten/s03> rdf:type g:School .
+<https://w3id.org/kim/schularten/s03> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s04
-<https://w3id.org/kim/schularten/s04> rdf:type g:School .
+<https://w3id.org/kim/schularten/s04> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s05
-<https://w3id.org/kim/schularten/s05> rdf:type g:School .
+<https://w3id.org/kim/schularten/s05> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s06
-<https://w3id.org/kim/schularten/s06> rdf:type g:School .
+<https://w3id.org/kim/schularten/s06> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s07
-<https://w3id.org/kim/schularten/s07> rdf:type g:School .
+<https://w3id.org/kim/schularten/s07> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s08
-<https://w3id.org/kim/schularten/s08> rdf:type g:School .
+<https://w3id.org/kim/schularten/s08> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s09
-<https://w3id.org/kim/schularten/s09> rdf:type g:School .
+<https://w3id.org/kim/schularten/s09> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s10
-<https://w3id.org/kim/schularten/s10> rdf:type g:School .
+<https://w3id.org/kim/schularten/s10> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s11
-<https://w3id.org/kim/schularten/s11> rdf:type g:School .
+<https://w3id.org/kim/schularten/s11> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s12
-<https://w3id.org/kim/schularten/s12> rdf:type g:School .
+<https://w3id.org/kim/schularten/s12> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s13
-<https://w3id.org/kim/schularten/s13> rdf:type g:School .
+<https://w3id.org/kim/schularten/s13> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s14
-<https://w3id.org/kim/schularten/s14> rdf:type g:School .
+<https://w3id.org/kim/schularten/s14> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s15
-<https://w3id.org/kim/schularten/s15> rdf:type g:School .
+<https://w3id.org/kim/schularten/s15> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 ###  https://w3id.org/kim/schularten/s16
-<https://w3id.org/kim/schularten/s16> rdf:type g:School .
+<https://w3id.org/kim/schularten/s16> rdf:type owl:NamedIndividual ,
+                                               g:School .
 
 
 #################################################################
