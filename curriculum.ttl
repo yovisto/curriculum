@@ -30,7 +30,9 @@ The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https
 
 An overview is shown in the following image:
 
-![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1500.png)"""@en ;
+![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1500.png)
+
+The ontology imports https://w3id.org/kim/educationalLevel/ for the educational levels wich also links to ISCED levels (International Standard Classification of Education, https://uis.unesco.org/en/topic/international-standard-classification-education-isced). Furthermore type of schools are reused from https://w3id.org/kim/schularten/ ."""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                terms:title "Curriculum Ontology"@en ;
                                owl:versionInfo "v1.0.0a" .
