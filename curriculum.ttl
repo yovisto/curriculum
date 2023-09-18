@@ -443,9 +443,8 @@ g:MinorSubject rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/School
 g:School rdf:type owl:Class ;
-         skos:definition "Allgemeiner Typ der Schule"@de ,
-                         "Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem."@de ,
-                         "Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."@de ;
+         skos:definition """Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem.
+Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."""@de ;
          skos:prefLabel "Schule"@de ,
                         "school"@en .
 
