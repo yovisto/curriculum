@@ -13,8 +13,6 @@
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
                                owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
-                               owl:imports <https://raw.githubusercontent.com/dini-ag-kim/educationalLevel/main/educationalLevel.ttl> ,
-                                           <https://raw.githubusercontent.com/dini-ag-kim/schularten/main/schularten.ttl> ;
                                terms:created "2023-07-26" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
@@ -57,8 +55,20 @@ terms:description rdf:type owl:AnnotationProperty .
 terms:identifier rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/dc/terms/issued
+terms:issued rdf:type owl:AnnotationProperty .
+
+
 ###  http://purl.org/dc/terms/license
 terms:license rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/modified
+terms:modified rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/dc/terms/publisher
+terms:publisher rdf:type owl:AnnotationProperty .
 
 
 ###  http://purl.org/dc/terms/subject
@@ -69,20 +79,90 @@ terms:subject rdf:type owl:AnnotationProperty .
 terms:title rdf:type owl:AnnotationProperty .
 
 
+###  http://purl.org/vocab/vann/preferredNamespacePrefix
+<http://purl.org/vocab/vann/preferredNamespacePrefix> rdf:type owl:AnnotationProperty .
+
+
+###  http://purl.org/vocab/vann/preferredNamespaceUri
+<http://purl.org/vocab/vann/preferredNamespaceUri> rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#altLabel
 skos:altLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#broadMatch
+skos:broadMatch rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#closeMatch
+skos:closeMatch rdf:type owl:AnnotationProperty .
 
 
 ###  http://www.w3.org/2004/02/skos/core#definition
 skos:definition rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#editorialNote
+skos:editorialNote rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#exactMatch
+skos:exactMatch rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#example
 skos:example rdf:type owl:AnnotationProperty .
 
 
+###  http://www.w3.org/2004/02/skos/core#hasTopConcept
+skos:hasTopConcept rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#inScheme
+skos:inScheme rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#narrowMatch
+skos:narrowMatch rdf:type owl:AnnotationProperty .
+
+
 ###  http://www.w3.org/2004/02/skos/core#prefLabel
 skos:prefLabel rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#related
+skos:related rdf:type owl:AnnotationProperty .
+
+
+###  http://www.w3.org/2004/02/skos/core#topConceptOf
+skos:topConceptOf rdf:type owl:AnnotationProperty .
+
+
+###  https://d-nb.info/standards/elementset/gnd#broaderTermGeneral
+<https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> rdf:type owl:AnnotationProperty .
+
+
+###  https://d-nb.info/standards/elementset/gnd#gndIdentifier
+<https://d-nb.info/standards/elementset/gnd#gndIdentifier> rdf:type owl:AnnotationProperty .
+
+
+###  https://w3id.org/curriculum/EDU_00000077
+g:EDU_00000077 rdf:type owl:AnnotationProperty ;
+               rdfs:label "bfoEquivalentClass"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000078
+g:EDU_00000078 rdf:type owl:AnnotationProperty ;
+               rdfs:label "bfoSuperclass"@de .
+
+
+#################################################################
+#    Datatypes
+#################################################################
+
+###  http://www.w3.org/2001/XMLSchema#date
+xsd:date rdf:type rdfs:Datatype .
 
 
 #################################################################
@@ -97,177 +177,233 @@ skos:broader rdf:type owl:ObjectProperty .
 skos:narrower rdf:type owl:ObjectProperty .
 
 
-###  https://w3id.org/curriculum/competenceAreaOf
-g:competenceAreaOf rdf:type owl:ObjectProperty ;
-                   rdfs:subPropertyOf skos:broader ;
-                   owl:inverseOf g:hasCompetenceArea .
-
-
-###  https://w3id.org/curriculum/competenceOf
-g:competenceOf rdf:type owl:ObjectProperty ;
-               rdfs:subPropertyOf skos:broader ;
-               owl:inverseOf g:hasCompetence .
-
-
-###  https://w3id.org/curriculum/contentOf
-g:contentOf rdf:type owl:ObjectProperty ;
-            rdfs:subPropertyOf skos:broader ;
-            owl:inverseOf g:hasContent .
-
-
-###  https://w3id.org/curriculum/curriculumOf
-g:curriculumOf rdf:type owl:ObjectProperty ;
+###  https://w3id.org/curriculum/EDU_00000039
+g:EDU_00000039 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
-               owl:inverseOf g:hasCurriculum ;
-               rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
-               rdfs:range g:FederalState ;
-               skos:prefLabel "Lehrplan von"@de ,
-                              "curriculum of"@en .
+               owl:inverseOf g:EDU_00000040 ;
+               rdfs:domain [ rdf:type owl:Class ;
+                             owl:unionOf ( g:EDU_00000006
+                                           <https://w3id.org/dini/dini-ns/Curriculum>
+                                           <https://w3id.org/dini/dini-ns/CurriculumItem>
+                                         )
+                           ] ;
+               rdfs:range g:EDU_00000021 ;
+               rdfs:comment "bezieht sich auf Geltungsbereich"@de ;
+               rdfs:label "hasScope"@de ;
+               skos:prefLabel "gilt für"@de .
 
 
-###  https://w3id.org/curriculum/exerciseOf
-g:exerciseOf rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:broader ;
-             owl:inverseOf g:hasExercise .
+###  https://w3id.org/curriculum/EDU_00000040
+g:EDU_00000040 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:label "scopeOf"@de .
 
 
-###  https://w3id.org/curriculum/hasCompetence
-g:hasCompetence rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf skos:narrower ;
-                rdfs:range g:Competence .
+###  https://w3id.org/curriculum/EDU_00000044
+g:EDU_00000044 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000040 ;
+               owl:inverseOf g:EDU_00000047 ;
+               skos:prefLabel "Fach von"@de ,
+                              "subject of"@en .
 
 
-###  https://w3id.org/curriculum/hasCompetenceArea
-g:hasCompetenceArea rdf:type owl:ObjectProperty ;
-                    rdfs:subPropertyOf skos:narrower ;
-                    rdfs:range g:CompetenceArea .
+###  https://w3id.org/curriculum/EDU_00000045
+g:EDU_00000045 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000039 ;
+               owl:inverseOf g:EDU_00000049 ;
+               rdfs:range g:EDU_00000015 ;
+               skos:prefLabel "curriculum of state"@en ,
+                              "gilt in Bundesland"@de .
 
 
-###  https://w3id.org/curriculum/hasContent
-g:hasContent rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:narrower ;
-             rdfs:range g:LearningContent .
+###  https://w3id.org/curriculum/EDU_00000046
+g:EDU_00000046 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000039 ;
+               owl:inverseOf g:EDU_00000050 ;
+               skos:prefLabel "gilt für Niveau"@de ,
+                              "has level"@en .
 
 
-###  https://w3id.org/curriculum/hasCurriculum
-g:hasCurriculum rdf:type owl:ObjectProperty ;
-                rdfs:subPropertyOf owl:topObjectProperty ;
-                skos:prefLabel "has curriculum"@en ,
-                               "hat Lehrplan"@de .
+###  https://w3id.org/curriculum/EDU_00000047
+g:EDU_00000047 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000039 ;
+               rdfs:range g:EDU_00000020 ;
+               skos:prefLabel "gilt für Fach"@de ,
+                              "has subject"@en .
 
 
-###  https://w3id.org/curriculum/hasExercise
-g:hasExercise rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower ;
-              rdfs:range g:Exercise .
+###  https://w3id.org/curriculum/EDU_00000048
+g:EDU_00000048 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf owl:topObjectProperty ;
+               skos:prefLabel "relates to"@en .
 
 
-###  https://w3id.org/curriculum/hasLevel
-g:hasLevel rdf:type owl:ObjectProperty ;
-           owl:inverseOf g:levelOf ;
-           skos:prefLabel "has level"@en ,
-                          "hat Stufe"@de .
+###  https://w3id.org/curriculum/EDU_00000049
+g:EDU_00000049 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000040 ;
+               skos:prefLabel "bzgl. Lehrplan"@de ,
+                              "has curriculum"@en .
 
 
-###  https://w3id.org/curriculum/hasMaterial
-g:hasMaterial rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower ;
-              owl:inverseOf g:materialOf ;
-              rdfs:range g:Material .
+###  https://w3id.org/curriculum/EDU_00000050
+g:EDU_00000050 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000040 ;
+               rdfs:domain g:EDU_00000016 ;
+               rdfs:range g:EDU_00000002 ;
+               skos:prefLabel "Niveau von"@de ,
+                              "level of"@en .
 
 
-###  https://w3id.org/curriculum/hasParentCompetenceArea
-g:hasParentCompetenceArea rdf:type owl:ObjectProperty ;
-                          rdfs:subPropertyOf g:competenceAreaOf ;
-                          owl:inverseOf g:hasSubCompetenceArea .
+###  https://w3id.org/curriculum/EDU_00000051
+g:EDU_00000051 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000062 ;
+               skos:prefLabel "competence area of"@en .
 
 
-###  https://w3id.org/curriculum/hasPart
-g:hasPart rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf skos:narrower ;
-          owl:inverseOf g:partOf ;
-          rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
-          rdfs:range g:CurriculumPart .
+###  https://w3id.org/curriculum/EDU_00000052
+g:EDU_00000052 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000051 ;
+               owl:inverseOf g:EDU_00000063 ;
+               skos:prefLabel "has parent competence area"@en .
 
 
-###  https://w3id.org/curriculum/hasStandard
-g:hasStandard rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:narrower ;
-              owl:inverseOf g:standardOf ;
-              rdfs:range g:Standard .
+###  https://w3id.org/curriculum/EDU_00000053
+g:EDU_00000053 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000061 ;
+               skos:prefLabel "competence of"@en .
 
 
-###  https://w3id.org/curriculum/hasSubCompetenceArea
-g:hasSubCompetenceArea rdf:type owl:ObjectProperty ;
-                       rdfs:subPropertyOf g:hasCompetenceArea ;
-                       rdfs:domain g:CompetenceArea ;
-                       rdfs:range g:CompetenceArea .
+###  https://w3id.org/curriculum/EDU_00000054
+g:EDU_00000054 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000064 ;
+               skos:prefLabel "content of"@en .
 
 
-###  https://w3id.org/curriculum/hasSubject
-g:hasSubject rdf:type owl:ObjectProperty ;
-             owl:inverseOf g:subjectOf ;
-             rdfs:range g:Subject ;
-             skos:prefLabel "has subject"@en ,
-                            "hat Fach"@de .
+###  https://w3id.org/curriculum/EDU_00000055
+g:EDU_00000055 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000065 ;
+               skos:prefLabel "exercise of"@en .
 
 
-###  https://w3id.org/curriculum/hasTopic
-g:hasTopic rdf:type owl:ObjectProperty ;
-           rdfs:subPropertyOf skos:narrower ;
-           owl:inverseOf g:topicOf ;
-           rdfs:range g:Topic .
+###  https://w3id.org/curriculum/EDU_00000056
+g:EDU_00000056 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000066 ;
+               skos:prefLabel "material of"@en .
 
 
-###  https://w3id.org/curriculum/hasTopicArea
-g:hasTopicArea rdf:type owl:ObjectProperty ;
+###  https://w3id.org/curriculum/EDU_00000057
+g:EDU_00000057 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000067 ;
+               skos:prefLabel "part of"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000058
+g:EDU_00000058 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000053 ;
+               owl:inverseOf g:EDU_00000068 ;
+               rdfs:domain <http://purl.obolibrary.org/obo/EDU_00000003> ;
+               skos:prefLabel "standard of"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000059
+g:EDU_00000059 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000070 ;
+               skos:prefLabel "topic area of"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000060
+g:EDU_00000060 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:broader ;
+               owl:inverseOf g:EDU_00000069 ;
+               skos:prefLabel "topic of"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000061
+g:EDU_00000061 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
-               owl:inverseOf g:topicAreaOf ;
-               rdfs:range g:TopicArea .
+               skos:prefLabel "has competence"@en .
 
 
-###  https://w3id.org/curriculum/levelOf
-g:levelOf rdf:type owl:ObjectProperty ;
-          rdfs:domain g:Level ;
-          rdfs:range g:Standard ;
-          skos:prefLabel "Stufe von"@de ,
-                         "level of"@en .
+###  https://w3id.org/curriculum/EDU_00000062
+g:EDU_00000062 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000004 ;
+               skos:prefLabel "has competence area"@en .
 
 
-###  https://w3id.org/curriculum/materialOf
-g:materialOf rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/EDU_00000063
+g:EDU_00000063 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000062 ;
+               rdfs:domain g:EDU_00000004 ;
+               rdfs:range g:EDU_00000004 ;
+               skos:prefLabel "has competence subarea"@en .
 
 
-###  https://w3id.org/curriculum/partOf
-g:partOf rdf:type owl:ObjectProperty ;
-         rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/EDU_00000064
+g:EDU_00000064 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000008 ;
+               skos:prefLabel "has content"@en .
 
 
-###  https://w3id.org/curriculum/standardOf
-g:standardOf rdf:type owl:ObjectProperty ;
-             rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/EDU_00000065
+g:EDU_00000065 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000013 ;
+               skos:prefLabel "has exercise"@en .
 
 
-###  https://w3id.org/curriculum/subjectOf
-g:subjectOf rdf:type owl:ObjectProperty ;
-            skos:prefLabel "Fach von"@de ,
-                           "subject of"@en .
+###  https://w3id.org/curriculum/EDU_00000066
+g:EDU_00000066 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000014 ;
+               skos:prefLabel "has material"@en .
 
 
-###  https://w3id.org/curriculum/topicAreaOf
-g:topicAreaOf rdf:type owl:ObjectProperty ;
-              rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/EDU_00000067
+g:EDU_00000067 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:domain <https://w3id.org/dini/dini-ns/Curriculum> ;
+               rdfs:range g:EDU_00000006 ;
+               skos:prefLabel "has part"@en .
 
 
-###  https://w3id.org/curriculum/topicOf
-g:topicOf rdf:type owl:ObjectProperty ;
-          rdfs:subPropertyOf skos:broader .
+###  https://w3id.org/curriculum/EDU_00000068
+g:EDU_00000068 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf g:EDU_00000061 ;
+               rdfs:range <http://purl.obolibrary.org/obo/EDU_00000003> ;
+               skos:prefLabel "has standard"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000069
+g:EDU_00000069 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000009 ;
+               skos:prefLabel "has topic"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000070
+g:EDU_00000070 rdf:type owl:ObjectProperty ;
+               rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000010 ;
+               skos:prefLabel "has topic area"@en .
 
 
 #################################################################
 #    Data properties
 #################################################################
+
+###  https://w3id.org/curriculum/successfullyCompleted
+g:successfullyCompleted rdf:type owl:DatatypeProperty ,
+                                 owl:FunctionalProperty .
+
 
 ###  https://w3id.org/curriculum/uri
 g:uri rdf:type owl:DatatypeProperty .
@@ -277,6 +413,22 @@ g:uri rdf:type owl:DatatypeProperty .
 #    Classes
 #################################################################
 
+###  http://purl.obolibrary.org/obo/EDU_00000003
+<http://purl.obolibrary.org/obo/EDU_00000003> rdf:type owl:Class ;
+                                              owl:equivalentClass [ owl:intersectionOf ( g:EDU_00000002
+                                                                                         [ rdf:type owl:Restriction ;
+                                                                                           owl:onProperty g:EDU_00000039 ;
+                                                                                           owl:someValuesFrom g:EDU_00000021
+                                                                                         ]
+                                                                                       ) ;
+                                                                    rdf:type owl:Class
+                                                                  ] ;
+                                              rdfs:comment "The standards define the skills and knowledge regarding a particular competence that students at a particular school and grade level should have acquired."@en ;
+                                              skos:definition "a standard is a competence, which an individuum is capable of after a (learning) process" ;
+                                              skos:prefLabel "Standard"@de ,
+                                                             "standard"@en .
+
+
 ###  http://www.w3.org/2004/02/skos/core#Concept
 skos:Concept rdf:type owl:Class .
 
@@ -285,17 +437,114 @@ skos:Concept rdf:type owl:Class .
 skos:ConceptScheme rdf:type owl:Class .
 
 
-###  https://w3id.org/curriculum/AdditionalMaterial
-g:AdditionalMaterial rdf:type owl:Class ;
-                     rdfs:subClassOf g:Material ;
-                     skos:prefLabel "Zusatzmaterial"@de ,
-                                    "additional material"@en .
+###  https://w3id.org/curriculum/EDU_00000001
+g:EDU_00000001 rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+               skos:definition "a competence item is a curriculum item, which is related to competences" ;
+               skos:prefLabel "Kompetenzelement"@de ,
+                              "competence item"@en .
 
 
-###  https://w3id.org/curriculum/BB-Level
-g:BB-Level rdf:type owl:Class ;
-           rdfs:subClassOf g:Level ;
-           skos:definition """Berlin Brandenburg grouping of educational levels: 
+###  https://w3id.org/curriculum/EDU_00000002
+g:EDU_00000002 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000001 ;
+               rdfs:comment """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
+Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en ,
+                            "operationalisierbar und meßbar"@de ;
+               skos:definition "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"@en ;
+               skos:prefLabel "Kompetenz"@de ,
+                              "competence"@en ;
+               g:EDU_00000078 "realizable entity"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000004
+g:EDU_00000004 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000001 ;
+               skos:definition "a competence area is a competence item, which groups specific competences together."@en ;
+               skos:example "dealing with expertise"@en ,
+                            "probelm solving"@en ,
+                            "reading competencies"@en ;
+               skos:prefLabel "Kompetenzbereich"@de ,
+                              "competence area"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000006
+g:EDU_00000006 rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+               skos:prefLabel "Lehrplanteil"@de ,
+                              "curriculum part"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000007
+g:EDU_00000007 rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+               rdfs:comment "An organizational element to group topic and learning content related items."@en ;
+               skos:prefLabel "Themenelement"@de ,
+                              "topic item"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000008
+g:EDU_00000008 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000007 ;
+               skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
+                               "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de ;
+               skos:prefLabel "Lerninhalt"@de ,
+                              "learning content"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000009
+g:EDU_00000009 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000007 ;
+               skos:definition "A concrete topic of school teaching that can be taught through particular learning content."@en ,
+                               "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de ;
+               skos:prefLabel "Thema"@de ,
+                              "topic"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000010
+g:EDU_00000010 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000007 ;
+               skos:definition "A topic area includes one or more topics that are subject of teaching."@en ,
+                               "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de ;
+               skos:prefLabel "Themenfeld"@de ,
+                              "topic area"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000011
+g:EDU_00000011 rdf:type owl:Class ;
+               skos:prefLabel "Schulabschluss" .
+
+
+###  https://w3id.org/curriculum/EDU_00000013
+g:EDU_00000013 rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+               skos:prefLabel "exercise"@en ,
+                              "Übung"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000014
+g:EDU_00000014 rdf:type owl:Class ;
+               rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
+               skos:prefLabel "Learning Material"@en ,
+                              "Lernmaterial"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000015
+g:EDU_00000015 rdf:type owl:Class ;
+               skos:prefLabel "Bundesland"@de ,
+                              "federal state"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000016
+g:EDU_00000016 rdf:type owl:Class ;
+               skos:prefLabel "Niveau"@de ,
+                              "level"@en .
+
+
+###  https://w3id.org/curriculum/EDU_00000017
+g:EDU_00000017 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000016 ;
+               skos:definition """Berlin Brandenburg grouping of educational levels: 
 
 Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
 weiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:
@@ -319,203 +568,245 @@ grundlegendes Niveau:
 * erweitertes Niveau:
 * Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F
 * Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de ;
-           skos:prefLabel "BB Stufe"@de ,
-                          "bb educational level"@en .
+               skos:prefLabel "BB Stufe"@de ,
+                              "bb educational level"@en .
 
 
-###  https://w3id.org/curriculum/Competence
-g:Competence rdf:type owl:Class ;
-             rdfs:subClassOf g:CompetenceItem ;
-             skos:definition """Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. 
-Instances of this class provide text that describes a particular competence (e.g. \"reading\")."""@en ;
-             skos:example "analyzing astronomical problems and tasks"@en ,
-                          "relating number ranges to each other"@en ;
-             skos:prefLabel "Kompetenz"@de ,
-                            "competence"@en .
+###  https://w3id.org/curriculum/EDU_00000018
+g:EDU_00000018 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000016 ;
+               skos:definition """Der Begriff \"Klassenstufe“ („Jahrgangsstufe“, „Schuljahrgang“) kennzeichnet das
+jeweilige klassenspezifische Bildungsniveau, das die Schüler/innen eines Klassenverbandes erreicht haben.
+Die Klassenstufen werden grundsätzlich jahresweise
+aufsteigend durchgezählt (eine Ausnahme bilden in der gymnasialen Oberstufe die
+Einführungs- und Qualifikationsphasen). Schüler/innen verschiedener Klassenstu-
+fen, die aus schulorganisatorischen Gründen in einer Klasse zusammengefasst
+werden, bilden eine „klassenstufenübergreifende Klasse“ (s. unten). Klassen, die
+sich aus Schüler/innen mit unterschiedlichem Bildungsniveau zusammensetzen
+und deren Schüler/innen keiner Klassenstufe zugeordnet werden können, werden
+unter „keiner Klassenstufe/keinem Schuljahrgang zugeordnet“ gezählt (Bei-
+spiel: Vorbereitungsklassen für ausländische Jugendliche).
+Der Begriff „Klassenstufe“ wird in den beruflichen Schulen nur bei den Schularten
+verwendet, die primär zur Hochschul- bzw. Fachhochschulreife führen (Fachober-
+schulen, Fachgymnasien sowie Berufsoberschulen/Technische Oberschulen). In
+diesen Schularten werden die Klassenstufen aufsteigend von Klassenstufe 11 an
+gezählt (Fachgymnasien in Baden-Württemberg beginnen in Form von Wirtschaftsgymnasien mit Klassenstufe 8).
+In allen anderen beruflichen Schularten werden die Schüler/innen nach „Schuljahrgängen“ nachgewiesen. Auch der Schuljahrgang kennzeichnet das klassenspezifische Bildungsniveau, allerdings bezogen auf Berufsvorbereitung, Berufsausbil-
+dung bzw. Berufsfortbildung. Die Schulbesuchsdauer kann ein bis vier Schuljahr-
+gänge umfassen."""@de ,
+                               "Klassenlevel"@de ,
+                               "the year of school"@en ;
+               skos:example "7. Klasse"@de ,
+                            "Klasse 5"@de ;
+               skos:prefLabel "Jahrgangsstufe"@de ,
+                              "educational level"@en .
 
 
-###  https://w3id.org/curriculum/CompetenceArea
-g:CompetenceArea rdf:type owl:Class ;
-                 rdfs:subClassOf g:CompetenceItem ;
-                 skos:definition "CompetenceArea is understood as a general organizational item to group specific comptences thogether. E.g. \"reading competencies\"."@en ;
-                 skos:example "dealing with expertise"@en ,
-                              "probelm solving"@en ,
-                              "reading"@en ;
-                 skos:prefLabel "Kompetenzbereich"@de ,
-                                "competence area"@en .
+###  https://w3id.org/curriculum/EDU_00000019
+g:EDU_00000019 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000016 ;
+               skos:prefLabel "KIM Level"@en ,
+                              "KIM Stufe"@de .
 
 
-###  https://w3id.org/curriculum/CompetenceItem
-g:CompetenceItem rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 rdfs:comment "An organizational element to group competence related classes."@en ;
-                 skos:prefLabel "Kompetenzelement"@de ,
-                                "competence item"@en .
+###  https://w3id.org/curriculum/EDU_00000020
+g:EDU_00000020 rdf:type owl:Class ;
+               skos:prefLabel "Schulfach"@de ,
+                              "subject"@en .
 
 
-###  https://w3id.org/curriculum/CurriculumForm
-g:CurriculumForm rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 skos:prefLabel "Lehrplanausprägung"@de ,
-                                "form of curriculum"@en .
+###  https://w3id.org/curriculum/EDU_00000021
+g:EDU_00000021 rdf:type owl:Class ;
+               skos:definition "Der Geltungsbereich definiert die Bezogenheit des Lehrplans oder einzelner Lehrplanelemente."@de ;
+               skos:prefLabel "Geltungsbereich"@de ,
+                              "curriculum scope"@en ;
+               g:EDU_00000078 "role" .
 
 
-###  https://w3id.org/curriculum/CurriculumPart
-g:CurriculumPart rdf:type owl:Class ;
-                 rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-                 skos:prefLabel "Lehrplanteil"@de ,
-                                "curriculum part"@en .
+###  https://w3id.org/curriculum/EDU_00000022
+g:EDU_00000022 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000072 ;
+               skos:prefLabel "Bundeslandbezogen"@de .
 
 
-###  https://w3id.org/curriculum/EducationalLevel
-g:EducationalLevel rdf:type owl:Class ;
-                   rdfs:subClassOf g:Level ;
-                   skos:definition "Klassenlevel"@de ,
-                                   "the year of school"@en ;
-                   skos:example "7. Klasse"@de ,
-                                "Klasse 5"@de ;
-                   skos:prefLabel "Jahrgangsstufe"@de ,
-                                  "educational level"@en .
+###  https://w3id.org/curriculum/EDU_00000023
+g:EDU_00000023 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000075 ;
+               skos:prefLabel "Erste Fremdsprache"@de ,
+                              "first foreign language"@en .
 
 
-###  https://w3id.org/curriculum/Exercise
-g:Exercise rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-           skos:prefLabel "exercise"@en ,
-                          "Übung"@de .
+###  https://w3id.org/curriculum/EDU_00000024
+g:EDU_00000024 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000075 ;
+               skos:prefLabel "Zweite Fremdsprache"@de ,
+                              "second foreign language"@en .
 
 
-###  https://w3id.org/curriculum/FederalState
-g:FederalState rdf:type owl:Class ;
-               skos:prefLabel "Bundesland"@de ,
-                              "federal state"@en .
+###  https://w3id.org/curriculum/EDU_00000025
+g:EDU_00000025 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000075 ;
+               skos:prefLabel "Dritte Fremdsprache"@de ,
+                              "third foreign language"@en .
 
 
-###  https://w3id.org/curriculum/FirstForeignLanguage
-g:FirstForeignLanguage rdf:type owl:Class ;
-                       rdfs:subClassOf g:CurriculumForm ;
-                       skos:prefLabel "Erste Fremdsprache"@de ,
-                                      "first foreign language"@en .
+###  https://w3id.org/curriculum/EDU_00000026
+g:EDU_00000026 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000073 ;
+               skos:prefLabel "Frühbeginnend"@de .
 
 
-###  https://w3id.org/curriculum/KIM-Level
-g:KIM-Level rdf:type owl:Class ;
-            rdfs:subClassOf g:Level ;
-            skos:prefLabel "kim level" .
+###  https://w3id.org/curriculum/EDU_00000027
+g:EDU_00000027 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000016 ;
+               rdfs:comment "In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen. Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe komplett der Sekundarstufe II zugeordnet."@de ;
+               rdfs:isDefinedBy "Defkat 2022, Abschnitt 2"@de ;
+               skos:prefLabel "Einführungsphase"@de .
 
 
-###  https://w3id.org/curriculum/LearningContent
-g:LearningContent rdf:type owl:Class ;
-                  rdfs:subClassOf g:TopicItem ;
-                  skos:definition "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."@en ,
-                                  "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."@de ;
-                  skos:prefLabel "Lerninhalte"@de ,
-                                 "learning content"@en .
+###  https://w3id.org/curriculum/EDU_00000028
+g:EDU_00000028 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000074 ;
+               rdfs:comment "In der gymnasialen Oberstufe wird der Unterricht in der Regel in Kursen erteilt. Die Unterscheidung in „Grund- und Leistungskurse“ ist in der neugefassten „Vereinbarung zur Gestaltung der gymnasialen Oberstufe in der Sekundarstufe II“8 durch Kurse mit verschiedenen Anspruchsebenen ersetzt worden. Kurse mit grundlegen dem Anforderungsniveau umfassen in der Regel bis zu drei Wochenstunden. Kurse mit erhöhtem Anforderungsniveau setzen mindestens vierstündigen Unterricht in der Woche voraus."@de ;
+               rdfs:isDefinedBy "Defkat2022, Abschnitt 4.2"@de ;
+               skos:prefLabel "Leistungskurs"@de ;
+               g:EDU_00000078 "role" .
 
 
-###  https://w3id.org/curriculum/Level
-g:Level rdf:type owl:Class ;
-        rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-        skos:prefLabel "Stufe"@de ,
-                       "level"@en .
+###  https://w3id.org/curriculum/EDU_00000029
+g:EDU_00000029 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000074 ;
+               rdfs:isDefinedBy "Defkat2022, Abschnitt 4.2"@de ;
+               skos:definition "In der gymnasialen Oberstufe wird der Unterricht in der Regel in Kursen erteilt. Die Unterscheidung in „Grund- und Leistungskurse“ ist in der neugefassten „Vereinbarung zur Gestaltung der gymnasialen Oberstufe in der Sekundarstufe II“8 durch Kurse mit verschiedenen Anspruchsebenen ersetzt worden. Kurse mit grundlegen dem Anforderungsniveau umfassen in der Regel bis zu drei Wochenstunden. Kurse mit erhöhtem Anforderungsniveau setzen mindestens vierstündigen Unterricht in der Woche voraus."@de ,
+                               "Repräsentiert ein grundlegendes Anforderungsniveau bezogen auf einen Kurs. Grundkurse umfassen in der Regel bis zu drei Wochenstunden."@de ;
+               skos:prefLabel "Grundkurs"@de ;
+               g:EDU_00000078 "role" .
 
 
-###  https://w3id.org/curriculum/MajorSubject
-g:MajorSubject rdf:type owl:Class ;
-               rdfs:subClassOf g:CurriculumForm ;
-               skos:prefLabel "Hauptfach"@de ,
-                              "major subject"@en .
+###  https://w3id.org/curriculum/EDU_00000032
+g:EDU_00000032 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000072 ;
+               skos:altLabel "bundesweit"@de ;
+               skos:prefLabel "Nationalbezogen"@de .
 
 
-###  https://w3id.org/curriculum/Material
-g:Material rdf:type owl:Class ;
-           rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-           skos:prefLabel "Learning Material"@en ,
-                          "Lernmaterial"@de .
+###  https://w3id.org/curriculum/EDU_00000033
+g:EDU_00000033 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000016 ;
+               rdfs:comment "In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen. Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe kom- plett der Sekundarstufe II zugeordnet."@de ;
+               rdfs:isDefinedBy "Defkat 2022, Abschnitt 2"@de ;
+               skos:prefLabel "Qualifikationsphase"@de .
 
 
-###  https://w3id.org/curriculum/MinorSubject
-g:MinorSubject rdf:type owl:Class ;
-               rdfs:subClassOf g:CurriculumForm ;
-               skos:prefLabel "Nebenfach"@de ,
-                              "minor subject"@en .
-
-
-###  https://w3id.org/curriculum/School
-g:School rdf:type owl:Class ;
-         skos:definition """Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem.
+###  https://w3id.org/curriculum/EDU_00000034
+g:EDU_00000034 rdf:type owl:Class ;
+               skos:definition """Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem.
 Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."""@de ;
-         skos:prefLabel "Schule"@de ,
-                        "school"@en .
+               skos:prefLabel "Schulart"@de ,
+                              "school"@en .
 
 
-###  https://w3id.org/curriculum/SecondForeignLanguage
-g:SecondForeignLanguage rdf:type owl:Class ;
-                        rdfs:subClassOf g:CurriculumForm ;
-                        skos:prefLabel "Zweite Fremdsprache"@de ,
-                                       "second foreign language"@en .
+###  https://w3id.org/curriculum/EDU_00000035
+g:EDU_00000035 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000014 ;
+               skos:prefLabel "Zusatzmaterial"@de ,
+                              "additional material"@en .
 
 
-###  https://w3id.org/curriculum/Standard
-g:Standard rdf:type owl:Class ;
-           rdfs:subClassOf g:CompetenceItem ;
-           skos:definition "The standards define the skills and knowledge regarding a particular competence that students at a particular grade level should acquire. The grade level can be specified with the hasLevel property."@en ;
-           skos:prefLabel "Standard"@de ,
-                          "standard"@en .
+###  https://w3id.org/curriculum/EDU_00000036
+g:EDU_00000036 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               skos:prefLabel "Wahlpflichtfach"@de .
 
 
-###  https://w3id.org/curriculum/Subject
-g:Subject rdf:type owl:Class ;
-          skos:prefLabel "Fach"@de ,
-                         "Subject"@en .
+###  https://w3id.org/curriculum/EDU_00000037
+g:EDU_00000037 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000073 ;
+               skos:prefLabel "Spätbeginnend"@de .
 
 
-###  https://w3id.org/curriculum/ThirdForeignLanguage
-g:ThirdForeignLanguage rdf:type owl:Class ;
-                       rdfs:subClassOf g:CurriculumForm ;
-                       skos:prefLabel "Dritte Fremdsprache"@de ,
-                                      "third foreign language"@en .
+###  https://w3id.org/curriculum/EDU_00000038
+g:EDU_00000038 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000072 ;
+               skos:prefLabel "Schulintern"@de .
 
 
-###  https://w3id.org/curriculum/Topic
-g:Topic rdf:type owl:Class ;
-        rdfs:subClassOf g:TopicItem ;
-        skos:definition "A concrete topic of school teaching that can be taught through particular learning content."@en ,
-                        "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."@de ;
-        skos:prefLabel "Thema"@de ,
-                       "topic"@en .
+###  https://w3id.org/curriculum/EDU_00000041
+g:EDU_00000041 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000071 ;
+               rdfs:label "Fachübergreifend"@de .
 
 
-###  https://w3id.org/curriculum/TopicArea
-g:TopicArea rdf:type owl:Class ;
-            rdfs:subClassOf g:TopicItem ;
-            skos:definition "A topic area includes one or more topics that are subject of teaching."@en ,
-                            "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."@de ;
-            skos:prefLabel "Themenfeld"@de ,
-                           "topic area"@en .
+###  https://w3id.org/curriculum/EDU_00000042
+g:EDU_00000042 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000071 ;
+               rdfs:label "Klassenstufenübergreifend"@de .
 
 
-###  https://w3id.org/curriculum/TopicItem
-g:TopicItem rdf:type owl:Class ;
-            rdfs:subClassOf <https://w3id.org/dini/dini-ns/CurriculumItem> ;
-            rdfs:comment "An organizational element to group topic and learning content related items."@en ;
-            skos:prefLabel "Themenelement"@de ,
-                           "topic item"@en .
+###  https://w3id.org/curriculum/EDU_00000071
+g:EDU_00000071 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Übergreifendes"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000072
+g:EDU_00000072 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Lokaler Bezug"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000073
+g:EDU_00000073 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Beginn"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000074
+g:EDU_00000074 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Kursanforderung"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000075
+g:EDU_00000075 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Fremdsprachenbezug"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000079
+g:EDU_00000079 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000020 ;
+               rdfs:label "Fremdsprache"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000080
+g:EDU_00000080 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000020 ;
+               rdfs:label "MINT-Fach"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000081
+g:EDU_00000081 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Fachbezug"@de .
+
+
+###  https://w3id.org/curriculum/EDU_00000082
+g:EDU_00000082 rdf:type owl:Class ;
+               rdfs:subClassOf g:EDU_00000021 ;
+               rdfs:label "Niveauanforderung"@de ;
+               skos:definition "Bezug zur Niveaustufe (z.B. Jahrgangsstufe, Klasse, etc.)"@de .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
 <https://w3id.org/dini/dini-ns/Curriculum> rdf:type owl:Class ;
                                            owl:equivalentClass [ owl:intersectionOf ( [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasCompetenceArea ;
-                                                                                        owl:someValuesFrom g:CompetenceArea
+                                                                                        owl:onProperty g:EDU_00000039 ;
+                                                                                        owl:someValuesFrom g:EDU_00000020
                                                                                       ]
                                                                                       [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasContent ;
-                                                                                        owl:someValuesFrom g:LearningContent
-                                                                                      ]
-                                                                                      [ rdf:type owl:Restriction ;
-                                                                                        owl:onProperty g:hasSubject ;
-                                                                                        owl:someValuesFrom g:Subject
+                                                                                        owl:onProperty g:EDU_00000062 ;
+                                                                                        owl:someValuesFrom g:EDU_00000004
                                                                                       ]
                                                                                     ) ;
                                                                  rdf:type owl:Class
@@ -532,8 +823,9 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 ###  https://w3id.org/dini/dini-ns/CurriculumItem
 <https://w3id.org/dini/dini-ns/CurriculumItem> rdf:type owl:Class ;
                                                rdfs:subClassOf skos:Concept ;
-                                               skos:definition "Curriculum item a skos:Concept referrring to a Curriculum. It summarizes the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
-                                                               "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
+                                               rdfs:comment "Curriculum item a skos:Concept referrring to a Curriculum. It aggregates the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."@en ,
+                                                            "Das Lehrplanelement ist eine Unterklasse von skos:Concept, das sich auf einen Lehrplan bezieht. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."@de ;
+                                               skos:definition "a curriculum item is some thing, which is related to a curriculum"@en ;
                                                skos:prefLabel "Lehrplanelement"@de ,
                                                               "curriculum item"@en .
 
@@ -551,94 +843,94 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 
 ###  http://dbpedia.org/resource/Bavaria
 <http://dbpedia.org/resource/Bavaria> rdf:type owl:NamedIndividual ;
-                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Bayern> .
+                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Bayern
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051
 
 ###  http://dbpedia.org/resource/Berlin
 <http://dbpedia.org/resource/Berlin> rdf:type owl:NamedIndividual ;
-                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Berlin> .
+                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048
 
 ###  http://dbpedia.org/resource/Brandenburg
 <http://dbpedia.org/resource/Brandenburg> rdf:type owl:NamedIndividual ;
-                                          owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> .
+                                          owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057
 
 ###  http://dbpedia.org/resource/Hamburg
 <http://dbpedia.org/resource/Hamburg> rdf:type owl:NamedIndividual ;
-                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Hamburg> .
+                                      owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Hamburg
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045
 
 ###  http://dbpedia.org/resource/Hesse
 <http://dbpedia.org/resource/Hesse> rdf:type owl:NamedIndividual ;
-                                    owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Hessen> .
+                                    owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Hessen
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050
 
 ###  http://dbpedia.org/resource/Lower_Saxony
 <http://dbpedia.org/resource/Lower_Saxony> rdf:type owl:NamedIndividual ;
-                                           owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen> .
+                                           owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043
 
 ###  http://dbpedia.org/resource/Mecklenburg-Vorpommern
 <http://dbpedia.org/resource/Mecklenburg-Vorpommern> rdf:type owl:NamedIndividual ;
-                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern> .
+                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052
 
 ###  http://dbpedia.org/resource/North_Rhine-Westphalia
 <http://dbpedia.org/resource/North_Rhine-Westphalia> rdf:type owl:NamedIndividual ;
-                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen> .
+                                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044
 
 ###  http://dbpedia.org/resource/Rhineland-Palatinate
 <http://dbpedia.org/resource/Rhineland-Palatinate> rdf:type owl:NamedIndividual ;
-                                                   owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz> .
+                                                   owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046
 
 ###  http://dbpedia.org/resource/Saarland
 <http://dbpedia.org/resource/Saarland> rdf:type owl:NamedIndividual ;
-                                       owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Saarland> .
+                                       owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Saarland
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055
 
 ###  http://dbpedia.org/resource/Saxony
 <http://dbpedia.org/resource/Saxony> rdf:type owl:NamedIndividual ;
-                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Sachsen> .
+                                     owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047
 
 ###  http://dbpedia.org/resource/Saxony-Anhalt
 <http://dbpedia.org/resource/Saxony-Anhalt> rdf:type owl:NamedIndividual ;
-                                            owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt> .
+                                            owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053
 
 ###  http://dbpedia.org/resource/Schleswig-Holstein
 <http://dbpedia.org/resource/Schleswig-Holstein> rdf:type owl:NamedIndividual ;
-                                                 owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein> .
+                                                 owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054
 
 ###  http://dbpedia.org/resource/Thuringia
 <http://dbpedia.org/resource/Thuringia> rdf:type owl:NamedIndividual ;
@@ -649,380 +941,1261 @@ Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassen
 
 ###  http://dbpedia.org/resource/Bremen_(state)
 <http://dbpedia.org/resource/Bremen_(state)> rdf:type owl:NamedIndividual ;
-                                             owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Bremen> .
+                                             owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Bremen
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056
+
+###  http://w3id.org/kim/schulfaecher/
+<http://w3id.org/kim/schulfaecher/> rdf:type owl:NamedIndividual ,
+                                             skos:ConceptScheme ;
+                                    terms:created "2021-03-03"^^xsd:date ;
+                                    terms:description "Werteliste von Fächern im Schulbereich."@de ;
+                                    terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                    terms:publisher "DINI-AG-KIM OER-Metadatengruppe"@de ;
+                                    terms:title "Schulfächer"@de ;
+                                    <http://purl.org/vocab/vann/preferredNamespacePrefix> "subj" ;
+                                    <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/kim/schulfaecher/" ;
+                                    skos:hasTopConcept <http://w3id.org/kim/schulfaecher/s1000> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1001> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1002> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1003> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1004> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1005> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1006> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1007> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1008> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1009> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1010> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1011> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1012> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1013> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1014> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1015> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1016> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1017> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1019> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1020> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1021> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1022> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1023> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1024> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1025> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1026> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1027> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1028> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1029> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1030> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1031> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1032> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1033> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1034> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1035> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1036> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1037> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1038> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1039> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1040> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1041> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1043> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1044> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1045> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1046> ,
+                                                       <http://w3id.org/kim/schulfaecher/s1047> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1000
+<http://w3id.org/kim/schulfaecher/s1000> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20003> ;
+                                         skos:prefLabel "Alt-Griechisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1001
+<http://w3id.org/kim/schulfaecher/s1001> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/080> ;
+                                         skos:prefLabel "Biologie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1002
+<http://w3id.org/kim/schulfaecher/s1002> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/100> ;
+                                         skos:prefLabel "Chemie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1003
+<http://w3id.org/kim/schulfaecher/s1003> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Chinesisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1004
+<http://w3id.org/kim/schulfaecher/s1004> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Theater"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/12002> ;
+                                         skos:prefLabel "Darstellendes Spiel"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1005
+<http://w3id.org/kim/schulfaecher/s1005> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/120> ;
+                                         skos:prefLabel "Deutsch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1006
+<http://w3id.org/kim/schulfaecher/s1006> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "DaZ"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/12005> ;
+                                         skos:prefLabel "Deutsch als Zweitsprache"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1007
+<http://w3id.org/kim/schulfaecher/s1007> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20001> ;
+                                         skos:prefLabel "Englisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1008
+<http://w3id.org/kim/schulfaecher/s1008> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Werte und Normen"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/160> ;
+                                         skos:prefLabel "Ethik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1009
+<http://w3id.org/kim/schulfaecher/s1009> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
+                                         skos:prefLabel "Französisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1010
+<http://w3id.org/kim/schulfaecher/s1010> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Erdkunde"@de ,
+                                                       "Geographie"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/220> ;
+                                         skos:prefLabel "Geografie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1011
+<http://w3id.org/kim/schulfaecher/s1011> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20002> ;
+                                         skos:prefLabel "Geschichte"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1012
+<http://w3id.org/kim/schulfaecher/s1012> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Gesundheitserziehung"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/260> ;
+                                         skos:prefLabel "Gesundheit"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1013
+<http://w3id.org/kim/schulfaecher/s1013> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:altLabel "Informations- und Kommunikationstechnologie"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/320> ;
+                                         skos:prefLabel "Informatik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1014
+<http://w3id.org/kim/schulfaecher/s1014> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20004> ;
+                                         skos:prefLabel "Italienisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1015
+<http://w3id.org/kim/schulfaecher/s1015> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Bildende Kunst"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/060> ;
+                                         skos:prefLabel "Kunst"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1016
+<http://w3id.org/kim/schulfaecher/s1016> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20005> ;
+                                         skos:prefLabel "Latein"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1017
+<http://w3id.org/kim/schulfaecher/s1017> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/380> ;
+                                         skos:prefLabel "Mathematik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1019
+<http://w3id.org/kim/schulfaecher/s1019> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:altLabel "Chemie, Physik, Biologie"@de ,
+                                                       "Naturwissenschaften"@de ;
+                                         skos:prefLabel "MINT"@de ;
+                                         skos:related <http://w3id.org/kim/schulfaecher/s1001> ,
+                                                      <http://w3id.org/kim/schulfaecher/s1002> ,
+                                                      <http://w3id.org/kim/schulfaecher/s1013> ,
+                                                      <http://w3id.org/kim/schulfaecher/s1017> ,
+                                                      <http://w3id.org/kim/schulfaecher/s1022> ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1020
+<http://w3id.org/kim/schulfaecher/s1020> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/420> ;
+                                         skos:prefLabel "Musik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1021
+<http://w3id.org/kim/schulfaecher/s1021> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/450> ;
+                                         skos:prefLabel "Philosophie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1022
+<http://w3id.org/kim/schulfaecher/s1022> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000080 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/460> ;
+                                         skos:prefLabel "Physik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1023
+<http://w3id.org/kim/schulfaecher/s1023> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Politische Bildung"@de ,
+                                                       "Sozialkunde"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/480> ;
+                                         skos:prefLabel "Politik"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1024
+<http://w3id.org/kim/schulfaecher/s1024> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Evangelischer Religionsunterricht"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/520> ;
+                                         skos:prefLabel "Religionslehre (evangelische)"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1025
+<http://w3id.org/kim/schulfaecher/s1025> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Islamischer Religionsunterricht"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/520> ;
+                                         skos:editorialNote "EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen"@de ;
+                                         skos:prefLabel "Religionslehre (islamisch)"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1026
+<http://w3id.org/kim/schulfaecher/s1026> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Katholischer Religionsunterricht"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/520> ;
+                                         skos:prefLabel "Religionslehre (katholische)"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1027
+<http://w3id.org/kim/schulfaecher/s1027> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20006> ;
+                                         skos:prefLabel "Russisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1028
+<http://w3id.org/kim/schulfaecher/s1028> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Heimatunterricht"@de ,
+                                                       "Sachkunde"@de ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/28010> ;
+                                         skos:prefLabel "Sachunterricht"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1029
+<http://w3id.org/kim/schulfaecher/s1029> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/560> ;
+                                         skos:prefLabel "Sexualerziehung"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1030
+<http://w3id.org/kim/schulfaecher/s1030> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20007> ;
+                                         skos:prefLabel "Spanisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1031
+<http://w3id.org/kim/schulfaecher/s1031> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/600> ;
+                                         skos:prefLabel "Sport"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1032
+<http://w3id.org/kim/schulfaecher/s1032> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008> ,
+                                                         <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/20008> ;
+                                         skos:prefLabel "Türkisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1033
+<http://w3id.org/kim/schulfaecher/s1033> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:closeMatch <http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700> ,
+                                                         <http://w3id.org/openeduhub/vocabs/discipline/700> ;
+                                         skos:prefLabel "Wirtschaftskunde"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1034
+<http://w3id.org/kim/schulfaecher/s1034> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:prefLabel "Hebräisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1035
+<http://w3id.org/kim/schulfaecher/s1035> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:prefLabel "Japanisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1036
+<http://w3id.org/kim/schulfaecher/s1036> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:prefLabel "Neugriechisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1037
+<http://w3id.org/kim/schulfaecher/s1037> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:prefLabel "Polnisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1038
+<http://w3id.org/kim/schulfaecher/s1038> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:prefLabel "Portugiesisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1039
+<http://w3id.org/kim/schulfaecher/s1039> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ,
+                                                  g:EDU_00000079 ;
+                                         skos:altLabel "Wendisch"@de ;
+                                         skos:prefLabel "Sorbisch"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1040
+<http://w3id.org/kim/schulfaecher/s1040> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Astronomie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1041
+<http://w3id.org/kim/schulfaecher/s1041> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Deutsche Gebärdensprache"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1042
+<http://w3id.org/kim/schulfaecher/s1042> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Gesellschaftswissenschaften"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1043
+<http://w3id.org/kim/schulfaecher/s1043> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Psychologie"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1044
+<http://w3id.org/kim/schulfaecher/s1044> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Ernährung"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1045
+<http://w3id.org/kim/schulfaecher/s1045> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:altLabel "Pädagogik"@de ;
+                                         skos:prefLabel "Erziehungswissenschaften"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1046
+<http://w3id.org/kim/schulfaecher/s1046> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Medienbildung"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
+
+###  http://w3id.org/kim/schulfaecher/s1047
+<http://w3id.org/kim/schulfaecher/s1047> rdf:type owl:NamedIndividual ,
+                                                  skos:Concept ,
+                                                  g:EDU_00000020 ;
+                                         skos:prefLabel "Hauswirtschaft"@de ;
+                                         skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
+
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
 <https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> rdf:type owl:NamedIndividual ,
-                                                                             g:FederalState ;
+                                                                             g:EDU_00000015 ;
                                                                     skos:prefLabel "Baden-Württemberg"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Bayern
-<https://edu.yovisto.com/resource/bb/curriculum/Bayern> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState ;
-                                                        skos:prefLabel "Bayern"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Niedersachsen"@de ;
+                                                              skos:prefLabel "Niedersachsen"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Berlin
-<https://edu.yovisto.com/resource/bb/curriculum/Berlin> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState ;
-                                                        skos:prefLabel "Berlin"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Nordrhein-Westfalen"@de ;
+                                                              skos:prefLabel "Nordrhein-Westfalen"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Brandenburg
-<https://edu.yovisto.com/resource/bb/curriculum/Brandenburg> rdf:type owl:NamedIndividual ,
-                                                                      g:FederalState ;
-                                                             skos:prefLabel "Brandenburg"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Hamburg"@de ;
+                                                              skos:prefLabel "Hamburg"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Bremen
-<https://edu.yovisto.com/resource/bb/curriculum/Bremen> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState ;
-                                                        skos:prefLabel "Bremen"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Rheinland-Pfalz"@de ;
+                                                              skos:prefLabel "Rheinland-Pfalz"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Hamburg
-<https://edu.yovisto.com/resource/bb/curriculum/Hamburg> rdf:type owl:NamedIndividual ,
-                                                                  g:FederalState ;
-                                                         skos:prefLabel "Hamburg"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Sachsen"@de ;
+                                                              skos:prefLabel "Sachsen"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Hessen
-<https://edu.yovisto.com/resource/bb/curriculum/Hessen> rdf:type owl:NamedIndividual ,
-                                                                 g:FederalState ;
-                                                        skos:prefLabel "Hessen"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Berlin"@de ;
+                                                              skos:prefLabel "Berlin"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern
-<https://edu.yovisto.com/resource/bb/curriculum/Mecklenburg-Vorpommern> rdf:type owl:NamedIndividual ,
-                                                                                 g:FederalState ;
-                                                                        skos:prefLabel "Mecklenburg-Vorpommern"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Hessen"@de ;
+                                                              skos:prefLabel "Hessen"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen
-<https://edu.yovisto.com/resource/bb/curriculum/Niedersachsen> rdf:type owl:NamedIndividual ,
-                                                                        g:FederalState ;
-                                                               skos:prefLabel "Niedersachsen"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Bayern"@de ;
+                                                              skos:prefLabel "Bayern"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen
-<https://edu.yovisto.com/resource/bb/curriculum/Nordrhein-Westfalen> rdf:type owl:NamedIndividual ,
-                                                                              g:FederalState ;
-                                                                     skos:prefLabel "Nordrhein-Westfalen"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Mecklenburg-Vorpommern"@de ;
+                                                              skos:prefLabel "Mecklenburg-Vorpommern"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz
-<https://edu.yovisto.com/resource/bb/curriculum/Rheinland-Pfalz> rdf:type owl:NamedIndividual ,
-                                                                          g:FederalState ;
-                                                                 skos:prefLabel "Rheinland-Pfalz"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Sachsen-Anhalt"@de ;
+                                                              skos:prefLabel "Sachsen-Anhalt"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Saarland
-<https://edu.yovisto.com/resource/bb/curriculum/Saarland> rdf:type owl:NamedIndividual ,
-                                                                   g:FederalState ;
-                                                          skos:prefLabel "Saarland"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Schleswig-Holstein"@de ;
+                                                              skos:prefLabel "Schleswig-Holstein"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen
-<https://edu.yovisto.com/resource/bb/curriculum/Sachsen> rdf:type owl:NamedIndividual ,
-                                                                  g:FederalState ;
-                                                         skos:prefLabel "Sachsen"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Saarland"@de ;
+                                                              skos:prefLabel "Saarland"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt
-<https://edu.yovisto.com/resource/bb/curriculum/Sachsen-Anhalt> rdf:type owl:NamedIndividual ,
-                                                                         g:FederalState ;
-                                                                skos:prefLabel "Sachsen-Anhalt"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Bremen"@de ;
+                                                              skos:prefLabel "Bremen"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein
-<https://edu.yovisto.com/resource/bb/curriculum/Schleswig-Holstein> rdf:type owl:NamedIndividual ,
-                                                                             g:FederalState ;
-                                                                    skos:prefLabel "Schleswig-Holstein"@de .
+###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057
+<https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057> rdf:type owl:NamedIndividual ,
+                                                                       g:EDU_00000015 ;
+                                                              rdfs:label "Brandenburg"@de ;
+                                                              skos:prefLabel "Brandenburg"@de .
 
 
 ###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
 <https://edu.yovisto.com/resource/bb/curriculum/Thueringen> rdf:type owl:NamedIndividual ,
-                                                                     g:FederalState ;
+                                                                     g:EDU_00000015 ;
                                                             skos:prefLabel "Thüringen"@de .
 
 
 ###  https://w3id.org/curriculum/bbLevelA
 g:bbLevelA rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe A" ;
            skos:prefLabel "A" .
 
 
 ###  https://w3id.org/curriculum/bbLevelB
 g:bbLevelB rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe B" ;
            skos:prefLabel "B" .
 
 
 ###  https://w3id.org/curriculum/bbLevelC
 g:bbLevelC rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe C" ;
            skos:prefLabel "C" .
 
 
 ###  https://w3id.org/curriculum/bbLevelD
 g:bbLevelD rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe D" ;
            skos:prefLabel "D" .
 
 
 ###  https://w3id.org/curriculum/bbLevelE
 g:bbLevelE rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe E" ;
            skos:prefLabel "E" .
 
 
 ###  https://w3id.org/curriculum/bbLevelF
 g:bbLevelF rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe F" ;
            skos:prefLabel "F" .
 
 
 ###  https://w3id.org/curriculum/bbLevelG
 g:bbLevelG rdf:type owl:NamedIndividual ,
-                    g:BB-Level ;
+                    g:EDU_00000017 ;
            skos:altLabel "Niveaustufe G" ;
            skos:prefLabel "G" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel1
 g:educationalLevel1 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 1" ;
                     skos:prefLabel "1" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel10
 g:educationalLevel10 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EDU_00000018 ;
                      skos:altLabel "Jahrgang 10" ;
                      skos:prefLabel "10" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel11
 g:educationalLevel11 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EDU_00000018 ;
                      skos:altLabel "Jahrgang 11" ;
                      skos:prefLabel "11" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel12
 g:educationalLevel12 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EDU_00000018 ;
                      skos:altLabel "Jahrgang 12" ;
                      skos:prefLabel "12" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel13
 g:educationalLevel13 rdf:type owl:NamedIndividual ,
-                              g:EducationalLevel ;
+                              g:EDU_00000018 ;
                      skos:altLabel "Jahrgang 13" ;
                      skos:prefLabel "13" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel2
 g:educationalLevel2 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 2" ;
                     skos:prefLabel "2" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel3
 g:educationalLevel3 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 3" ;
                     skos:prefLabel "3" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel4
 g:educationalLevel4 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 4" ;
                     skos:prefLabel "4" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel5
 g:educationalLevel5 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 5" ;
                     skos:prefLabel "5" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel6
 g:educationalLevel6 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 6" ;
                     skos:prefLabel "6" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel7
 g:educationalLevel7 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 7" ;
                     skos:prefLabel "7" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel8
 g:educationalLevel8 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 8" ;
                     skos:prefLabel "8" .
 
 
 ###  https://w3id.org/curriculum/educationalLevel9
 g:educationalLevel9 rdf:type owl:NamedIndividual ,
-                             g:EducationalLevel ;
+                             g:EDU_00000018 ;
                     skos:altLabel "Jahrgang 9" ;
                     skos:prefLabel "9" .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_0
 <https://w3id.org/kim/educationalLevel/level_0> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "Elementarstufe"@de ,
+                                                              "Frühbereich"@de ,
+                                                              "Frühkindliche Bildung"@de ,
+                                                              "ISCED 2011, Level 0"@de ,
+                                                              "ISCED 2011, Level 0"@en ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/elementarbereich> ,
+                                                                <https://w3id.org/kim/isced-2011/level0> ;
+                                                skos:narrowMatch <https://w3id.org/kim/isced-1997/level0> ;
+                                                skos:prefLabel "Early childhood education"@en ,
+                                                               "Elementarbereich"@de ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_1
 <https://w3id.org/kim/educationalLevel/level_1> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "ISCED 2011, Level 1"@de ,
+                                                              "ISCED 2011, Level 1"@en ,
+                                                              "Primarstufe"@de ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/grundschule> ,
+                                                                <https://w3id.org/kim/isced-1997/level1> ,
+                                                                <https://w3id.org/kim/isced-2011/level1> ;
+                                                skos:prefLabel "Primarbereich"@de ,
+                                                               "Primary education"@en ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_2
 <https://w3id.org/kim/educationalLevel/level_2> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "ISCED 2011, Level 2"@de ,
+                                                              "ISCED 2011, Level 2"@en ,
+                                                              "Sekundarstufe I"@de ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/sekundarstufe_1> ,
+                                                                <https://w3id.org/kim/isced-1997/level2> ,
+                                                                <https://w3id.org/kim/isced-2011/level2> ;
+                                                skos:prefLabel "Lower secondary education"@en ,
+                                                               "Sekundarbereich I"@de ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_3
 <https://w3id.org/kim/educationalLevel/level_3> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "ISCED 2011, Level 3"@de ,
+                                                              "ISCED 2011, Level 3"@en ,
+                                                              "Sekundarstufe II"@de ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/sekundarstufe_2> ,
+                                                                <https://w3id.org/kim/isced-1997/level3> ,
+                                                                <https://w3id.org/kim/isced-2011/level3> ;
+                                                skos:prefLabel "Sekundarbereich II"@de ,
+                                                               "Upper secondary education"@en ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_4
 <https://w3id.org/kim/educationalLevel/level_4> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "Berufliche Bildung"@de ,
+                                                              "ISCED 2011, Level 4"@de ,
+                                                              "ISCED 2011, Level 4"@en ;
+                                                skos:closeMatch <http://w3id.org/openeduhub/vocabs/educationalContext/berufliche_bildung> ;
+                                                skos:exactMatch <https://w3id.org/kim/isced-1997/level4> ,
+                                                                <https://w3id.org/kim/isced-2011/level4> ;
+                                                skos:prefLabel "Post-secondary non-tertiary education"@en ,
+                                                               "Postsekundarer nicht-tertiärer Bereich"@de ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_5
 <https://w3id.org/kim/educationalLevel/level_5> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:altLabel "ISCED 2011, Level 5"@de ,
+                                                              "ISCED 2011, Level 5"@en ;
+                                                skos:closeMatch <https://w3id.org/kim/isced-1997/level5> ;
+                                                skos:definition "Erste Stufe der tertiären Bildung, die nicht direkt zu einer höheren Forschungsqualifikation führt"@de ,
+                                                                "First stage of tertiary education, not leading directly to an advanced research qualification"@en ;
+                                                skos:exactMatch <https://w3id.org/kim/isced-2011/level5> ;
+                                                skos:prefLabel "Kurzes tertiäres Bildungsprogramm"@de ,
+                                                               "Short-cycle tertiary education"@en ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_6
 <https://w3id.org/kim/educationalLevel/level_6> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:broader <https://w3id.org/kim/educationalLevel/level_A> ;
+                                                skos:altLabel "ISCED 2011, Level 6"@de ,
+                                                              "ISCED 2011, Level 6"@en ;
+                                                skos:broadMatch <http://w3id.org/openeduhub/vocabs/educationalContext/hochschule> ;
+                                                skos:closeMatch <https://w3id.org/kim/isced-1997/level5> ;
+                                                skos:exactMatch <https://w3id.org/kim/isced-2011/level6> ;
+                                                skos:inScheme <https://w3id.org/kim/educationalLevel/> ;
+                                                skos:prefLabel "Bachelor oder äquivalent"@de ,
+                                                               "Bachelor or equivalent"@en .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_7
 <https://w3id.org/kim/educationalLevel/level_7> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:broader <https://w3id.org/kim/educationalLevel/level_A> ;
+                                                skos:altLabel "ISCED 2011, Level 7"@de ,
+                                                              "ISCED 2011, Level 7"@en ;
+                                                skos:broadMatch <http://w3id.org/openeduhub/vocabs/educationalContext/hochschule> ;
+                                                skos:closeMatch <https://w3id.org/kim/isced-1997/level5> ;
+                                                skos:exactMatch <https://w3id.org/kim/isced-2011/level7> ;
+                                                skos:inScheme <https://w3id.org/kim/educationalLevel/> ;
+                                                skos:prefLabel "Master oder äquivalent"@de ,
+                                                               "Master or equivalent"@en .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_8
 <https://w3id.org/kim/educationalLevel/level_8> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:broader <https://w3id.org/kim/educationalLevel/level_A> ;
+                                                skos:altLabel "ISCED 2011, Level 8"@de ,
+                                                              "ISCED 2011, Level 8"@en ;
+                                                skos:broadMatch <http://w3id.org/openeduhub/vocabs/educationalContext/hochschule> ;
+                                                skos:exactMatch <https://w3id.org/kim/isced-1997/level6> ,
+                                                                <https://w3id.org/kim/isced-2011/level8> ;
+                                                skos:inScheme <https://w3id.org/kim/educationalLevel/> ;
+                                                skos:prefLabel "Doctoral or equivalent"@en ,
+                                                               "Promotion oder äquivalent"@de .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_A
 <https://w3id.org/kim/educationalLevel/level_A> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:narrower <https://w3id.org/kim/educationalLevel/level_6> ,
+                                                              <https://w3id.org/kim/educationalLevel/level_7> ,
+                                                              <https://w3id.org/kim/educationalLevel/level_8> ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/hochschule> ;
+                                                skos:narrowMatch <https://w3id.org/kim/isced-1997/level5> ,
+                                                                 <https://w3id.org/kim/isced-1997/level6> ,
+                                                                 <https://w3id.org/kim/isced-2011/level6> ,
+                                                                 <https://w3id.org/kim/isced-2011/level7> ,
+                                                                 <https://w3id.org/kim/isced-2011/level8> ;
+                                                skos:prefLabel "Hochschule"@de ,
+                                                               "University"@en ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_B
 <https://w3id.org/kim/educationalLevel/level_B> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:definition "Der Vorbereitungsdienst bezeichnet die zweite Phase der Lehrkräfteausbildung in Deutschland."@de ,
+                                                                "The preparatory service designates the second phase of teacher training in germany."@en ;
+                                                skos:prefLabel "Preparatory service"@en ,
+                                                               "Vorbereitungsdienst"@de ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
 ###  https://w3id.org/kim/educationalLevel/level_C
 <https://w3id.org/kim/educationalLevel/level_C> rdf:type owl:NamedIndividual ,
-                                                         g:KIM-Level .
+                                                         g:EDU_00000019 ;
+                                                skos:exactMatch <http://w3id.org/openeduhub/vocabs/educationalContext/fortbildung> ;
+                                                skos:prefLabel "Advanced training"@en ,
+                                                               "Fortbildung"@de ;
+                                                skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
+
+
+###  https://w3id.org/kim/schulabschluesse/EDU_00000049
+<https://w3id.org/kim/schulabschluesse/EDU_00000049> rdf:type owl:NamedIndividual ,
+                                                              skos:ConceptScheme ;
+                                                     terms:created "2022-09-28"^^xsd:date ;
+                                                     terms:description "Eine Wertelliste für Schulabschlüsse in Deutschland."@de ;
+                                                     terms:issued "2022-09-28"^^xsd:date ;
+                                                     terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                                     terms:modified "2022-09-28"^^xsd:date ;
+                                                     terms:title "Schulabschlüsse"@de ;
+                                                     rdfs:label ""@de ;
+                                                     skos:hasTopConcept <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> ,
+                                                                        <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> ,
+                                                                        <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> ,
+                                                                        <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> ,
+                                                                        <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> ,
+                                                                        <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> .
+
+
+###  https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a
+<https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:exactMatch <http://www.wikidata.org/entity/Q1391140> ;
+                                                                             skos:prefLabel "Fachgebundene Hochschulreife"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4160223-7> .
+
+
+###  https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4
+<https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:altLabel "Qualifizierter Sekundarabschluss I"@de ,
+                                                                                           "Realschulabschluss"@de ;
+                                                                             skos:definition "Mittlerer Schulabschluss wird nach 10 Jahren erreicht"@de ;
+                                                                             skos:exactMatch <http://www.wikidata.org/entity/Q1345057> ,
+                                                                                             <https://d-nb.info/gnd/4170262-1> ;
+                                                                             skos:prefLabel "Mittlerer Schulabschluss"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4170262-1" .
+
+
+###  https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a
+<https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:altLabel "Hauptschulabschluss"@de ;
+                                                                             skos:definition "Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht"@de ;
+                                                                             skos:exactMatch <http://www.wikidata.org/entity/Q884856> ,
+                                                                                             <https://d-nb.info/gnd/4130918-2> ;
+                                                                             skos:prefLabel "Erster allgemeinbildender Schulabschluss"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4130918-2" .
+
+
+###  https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0
+<https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:prefLabel "Ohne Schulabschluss"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> .
+
+
+###  https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a
+<https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:exactMatch <http://www.wikidata.org/entity/Q1391297> ,
+                                                                                             <https://d-nb.info/gnd/4395719-5> ;
+                                                                             skos:prefLabel "Fachhochschulreife"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4395719-5" .
+
+
+###  https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d
+<https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> rdf:type owl:NamedIndividual ,
+                                                                                      skos:Concept ,
+                                                                                      g:EDU_00000011 ;
+                                                                             skos:altLabel "Abitur"@de ;
+                                                                             skos:exactMatch <http://www.wikidata.org/entity/Q708387> ,
+                                                                                             <https://d-nb.info/gnd/4049194-8> ;
+                                                                             skos:prefLabel "Allgemeine Hochschulreife"@de ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4160223-7> ;
+                                                                             <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4049194-8" .
 
 
 ###  https://w3id.org/kim/schularten/s02
 <https://w3id.org/kim/schularten/s02> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_1> ,
+                                                      <https://w3id.org/kim/isced-1997/level1> ,
+                                                      <https://w3id.org/kim/isced-2011/level1> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/1> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/2> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/3> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/4> ;
+                                      skos:prefLabel "Grundschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s03
 <https://w3id.org/kim/schularten/s03> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:altLabel "Mittelschule"@de ,
+                                                    "Mittelstufenschule"@de ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_2> ,
+                                                      <https://w3id.org/kim/isced-1997/level2> ,
+                                                      <https://w3id.org/kim/isced-2011/level2> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/10> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/5> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/6> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/7> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/8> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/9> ;
+                                      skos:prefLabel "Hauptschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s04
 <https://w3id.org/kim/schularten/s04> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_2> ,
+                                                      <https://w3id.org/kim/isced-1997/level2> ,
+                                                      <https://w3id.org/kim/isced-2011/level2> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/10> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/5> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/6> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/7> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/8> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/9> ;
+                                      skos:prefLabel "Realschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s05
 <https://w3id.org/kim/schularten/s05> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_2> ,
+                                                      <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level2> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level2> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/10> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/11> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/12> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/13> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/5> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/6> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/7> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/8> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/9> ;
+                                      skos:prefLabel "Gesamtschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s06
 <https://w3id.org/kim/schularten/s06> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:prefLabel "Förderschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s07
 <https://w3id.org/kim/schularten/s07> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:prefLabel "Oberschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s08
 <https://w3id.org/kim/schularten/s08> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_2> ,
+                                                      <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level2> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level2> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/10> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/11> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/12> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/13> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/5> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/6> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/7> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/8> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/9> ;
+                                      skos:prefLabel "Gymnasium"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s09
 <https://w3id.org/kim/schularten/s09> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:prefLabel "Gemeinschaftsschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s10
 <https://w3id.org/kim/schularten/s10> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_2> ,
+                                                      <https://w3id.org/kim/isced-1997/level2> ,
+                                                      <https://w3id.org/kim/isced-2011/level2> ;
+                                      skos:narrowMatch <http://w3id.org/openeduhub/vocabs/educationalLevel/10> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/5> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/6> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/7> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/8> ,
+                                                       <http://w3id.org/openeduhub/vocabs/educationalLevel/9> ;
+                                      skos:prefLabel "Sekundarschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s11
 <https://w3id.org/kim/schularten/s11> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:prefLabel "Berufsfachschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s12
 <https://w3id.org/kim/schularten/s12> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:prefLabel "Berufsschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s13
 <https://w3id.org/kim/schularten/s13> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:prefLabel "Fachoberschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s14
 <https://w3id.org/kim/schularten/s14> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:altLabel "Fachgymnasium"@de ;
+                                      skos:closeMatch <http://w3id.org/kim/educationalLevel/level_3> ,
+                                                      <https://w3id.org/kim/isced-1997/level3> ,
+                                                      <https://w3id.org/kim/isced-2011/level3> ;
+                                      skos:prefLabel "Berufliches Gymnasium"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s15
 <https://w3id.org/kim/schularten/s15> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:altLabel "Ersatzschule"@de ,
+                                                    "Freie Schule"@de ,
+                                                    "Privatschule"@de ;
+                                      skos:prefLabel "Privat- und Ersatzschule"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 ###  https://w3id.org/kim/schularten/s16
 <https://w3id.org/kim/schularten/s16> rdf:type owl:NamedIndividual ,
-                                               g:School .
+                                               g:EDU_00000034 ;
+                                      skos:altLabel "Kolleg"@de ;
+                                      skos:prefLabel "Abendgymnasium"@de ;
+                                      skos:topConceptOf <https://w3id.org/kim/schularten/> .
 
 
 #################################################################
@@ -1030,6 +2203,49 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
 #################################################################
 
 <https://orcid.org/0000-0001-7192-7143> rdfs:label "Jörg Waitelonis" .
+
+
+<https://w3id.org/kim/educationalLevel/> terms:created "2020-04-08"^^xsd:date ;
+                                         terms:description "Eine Wertelliste für die Stufe im Bildungssystem als Lehr-/Lernkontext, für den Lernobjekt ausgewiesen ist."@de ;
+                                         terms:issued "2020-04-08"^^xsd:date ;
+                                         terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                         terms:modified "2022-03-23"^^xsd:date ;
+                                         terms:title "Bildungsstufe"@de ,
+                                                     "Educational level"@en ;
+                                         skos:hasTopConcept <https://w3id.org/kim/educationalLevel/level_0> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_1> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_2> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_3> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_4> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_5> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_A> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_B> ,
+                                                            <https://w3id.org/kim/educationalLevel/level_C> .
+
+
+<https://w3id.org/kim/schularten/> terms:created "2021-04-22"^^xsd:date ;
+                                   terms:description "Eine Wertelliste für Schularten im deutschen Schulsystem. Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."@de ;
+                                   terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                   terms:modified "2022-05-24"^^xsd:date ;
+                                   terms:publisher "DINI-AG-KIM OER-Metadatengruppe"@de ;
+                                   terms:title "Schularten"@de ;
+                                   <http://purl.org/vocab/vann/preferredNamespacePrefix> "school" ;
+                                   <http://purl.org/vocab/vann/preferredNamespaceUri> "https://w3id.org/kim/schularten/" ;
+                                   skos:hasTopConcept <https://w3id.org/kim/schularten/s02> ,
+                                                      <https://w3id.org/kim/schularten/s03> ,
+                                                      <https://w3id.org/kim/schularten/s04> ,
+                                                      <https://w3id.org/kim/schularten/s05> ,
+                                                      <https://w3id.org/kim/schularten/s06> ,
+                                                      <https://w3id.org/kim/schularten/s07> ,
+                                                      <https://w3id.org/kim/schularten/s08> ,
+                                                      <https://w3id.org/kim/schularten/s09> ,
+                                                      <https://w3id.org/kim/schularten/s10> ,
+                                                      <https://w3id.org/kim/schularten/s11> ,
+                                                      <https://w3id.org/kim/schularten/s12> ,
+                                                      <https://w3id.org/kim/schularten/s13> ,
+                                                      <https://w3id.org/kim/schularten/s14> ,
+                                                      <https://w3id.org/kim/schularten/s15> ,
+                                                      <https://w3id.org/kim/schularten/s16> .
 
 
 ###  Generated by the OWL API (version 4.5.25.2023-02-15T19:15:49Z) https://github.com/owlcs/owlapi
