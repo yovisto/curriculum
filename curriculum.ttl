@@ -715,8 +715,9 @@ g:EDU_00000035 rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/EDU_00000036
 g:EDU_00000036 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
-               skos:prefLabel "Wahlpflichtfach"@de .
+               skos:definition "Rolle eines Fachs"@de ;
+               skos:prefLabel "Wahlpflichtfach"@de ;
+               g:EDU_00000078 "role" .
 
 
 ###  https://w3id.org/curriculum/EDU_00000037
@@ -745,31 +746,26 @@ g:EDU_00000042 rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/EDU_00000071
 g:EDU_00000071 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
                rdfs:label "Übergreifendes"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000072
 g:EDU_00000072 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
                rdfs:label "Lokaler Bezug"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000073
 g:EDU_00000073 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
                rdfs:label "Beginn"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000074
 g:EDU_00000074 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
                rdfs:label "Kursanforderung"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000075
 g:EDU_00000075 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
                rdfs:label "Fremdsprachenbezug"@de .
 
 
@@ -783,19 +779,6 @@ g:EDU_00000079 rdf:type owl:Class ;
 g:EDU_00000080 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000020 ;
                rdfs:label "MINT-Fach"@de .
-
-
-###  https://w3id.org/curriculum/EDU_00000081
-g:EDU_00000081 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
-               rdfs:label "Fachbezug"@de .
-
-
-###  https://w3id.org/curriculum/EDU_00000082
-g:EDU_00000082 rdf:type owl:Class ;
-               rdfs:subClassOf g:EDU_00000021 ;
-               rdfs:label "Niveauanforderung"@de ;
-               skos:definition "Bezug zur Niveaustufe (z.B. Jahrgangsstufe, Klasse, etc.)"@de .
 
 
 ###  https://w3id.org/dini/dini-ns/Curriculum
