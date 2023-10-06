@@ -12,7 +12,7 @@
 @base <https://w3id.org/curriculum/> .
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
-                               owl:versionIRI <https://w3id.org/curriculum/1.0.0a> ;
+                               owl:versionIRI <https://w3id.org/curriculum/1.0.1a> ;
                                terms:created "2023-07-26" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
@@ -33,7 +33,7 @@ An overview is shown in the following image:
 The ontology imports https://w3id.org/kim/educationalLevel/ for the educational levels wich also links to ISCED levels (International Standard Classification of Education, https://uis.unesco.org/en/topic/international-standard-classification-education-isced). Furthermore type of schools are reused from https://w3id.org/kim/schularten/ ."""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                terms:title "Curriculum Ontology"@en ;
-                               owl:versionInfo "v1.0.0a" .
+                               owl:versionInfo "v1.0.1a" .
 
 #################################################################
 #    Annotation properties
@@ -328,6 +328,7 @@ g:EDU_00000060 rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/EDU_00000061
 g:EDU_00000061 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
+               rdfs:range g:EDU_00000002 ;
                skos:prefLabel "has competence"@en .
 
 
