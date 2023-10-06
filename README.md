@@ -11,6 +11,6 @@ This ontology includes concepts that enable a high-level description of a curric
 The model is inspired by the "Datenmodell zur Abbildung von Lehrplänen" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and re-uses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a skos:ConceptScheme and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduced classes have been fitted in as sub-classes, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain compatibility.
 
 
-This ist development version 1.0.0a. 
+This ist development version 1.0.1a. 
 
 Namespace and further docu: [https://w3id.org/curriculum/]
