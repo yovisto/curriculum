@@ -189,14 +189,14 @@ g:EDU_00000039 rdf:type owl:ObjectProperty ;
                            ] ;
                rdfs:range g:EDU_00000021 ;
                rdfs:comment "bezieht sich auf Geltungsbereich"@de ;
-               rdfs:label "hasScope"@de ;
+               rdfs:label "has  scope"@en ;
                skos:prefLabel "gilt für"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000040
 g:EDU_00000040 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
-               rdfs:label "scopeOf"@de .
+               rdfs:label "scope of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000044
@@ -235,6 +235,7 @@ g:EDU_00000047 rdf:type owl:ObjectProperty ;
 ###  https://w3id.org/curriculum/EDU_00000048
 g:EDU_00000048 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf owl:topObjectProperty ;
+               rdfs:domain g:EDU_00000021 ;
                skos:prefLabel "relates to"@en .
 
 
