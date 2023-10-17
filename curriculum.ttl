@@ -513,7 +513,8 @@ g:EDU_00000010 rdf:type owl:Class ;
 g:EDU_00000011 rdf:type owl:Class ;
                rdfs:label "Schulabschluss"@de ,
                           "school graduation"@en ;
-               skos:definition "Bezeichnung für die erfolgreich abgeschlossene Ausbildung an einer Schule."@de ;
+               skos:definition "Bezeichnung für die erfolgreich abgeschlossene Ausbildung an einer Schule."@de ,
+                               "Designation for successfully completed education at a German school."@en ;
                g:EDU_00000092 g:EDU_00000087 .
 
 
@@ -547,18 +548,15 @@ g:EDU_00000015 rdf:type owl:Class ;
 g:EDU_00000016 rdf:type owl:Class ;
                rdfs:label "Niveau"@de ,
                           "level"@en ;
-               skos:definition "Bezeichnet Entwicklungsstufen in der Bildung, also den Grad des Ausgebildetseins." ;
+               skos:definition "Bezeichnet Entwicklungsstufen in der Bildung, also den Grad des Ausgebildetseins."@de ,
+                               "Denotes stages of development in education, i.e. the degree of being educated."@en ;
                g:EDU_00000092 g:EDU_00000091 .
 
 
 ###  https://w3id.org/curriculum/EDU_00000017
 g:EDU_00000017 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000016 ;
-               rdfs:label "BB Stufe"@de ,
-                          "bb educational level"@en ;
-               skos:definition """Berlin Brandenburg grouping of educational levels: 
-
-Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
+               rdfs:comment """Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an
 weiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:
 
 * Schulanfangsphase = Niveaustufen A, B, in Teilen C
@@ -579,33 +577,22 @@ grundlegendes Niveau:
 * Jahrgangsstufen 9 – 10 = Niveaustufe F, in Teilen G
 * erweitertes Niveau:
 * Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F
-* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de .
+* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"""@de ;
+               rdfs:label "BB Stufe"@de ,
+                          "bb educational grade"@en ;
+               skos:definition "Berlin/Brandenburg grouping of educational levels in stages A-G."@en ,
+                               "Unterteilung der Jahrgangsstufen in Niveaustufen A-G in Berlin/Brandenburg Lehrplänen."@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000018
 g:EDU_00000018 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000016 ;
+               rdfs:comment "Die Klassenstufen werden grundsätzlich jahresweise aufsteigend durchgezählt (eine Ausnahme bilden in der gymnasialen Oberstufe die Einführungs- und Qualifikationsphasen). Schüler/innen verschiedener Klassenstufen, die aus schulorganisatorischen Gründen in einer Klasse zusammengefasst werden, bilden eine „klassenstufenübergreifende Klasse“ (s. unten). Klassen, die sich aus Schüler/innen mit unterschiedlichem Bildungsniveau zusammensetzen und deren Schüler/innen keiner Klassenstufe zugeordnet werden können, werden unter „keiner Klassenstufe/keinem Schuljahrgang zugeordnet“ gezählt (Beispiel: Vorbereitungsklassen für ausländische Jugendliche). Der Begriff „Klassenstufe“ wird in den beruflichen Schulen nur bei den Schularten verwendet, die primär zur Hochschul- bzw. Fachhochschulreife führen (Fachoberschulen, Fachgymnasien sowie Berufsoberschulen/Technische Oberschulen). In diesen Schularten werden die Klassenstufen aufsteigend von Klassenstufe 11 angezählt (Fachgymnasien in Baden-Württemberg beginnen in Form von Wirtschaftsgymnasien mit Klassenstufe 8). In allen anderen beruflichen Schularten werden die Schüler/innen nach „Schuljahrgängen“ nachgewiesen. Auch der Schuljahrgang kennzeichnet das klassenspezifische Bildungsniveau, allerdings bezogen auf Berufsvorbereitung, Berufsausbildung bzw. Berufsfortbildung. Die Schulbesuchsdauer kann ein bis vier Schuljahrgänge umfassen."@de ;
                rdfs:label "Jahrgangsstufe"@de ,
-                          "educational level"@en ;
+                          "educational grade"@en ;
                skos:definition """Der Begriff \"Klassenstufe“ („Jahrgangsstufe“, „Schuljahrgang“) kennzeichnet das
-jeweilige klassenspezifische Bildungsniveau, das die Schüler/innen eines Klassenverbandes erreicht haben.
-Die Klassenstufen werden grundsätzlich jahresweise
-aufsteigend durchgezählt (eine Ausnahme bilden in der gymnasialen Oberstufe die
-Einführungs- und Qualifikationsphasen). Schüler/innen verschiedener Klassenstu-
-fen, die aus schulorganisatorischen Gründen in einer Klasse zusammengefasst
-werden, bilden eine „klassenstufenübergreifende Klasse“ (s. unten). Klassen, die
-sich aus Schüler/innen mit unterschiedlichem Bildungsniveau zusammensetzen
-und deren Schüler/innen keiner Klassenstufe zugeordnet werden können, werden
-unter „keiner Klassenstufe/keinem Schuljahrgang zugeordnet“ gezählt (Bei-
-spiel: Vorbereitungsklassen für ausländische Jugendliche).
-Der Begriff „Klassenstufe“ wird in den beruflichen Schulen nur bei den Schularten
-verwendet, die primär zur Hochschul- bzw. Fachhochschulreife führen (Fachober-
-schulen, Fachgymnasien sowie Berufsoberschulen/Technische Oberschulen). In
-diesen Schularten werden die Klassenstufen aufsteigend von Klassenstufe 11 an
-gezählt (Fachgymnasien in Baden-Württemberg beginnen in Form von Wirtschaftsgymnasien mit Klassenstufe 8).
-In allen anderen beruflichen Schularten werden die Schüler/innen nach „Schuljahrgängen“ nachgewiesen. Auch der Schuljahrgang kennzeichnet das klassenspezifische Bildungsniveau, allerdings bezogen auf Berufsvorbereitung, Berufsausbil-
-dung bzw. Berufsfortbildung. Die Schulbesuchsdauer kann ein bis vier Schuljahr-
-gänge umfassen."""@de ,
+jeweilige klassenspezifische Bildungsniveau, das die Schüler/innen eines Klassenverbandes erreicht haben."""@de ,
+                               "Educational grade denotes the respective class-specific level achieved by the students in a class group."@en ,
                                "Klassenlevel"@de ,
                                "the year of school"@en ;
                skos:example "7. Klasse"@de ,
@@ -619,17 +606,18 @@ g:EDU_00000019 rdf:type owl:Class ;
                rdfs:isDefinedBy <https://w3id.org/kim/educationalLevel/> ;
                rdfs:label "KIM Stufe"@de ,
                           "KIM educational level"@en ;
-               skos:definition "Educational leve: Eine Wertelliste für die Stufe im Bildungssystem als Lehr-/Lernkontext, für den Lernobjekt ausgewiesen ist. Importiert aus https://github.com/dini-ag-kim/educationalLevel/blob/main/educationalLevel.ttl"@de ;
+               skos:definition "Educational level: A value list for the level in the german educational system as the teaching/learning context for which a learning object is designated. Imported from https://github.com/dini-ag-kim/educationalLevel/blob/main/educationalLevel.ttl"@en ,
+                               "Educational level: Eine Wertelliste für die Stufe im Bildungssystem als Lehr-/Lernkontext, für den ein Lernobjekt ausgewiesen ist. Importiert aus https://github.com/dini-ag-kim/educationalLevel/blob/main/educationalLevel.ttl"@de ;
                g:EDU_00000092 g:EDU_00000087 ;
-               g:EDU_00000094 """In der Readme wird Version 1.0 vom 02.05.2022 beschrieben.
-Die Quelle hat allerdings keine (GitHub) Versionierung, d.h. die Inhalte  könnten sich unter Umständen verändern.""" .
+               g:EDU_00000094 "In der Readme wird Version 1.0 vom 02.05.2022 beschrieben. Die Quelle hat allerdings keine (GitHub) Versionierung, d.h. die Inhalte  könnten sich unter Umständen verändern." .
 
 
 ###  https://w3id.org/curriculum/EDU_00000020
 g:EDU_00000020 rdf:type owl:Class ;
                rdfs:label "Schulfach"@de ,
                           "subject"@en ;
-               skos:definition "Ausdruck für die thematische Gliederung dessen, was in der Schule als mehr oder weniger abgegrenzte Einheit gelehrt wird."@de ;
+               skos:definition "Ausdruck für die thematische Gliederung dessen, was in der Schule als mehr oder weniger abgegrenzte Einheit gelehrt wird."@de ,
+                               "Expression for the thematic outline of what is taught in school as a more or less delimited unit."@en ;
                g:EDU_00000092 g:EDU_00000097 .
 
 
@@ -651,10 +639,12 @@ g:EDU_00000027 rdf:type owl:Class ;
                                                )
                                    ] ;
                rdfs:subClassOf g:EDU_00000016 ;
-               rdfs:comment "In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen. Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe komplett der Sekundarstufe II zugeordnet."@de ;
+               rdfs:comment "Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe komplett der Sekundarstufe II zugeordnet."@de ;
                rdfs:isDefinedBy "Defkat 2022, Abschnitt 2"@de ;
                rdfs:label "Einführungsphase"@de ,
                           "introductory phase"@en ;
+               skos:definition "Grade 10 and 11. In the gymnasiale Oberstufe (upper level of the Gymnasium), the years 10/11 to 12/13 are not counted by grade; instead, they are reported as the \"introductory phase\" (E) and the two-year \"qualification phase\" (Q1 and Q2)."@en ,
+                               "Klassenstufe 10 und 11. In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen."@de ;
                g:EDU_00000092 g:EDU_00000087 .
 
 
@@ -670,15 +660,18 @@ g:EDU_00000033 rdf:type owl:Class ;
                rdfs:isDefinedBy "Defkat 2022, Abschnitt 2"@de ;
                rdfs:label "Qualifikationsphase"@de ,
                           "qualification phase"@en ;
-               g:EDU_00000092 g:EDU_00000087 .
+               skos:definition "Grade 12 and 13. In the gymnasiale Oberstufe (upper level of the Gymnasium), the years 10/11 to 12/13 are not counted by grade; instead, they are reported as the \"introductory phase\" (E) and the two-year \"qualification phase\" (Q1 and Q2)."@en ,
+                               "Klassenstufe 12 und 13. In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen."@de ;
+               g:EDU_00000092 g:EDU_00000097 .
 
 
 ###  https://w3id.org/curriculum/EDU_00000034
 g:EDU_00000034 rdf:type owl:Class ;
+               rdfs:isDefinedBy <https://w3id.org/kim/schularten/> ;
                rdfs:label "Schulart"@de ,
                           "type of school"@en ;
-               skos:definition """Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem.
-Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."""@de .
+               skos:definition "Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem. Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."@de ,
+                               "General type of school. Based on the list of values (https://w3id.org/kim/schularten/) for types of school in the German school system. A school type is characterized by the fact that it has an independent character with regard to curricula, educational goals and qualification level. It does not have to be an independent administrative organizational unit." .
 
 
 ###  https://w3id.org/curriculum/EDU_00000035
@@ -695,14 +688,18 @@ g:EDU_00000036 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000020 ;
                rdfs:label "Wahlpflichtfach"@de ,
                           "compulsory elective subject"@en ;
-               skos:definition "Ein Wahlpflichfach ist ein zusätzliches Pflichtfach, das aus einer Gruppe von alternativen Fächern ausgewählt werden kann."@de .
+               skos:definition "An additional required subject that may be selected from a group of alternative subjects."@en ,
+                               "Ein Wahlpflichfach ist ein zusätzliches Pflichtfach, das aus einer Gruppe von alternativen Fächern ausgewählt werden kann."@de ;
+               g:EDU_00000078 "role" ;
+               g:EDU_00000094 "eigentlich kein Fach als solches, sondern eine Rolle" .
 
 
 ###  https://w3id.org/curriculum/EDU_00000071
 g:EDU_00000071 rdf:type owl:Class ;
                rdfs:label "Fach- und Klassenbezug"@de ,
                           "subject and class reference"@en ;
-               skos:definition "Instanzen bezeichnen den Bezug den Lehrpläne zu Fächern und Klassenstufen im Allgemeinen."@de ;
+               skos:definition "Bezeichnet den übergreifenden Bezug der Lehrpläne zu Fächern und Klassenstufen im Allgemeinen."@de ,
+                               "Refers to the overarching relationship of curricula to subjects and grade levels in general."@en ;
                g:EDU_00000092 g:EDU_00000097 .
 
 
@@ -710,7 +707,8 @@ g:EDU_00000071 rdf:type owl:Class ;
 g:EDU_00000072 rdf:type owl:Class ;
                rdfs:label "Lokaler Bezug"@de ,
                           "locale reference"@en ;
-               skos:definition "Bezeichnet den Bezug hinsichtlich der Örtlichkeit."@de ;
+               skos:definition "Bezeichnet den Bezug hinsichtlich der Örtlichkeit."@de ,
+                               "Indicates the reference in terms of locality."@en ;
                skos:example "auf Bundesland bezogen"@de ,
                             "auf alle Bundesländer bezogen (national, bundesweit)"@de ,
                             "schulintern"@de ;
@@ -731,7 +729,8 @@ g:EDU_00000074 rdf:type owl:Class ;
                rdfs:isDefinedBy "Defkat2022, Abschnitt 4.2" ;
                rdfs:label "Kursanforderung"@de ,
                           "course depth"@en ;
-               skos:definition "In der gymnasialen Oberstufe wird der Unterricht in der Regel in Kursen erteilt. Die Unterscheidung in „Grund- und Leistungskurse“ ist in der neugefassten „Vereinbarung zur Gestaltung der gymnasialen Oberstufe in der Sekundarstufe II“8 durch Kurse mit verschiedenen Anspruchsebenen ersetzt worden. Kurse mit grundlegen dem Anforderungsniveau umfassen in der Regel bis zu drei Wochenstunden. Kurse mit erhöhtem Anforderungsniveau setzen mindestens vierstündigen Unterricht in der Woche voraus."@de ;
+               skos:definition "Distinction between \"basic\" and \"advanced\" courses. Courses with a basic requirement level generally comprise up to three hours per week. Courses with a higher requirement level require at least four hours of instruction per week."@en ,
+                               "Unterscheidung in „Grund- und Leistungskurse“. In der gymnasialen Oberstufe wird der Unterricht in der Regel in Kursen erteilt. Die Unterscheidung in „Grund- und Leistungskurse“ ist in der neugefassten „Vereinbarung zur Gestaltung der gymnasialen Oberstufe in der Sekundarstufe II“ durch Kurse mit verschiedenen Anspruchsebenen ersetzt worden. Kurse mit grundlegen dem Anforderungsniveau umfassen in der Regel bis zu drei Wochenstunden. Kurse mit erhöhtem Anforderungsniveau setzen mindestens vierstündigen Unterricht in der Woche voraus."@de ;
                g:EDU_00000092 g:EDU_00000087 .
 
 
@@ -739,7 +738,8 @@ g:EDU_00000074 rdf:type owl:Class ;
 g:EDU_00000075 rdf:type owl:Class ;
                rdfs:label "Fremdsprachenbezug"@de ,
                           "foreign language reference"@en ;
-               skos:definition "Angabe, ob eine Fremdsprache als erste, zweite, oder dritte Fremdsprache gelernt wird."@de ;
+               skos:definition "Angabe, ob eine Fremdsprache als erste, zweite, oder dritte Fremdsprache gelernt wird."@de ,
+                               "Indication of whether a foreign language is learned as a first, second, or third foreign language."@en ;
                g:EDU_00000092 g:EDU_00000087 .
 
 
@@ -748,21 +748,27 @@ g:EDU_00000079 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000020 ;
                owl:disjointWith g:EDU_00000080 ;
                rdfs:label "Fremdsprachfach"@de ,
-                          "foreign language subject"@en .
+                          "foreign language subject"@en ;
+               skos:definition "Fach, in dem eine Fremdsprache unterrichtet wird."@de ,
+                               "Subject in which a foreign language is taught."@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000080
 g:EDU_00000080 rdf:type owl:Class ;
                rdfs:subClassOf g:EDU_00000020 ;
+               rdfs:comment "The acronym MINT is made up of the first letters of the German terms for mathematics (Mathematik), IT (Informatik), science (Naturwissenschaften) and technology (Technik). It is roughly equivalent to STEM (science, technology, engineering, technology)."@en ;
                rdfs:label "MINT subject"@en ,
-                          "MINT-Fach"@de .
+                          "MINT-Fach"@de ;
+               skos:definition "MINT Fächer sind die Fächer Mathematik, Informatik, Naturwissenschaften und Technik."@de ,
+                               "MINT subjects are the subjects of mathematics, computer science, natural sciences and technology."@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000084
 g:EDU_00000084 rdf:type owl:Class ;
                rdfs:label "Lingualität"@de ,
                           "linguality"@en ;
-               skos:definition "Gibt an, ob der Unterricht mono-, bi- oder multilingual erfolgt."@de ;
+               skos:definition "Gibt an, ob der Unterricht mono-, bi- oder multilingual erfolgt."@de ,
+                               "Indicates whether instruction is monolingual, bilingual, or multilingual."@en ;
                g:EDU_00000092 g:EDU_00000091 ;
                g:EDU_00000094 "es ist unklar worauf sich diese Information wirklich bezieht: Wird der Unterricht bi-lingual gehalten? Dann wäre dies ja eine Eigenschaft des Unterrichts. d.h. der Lehrplan 'schreibt vor', dass der Unterricht \"bi-lingual\" gehalten werden soll. D.h. der Lehrplan als \"Plan\" spezifiziert, wie der Unterricht \"Prozess\" gehalten werden soll." .
 
@@ -1598,7 +1604,8 @@ g:EDU_00000028 rdf:type owl:NamedIndividual ,
                rdfs:isDefinedBy "Defkat2022, Abschnitt 4.2"@de ;
                rdfs:label "Leistungskurs"@de ,
                           "advanced course"@en ;
-               skos:definition "Repräsentiert ein erhöhtes Anforderungsniveau bezogen auf einen Kurs. Leistungskurse umfassen in der Regel mindestens vier Wochenstunden."@de ;
+               skos:definition "Represents an increased level of requirement related to a course. Advanced courses usually comprise at least four hours per week."@en ,
+                               "Repräsentiert ein erhöhtes Anforderungsniveau bezogen auf einen Kurs. Leistungskurse umfassen in der Regel mindestens vier Wochenstunden."@de ;
                g:EDU_00000078 "role" .
 
 
@@ -1608,7 +1615,8 @@ g:EDU_00000029 rdf:type owl:NamedIndividual ,
                rdfs:isDefinedBy "Defkat2022, Abschnitt 4.2"@de ;
                rdfs:label "Grundkurs"@de ,
                           "basic course"@en ;
-               skos:definition "Repräsentiert ein grundlegendes Anforderungsniveau bezogen auf einen Kurs. Grundkurse umfassen in der Regel bis zu drei Wochenstunden."@de ;
+               skos:definition "Represents a basic level of requirement related to a course. Basic courses usually comprise up to three hours per week."@en ,
+                               "Repräsentiert ein grundlegendes Anforderungsniveau bezogen auf einen Kurs. Grundkurse umfassen in der Regel bis zu drei Wochenstunden."@de ;
                g:EDU_00000078 "role" .
 
 
@@ -1640,7 +1648,7 @@ g:EDU_00000038 rdf:type owl:NamedIndividual ,
 ###  https://w3id.org/curriculum/EDU_00000041
 g:EDU_00000041 rdf:type owl:NamedIndividual ,
                         g:EDU_00000071 ;
-               rdfs:label "cross-disciplinary"@en ,
+               rdfs:label "cross disciplinary"@en ,
                           "fachübergreifend"@de ;
                skos:definition "Bezeichnet, dass sich der Lehrplan bzw. das Lehrplanelement nicht auf ein konkretes Fach bezieht, sondern übergreifend zu verstehen ist." .
 
