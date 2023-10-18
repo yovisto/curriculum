@@ -12,8 +12,8 @@
 @base <https://w3id.org/curriculum/> .
 
 <https://w3id.org/curriculum> rdf:type owl:Ontology ;
-                               owl:versionIRI <https://w3id.org/curriculum/1.0.1a> ;
-                               terms:created "2023-07-26" ;
+                               owl:versionIRI <https://w3id.org/curriculum/1.1.0> ;
+                               terms:created "2023-10-18" ;
                                terms:creator <https://orcid.org/0000-0001-7192-7143> ;
                                terms:description """This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. 
 
@@ -26,14 +26,16 @@ This ontology includes concepts that enable a high-level description of a curric
 
 The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and reuses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a subclass of skos:ConceptScheme and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduced classes are fitted in as subclasses, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain the SKOS hierarchy.
 
-An overview is shown in the following image:
+An overview is shown in the following images:
 
-![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1500.png)
+![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0-1500a.png)
 
-The ontology imports https://w3id.org/kim/educationalLevel/ for the educational levels wich also links to ISCED levels (International Standard Classification of Education, https://uis.unesco.org/en/topic/international-standard-classification-education-isced). Furthermore type of schools are reused from https://w3id.org/kim/schularten/ ."""@en ;
+![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0-1500b.png)
+
+The ontology imports https://w3id.org/kim/educationalLevel/ for the educational levels wich also links to ISCED levels (International Standard Classification of Education, https://uis.unesco.org/en/topic/international-standard-classification-education-isced). Furthermore type of schools are reused from https://w3id.org/kim/schularten/, school subjects from http://w3id.org/kim/schulfaecher/, graduate levels from https://w3id.org/kim/schulabschluesse ."""@en ;
                                terms:license <http://creativecommons.org/licenses/by/4.0/> ;
                                terms:title "Curriculum Ontology"@en ;
-                               owl:versionInfo "v1.0.1a" .
+                               owl:versionInfo "v1.1.0" .
 
 #################################################################
 #    Annotation properties
@@ -531,6 +533,7 @@ g:EDU_00000010 rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/EDU_00000011
 g:EDU_00000011 rdf:type owl:Class ;
+               rdfs:isDefinedBy <https://w3id.org/kim/schulabschluesse/> ;
                rdfs:label "Schulabschluss"@de ,
                           "school graduation"@en ;
                skos:definition "Bezeichnung für die erfolgreich abgeschlossene Ausbildung an einer Schule."@de ,
@@ -634,6 +637,7 @@ g:EDU_00000019 rdf:type owl:Class ;
 
 ###  https://w3id.org/curriculum/EDU_00000020
 g:EDU_00000020 rdf:type owl:Class ;
+               rdfs:isDefinedBy <http://w3id.org/kim/schulfaecher/> ;
                rdfs:label "Schulfach"@de ,
                           "subject"@en ;
                skos:definition "Ausdruck für die thematische Gliederung dessen, was in der Schule als mehr oder weniger abgegrenzte Einheit gelehrt wird."@de ,
@@ -1883,6 +1887,24 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                     skos:altLabel "Jahrgang 9" .
 
 
+###  https://w3id.org/kim/schulabschluesse
+<https://w3id.org/kim/schulabschluesse> rdf:type owl:NamedIndividual ,
+                                                 skos:ConceptScheme ;
+                                        terms:created "2022-09-28"^^xsd:date ;
+                                        terms:description "Eine Wertelliste für Schulabschlüsse in Deutschland."@de ;
+                                        terms:issued "2022-09-28"^^xsd:date ;
+                                        terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
+                                        terms:modified "2022-09-28"^^xsd:date ;
+                                        terms:title "Schulabschlüsse"@de ;
+                                        rdfs:label ""@de ;
+                                        skos:hasTopConcept <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> ,
+                                                           <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> ,
+                                                           <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> ,
+                                                           <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> ,
+                                                           <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> ,
+                                                           <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> .
+
+
 ###  https://w3id.org/kim/educationalLevel/level_0
 <https://w3id.org/kim/educationalLevel/level_0> rdf:type owl:NamedIndividual ,
                                                          g:EDU_00000019 ;
@@ -2047,31 +2069,13 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                 skos:topConceptOf <https://w3id.org/kim/educationalLevel/> .
 
 
-###  https://w3id.org/kim/schulabschluesse/EDU_00000049
-<https://w3id.org/kim/schulabschluesse/EDU_00000049> rdf:type owl:NamedIndividual ,
-                                                              skos:ConceptScheme ;
-                                                     terms:created "2022-09-28"^^xsd:date ;
-                                                     terms:description "Eine Wertelliste für Schulabschlüsse in Deutschland."@de ;
-                                                     terms:issued "2022-09-28"^^xsd:date ;
-                                                     terms:license <http://creativecommons.org/publicdomain/zero/1.0/> ;
-                                                     terms:modified "2022-09-28"^^xsd:date ;
-                                                     terms:title "Schulabschlüsse"@de ;
-                                                     rdfs:label ""@de ;
-                                                     skos:hasTopConcept <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> ,
-                                                                        <https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4> ,
-                                                                        <https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a> ,
-                                                                        <https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0> ,
-                                                                        <https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a> ,
-                                                                        <https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d> .
-
-
 ###  https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a
 <https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a> rdf:type owl:NamedIndividual ,
                                                                                       skos:Concept ,
                                                                                       g:EDU_00000011 ;
                                                                              rdfs:label "Fachgebundene Hochschulreife"@de ;
                                                                              skos:exactMatch <http://www.wikidata.org/entity/Q1391140> ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4160223-7> .
 
 
@@ -2085,7 +2089,7 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                                              skos:definition "Mittlerer Schulabschluss wird nach 10 Jahren erreicht"@de ;
                                                                              skos:exactMatch <http://www.wikidata.org/entity/Q1345057> ,
                                                                                              <https://d-nb.info/gnd/4170262-1> ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4170262-1" .
 
@@ -2099,7 +2103,7 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                                              skos:definition "Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht"@de ;
                                                                              skos:exactMatch <http://www.wikidata.org/entity/Q884856> ,
                                                                                              <https://d-nb.info/gnd/4130918-2> ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4130918-2" .
 
@@ -2109,7 +2113,7 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                                                       skos:Concept ,
                                                                                       g:EDU_00000011 ;
                                                                              rdfs:label "Ohne Schulabschluss"@de ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> .
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> .
 
 
 ###  https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a
@@ -2119,7 +2123,7 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                                              rdfs:label "Fachhochschulreife"@de ;
                                                                              skos:exactMatch <http://www.wikidata.org/entity/Q1391297> ,
                                                                                              <https://d-nb.info/gnd/4395719-5> ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4053444-3> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4395719-5" .
 
@@ -2132,7 +2136,7 @@ g:educationalLevel9 rdf:type owl:NamedIndividual ,
                                                                              skos:altLabel "Abitur"@de ;
                                                                              skos:exactMatch <http://www.wikidata.org/entity/Q708387> ,
                                                                                              <https://d-nb.info/gnd/4049194-8> ;
-                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/EDU_00000049> ;
+                                                                             skos:topConceptOf <https://w3id.org/kim/schulabschluesse/> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#broaderTermGeneral> <https://d-nb.info/gnd/4160223-7> ;
                                                                              <https://d-nb.info/standards/elementset/gnd#gndIdentifier> "4049194-8" .
 
