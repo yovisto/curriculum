@@ -200,7 +200,8 @@ g:EDU_00000039 rdf:type owl:ObjectProperty ;
                rdfs:comment "bezieht sich auf Geltungsbereich"@de ;
                rdfs:label "gilt für"@de ,
                           "has  scope"@en ;
-               skos:altLabel "hat Geltungsbereich"@de .
+               skos:altLabel "hat Geltungsbereich"@de ;
+               skos:definition "Mit dieser Relation kann zu einem Lehrplan oder Lehrplanelement ein Geltungsbereich angegeben werden."@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000040
@@ -219,49 +220,56 @@ g:EDU_00000040 rdf:type owl:ObjectProperty ;
 g:EDU_00000051 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000062 ;
-               rdfs:label "competence area of"@en .
+               rdfs:label "Kompetenzfeld von"@de ,
+                          "competence area of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000052
 g:EDU_00000052 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf g:EDU_00000051 ;
                owl:inverseOf g:EDU_00000063 ;
-               rdfs:label "has parent competence area"@en .
+               rdfs:label "has parent competence area"@en ,
+                          "has übergeordnetes Kompetenzfeld"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000053
 g:EDU_00000053 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000061 ;
-               rdfs:label "competence of"@en .
+               rdfs:label "Kompetent von"@de ,
+                          "competence of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000054
 g:EDU_00000054 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000064 ;
-               rdfs:label "content of"@en .
+               rdfs:label "Inhalt von"@de ,
+                          "content of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000055
 g:EDU_00000055 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000065 ;
-               rdfs:label "exercise of"@en .
+               rdfs:label "exercise of"@en ,
+                          "Übung von"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000056
 g:EDU_00000056 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000066 ;
-               rdfs:label "material of"@en .
+               rdfs:label "Material von"@de ,
+                          "material of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000057
 g:EDU_00000057 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000067 ;
-               rdfs:label "part of"@en .
+               rdfs:label "Teil von"@de ,
+                          "part of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000058
@@ -269,35 +277,40 @@ g:EDU_00000058 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf g:EDU_00000053 ;
                owl:inverseOf g:EDU_00000068 ;
                rdfs:domain <http://purl.obolibrary.org/obo/EDU_00000003> ;
-               rdfs:label "standard of"@en .
+               rdfs:label "Standard von"@de ,
+                          "standard of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000059
 g:EDU_00000059 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000070 ;
-               rdfs:label "topic area of"@en .
+               rdfs:label "Themenfeld von"@de ,
+                          "topic area of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000060
 g:EDU_00000060 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:broader ;
                owl:inverseOf g:EDU_00000069 ;
-               rdfs:label "topic of"@en .
+               rdfs:label "Thema von"@de ,
+                          "topic of"@en .
 
 
 ###  https://w3id.org/curriculum/EDU_00000061
 g:EDU_00000061 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000005 ;
-               rdfs:label "has competence"@en .
+               rdfs:label "has competence"@en ,
+                          "hat Kompetenz"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000062
 g:EDU_00000062 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000004 ;
-               rdfs:label "has competence area"@en .
+               rdfs:label "has competence area"@en ,
+                          "hat Kompetenzfeld"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000063
@@ -305,28 +318,32 @@ g:EDU_00000063 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf g:EDU_00000062 ;
                rdfs:domain g:EDU_00000004 ;
                rdfs:range g:EDU_00000004 ;
-               rdfs:label "has competence subarea"@en .
+               rdfs:label "has competence subarea"@en ,
+                          "hat untergeordnetes Kompetenzfeld"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000064
 g:EDU_00000064 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000008 ;
-               rdfs:label "has content"@en .
+               rdfs:label "has content"@en ,
+                          "hat Inhalt"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000065
 g:EDU_00000065 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000013 ;
-               rdfs:label "has exercise"@en .
+               rdfs:label "has exercise"@en ,
+                          "hat Übung"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000066
 g:EDU_00000066 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000014 ;
-               rdfs:label "has material"@en .
+               rdfs:label "has material"@en ,
+                          "hat Material"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000067
@@ -334,28 +351,32 @@ g:EDU_00000067 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:domain g:EDU_00000001 ;
                rdfs:range g:EDU_00000006 ;
-               rdfs:label "has part"@en .
+               rdfs:label "has part"@en ,
+                          "hat Teil"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000068
 g:EDU_00000068 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf g:EDU_00000061 ;
                rdfs:range <http://purl.obolibrary.org/obo/EDU_00000003> ;
-               rdfs:label "has standard"@en .
+               rdfs:label "has standard"@en ,
+                          "hat Standard"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000069
 g:EDU_00000069 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000009 ;
-               rdfs:label "has topic"@en .
+               rdfs:label "has topic"@en ,
+                          "hat Thema"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000070
 g:EDU_00000070 rdf:type owl:ObjectProperty ;
                rdfs:subPropertyOf skos:narrower ;
                rdfs:range g:EDU_00000010 ;
-               rdfs:label "has topic area"@en .
+               rdfs:label "has topic area"@en ,
+                          "hat Themenfeld"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000099
@@ -363,7 +384,8 @@ g:EDU_00000099 rdf:type owl:ObjectProperty ;
                rdfs:domain g:EDU_00000021 ;
                rdfs:label "bezieht sich auf"@de ,
                           "relates to"@en ;
-               skos:altLabel "hat Bezug"@de .
+               skos:altLabel "hat Bezug"@de ;
+               skos:definition "Diese Relation wird genutzt, um den Geltungsbereich näher zu spezifizieren. Zu einer Instanz des Geltungsbereich können hiermit beliebige Ressourcen angegeben werden. Z.B. ein Bundesland, eine Kursanforderung, Fremdsprachenbezug o.ä."@de .
 
 
 #################################################################
@@ -413,10 +435,8 @@ g:EDU_00000001 rdf:type owl:Class ;
                owl:equivalentClass <https://w3id.org/dini/dini-ns/Curriculum> ;
                rdfs:label "Lehrplan"@de ,
                           "curriculum"@en ;
-               skos:definition """Curriculum is a subclass of skos:ConceptScheme. It refers to a set of curriculum items (skos:Concepts), each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. 
-The curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."""@en ,
-                               """Lehrplan ist eine Unterklasse von skos:ConceptScheme. Sie bezieht sich auf eine Reihe von Lehrplan-Elementen (skos:Concepts), die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. 
-Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"""@de .
+               skos:definition "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."@en ,
+                               "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000002
