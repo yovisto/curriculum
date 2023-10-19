@@ -26,9 +26,11 @@ This ontology includes concepts that enable a high-level description of a curric
 
 The model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and reuses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a subclass of skos:ConceptScheme and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduced classes are fitted in as subclasses, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain the SKOS hierarchy.
 
-An overview is shown in the following images:
+An overview is shown in the following image:
 
 ![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0a.jpg)
+
+Use of scope with curriculum or curriculum items:
 
 ![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0b.jpg)
 
@@ -822,10 +824,10 @@ g:EDU_00000086 rdf:type owl:Class ;
 
 ###  http://dbpedia.org/resource/Baden-Württemberg
 <http://dbpedia.org/resource/Baden-Württemberg> rdf:type owl:NamedIndividual ;
-                                                owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> .
+                                                owl:sameAs g:EDU_00000048 .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
+###  https://w3id.org/curriculum/EDU_00000048
 
 ###  http://dbpedia.org/resource/Bavaria
 <http://dbpedia.org/resource/Bavaria> rdf:type owl:NamedIndividual ;
@@ -920,10 +922,10 @@ g:EDU_00000086 rdf:type owl:Class ;
 
 ###  http://dbpedia.org/resource/Thuringia
 <http://dbpedia.org/resource/Thuringia> rdf:type owl:NamedIndividual ;
-                                        owl:sameAs <https://edu.yovisto.com/resource/bb/curriculum/Thueringen> .
+                                        owl:sameAs g:EDU_00000031 .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
+###  https://w3id.org/curriculum/EDU_00000031
 
 ###  http://dbpedia.org/resource/Bremen_(state)
 <http://dbpedia.org/resource/Bremen_(state)> rdf:type owl:NamedIndividual ;
@@ -1489,12 +1491,6 @@ g:EDU_00000086 rdf:type owl:Class ;
                                          skos:topConceptOf <http://w3id.org/kim/schulfaecher/> .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg
-<https://edu.yovisto.com/resource/bb/curriculum/Baden-Wuerttemberg> rdf:type owl:NamedIndividual ,
-                                                                             g:EDU_00000015 ;
-                                                                    rdfs:label "Baden-Württemberg"@de .
-
-
 ###  https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043
 <https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043> rdf:type owl:NamedIndividual ,
                                                                        g:EDU_00000015 ;
@@ -1579,12 +1575,6 @@ g:EDU_00000086 rdf:type owl:Class ;
                                                               rdfs:label "Brandenburg"@de .
 
 
-###  https://edu.yovisto.com/resource/bb/curriculum/Thueringen
-<https://edu.yovisto.com/resource/bb/curriculum/Thueringen> rdf:type owl:NamedIndividual ,
-                                                                     g:EDU_00000015 ;
-                                                            rdfs:label "Thüringen"@de .
-
-
 ###  https://w3id.org/curriculum/EDU_00000022
 g:EDU_00000022 rdf:type owl:NamedIndividual ,
                         g:EDU_00000072 ;
@@ -1644,6 +1634,12 @@ g:EDU_00000029 rdf:type owl:NamedIndividual ,
                g:EDU_00000078 "role" .
 
 
+###  https://w3id.org/curriculum/EDU_00000031
+g:EDU_00000031 rdf:type owl:NamedIndividual ,
+                        g:EDU_00000015 ;
+               rdfs:label "Thüringen"@de .
+
+
 ###  https://w3id.org/curriculum/EDU_00000032
 g:EDU_00000032 rdf:type owl:NamedIndividual ,
                         g:EDU_00000072 ;
@@ -1683,6 +1679,12 @@ g:EDU_00000042 rdf:type owl:NamedIndividual ,
                rdfs:label "cross educational level"@en ,
                           "klassenstufenübergreifend"@de ;
                skos:definition "Bezeichnet, dass sich ein Lehrplan oder ein Lehrplanelement nicht auf eine konkrete Klassenstufe bezieht." .
+
+
+###  https://w3id.org/curriculum/EDU_00000048
+g:EDU_00000048 rdf:type owl:NamedIndividual ,
+                        g:EDU_00000015 ;
+               rdfs:label "Baden-Württemberg"@de .
 
 
 ###  https://w3id.org/curriculum/EDU_00000085
