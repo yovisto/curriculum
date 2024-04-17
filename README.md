@@ -5,6 +5,9 @@ This ontology is a formal representation that captures the fundamental concepts 
 Current development is managed via GitHub: https://github.com/yovisto/curriculum
 Feel free to give feedback, contribute, or raise issues.
 
+This work has been developed in the context of the ITsJOINTLY project https://its.jointly.info/, funded by German Federal Ministry of Education and Research.
+
+
 The model is developed based on the structure of the framework curricula for the states of Berlin and Brandenburg in Germany (https://bildungsserver.berlin-brandenburg.de/rlp-online). It is intended to serve as a starting point for formally opening up the structures of other states' curricula and competency frameworks related to curricula. 
 
 This ontology includes concepts that enable a high-level description of a curriculum. Thereby three main components are put in relation to each other: subjects, competencies, learning content. 
