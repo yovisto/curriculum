@@ -1,0 +1,4540 @@
+[ {
+  "@id" : "_:genid1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/EDU_00000001"
+    }, {
+      "@id" : "https://w3id.org/curriculum/EDU_00000002"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/educationalLevel10"
+    }, {
+      "@id" : "https://w3id.org/curriculum/educationalLevel11"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#oneOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/educationalLevel12"
+    }, {
+      "@id" : "https://w3id.org/curriculum/educationalLevel13"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid17",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AllDifferent" ],
+  "http://www.w3.org/2002/07/owl#distinctMembers" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/EDU_00000026"
+    }, {
+      "@id" : "https://w3id.org/curriculum/EDU_00000037"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#unionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/EDU_00000001"
+    }, {
+      "@id" : "https://w3id.org/curriculum/EDU_00000002"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2002/07/owl#intersectionOf" : [ {
+    "@list" : [ {
+      "@id" : "https://w3id.org/curriculum/EDU_00000005"
+    }, {
+      "@id" : "_:genid9"
+    } ]
+  } ]
+}, {
+  "@id" : "_:genid9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Restriction" ],
+  "http://www.w3.org/2002/07/owl#onProperty" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000039"
+  } ],
+  "http://www.w3.org/2002/07/owl#someValuesFrom" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000021"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Baden-Württemberg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000048"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Bavaria",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Berlin",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Brandenburg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Bremen_(state)",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Hamburg",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Hesse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Lower_Saxony",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Mecklenburg-Vorpommern",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/North_Rhine-Westphalia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Rhineland-Palatinate",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Saarland",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Saxony",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Saxony-Anhalt",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Schleswig-Holstein",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054"
+  } ]
+}, {
+  "@id" : "http://dbpedia.org/resource/Thuringia",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/2002/07/owl#sameAs" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000031"
+  } ]
+}, {
+  "@id" : "http://purl.obolibrary.org/obo/EDU_00000003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The standards define the skills and knowledge regarding a particular competence that students at a particular school and grade level should have acquired."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Standard"
+  }, {
+    "@language" : "en",
+    "@value" : "standard"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A standard is a competence, which an individuum is capable of after a (learning) process."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Standard ist eine Kompetenz, zu der ein Individuum nach einem (Lern-)Prozess fähig ist."
+  } ]
+}, {
+  "@id" : "http://purl.org/dc/terms/created",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/creator",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/description",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/identifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/issued",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/license",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/modified",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/publisher",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/subject",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/dc/terms/title",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespacePrefix",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://purl.org/vocab/vann/preferredNamespaceUri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-03-03"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "de",
+    "@value" : "Werteliste von Fächern im Schulbereich."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@language" : "de",
+    "@value" : "DINI-AG-KIM OER-Metadatengruppe"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "de",
+    "@value" : "Schulfächer"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "subj"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/kim/schulfaecher/"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1000"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1001"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1002"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1003"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1004"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1005"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1006"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1007"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1008"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1009"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1010"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1011"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1012"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1013"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1014"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1015"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1016"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1017"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1019"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1020"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1021"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1022"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1023"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1024"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1025"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1026"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1027"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1028"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1029"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1030"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1031"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1032"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1033"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1034"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1035"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1036"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1037"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1038"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1039"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1040"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1041"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1043"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1044"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1045"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1046"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1047"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1000",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Alt-Griechisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20003"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20003"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Biologie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/080"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/080"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Chemie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/100"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/100"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Chinesisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Darstellendes Spiel"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Theater"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12002"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/12002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Deutsch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/120"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28001"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/120"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Deutsch als Zweitsprache"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "DaZ"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/12005"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28002"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/12005"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Englisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20001"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800501"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20001"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ethik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Werte und Normen"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/160"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28004"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/160"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Französisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800502"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Geografie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Erdkunde"
+  }, {
+    "@language" : "de",
+    "@value" : "Geographie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/220"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/220"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Geschichte"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20002"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1012",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gesundheit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Gesundheitserziehung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/260"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/260"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Informatik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Informations- und Kommunikationstechnologie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/320"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/320"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Italienisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20004"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800503"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20004"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kunst"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Bildende Kunst"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/060"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28006"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/060"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Latein"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20005"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20005"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mathematik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28007"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/380"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/380"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "MINT"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Chemie, Physik, Biologie"
+  }, {
+    "@language" : "de",
+    "@value" : "Naturwissenschaften"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#related" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1001"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1002"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1013"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1017"
+  }, {
+    "@id" : "http://w3id.org/kim/schulfaecher/s1022"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Musik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28008"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/420"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/420"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Philosophie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/450"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/450"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Physik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/460"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/460"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Politik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Politische Bildung"
+  }, {
+    "@language" : "de",
+    "@value" : "Sozialkunde"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/480"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/480"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Religionslehre (evangelische)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Evangelischer Religionsunterricht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/520"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Religionslehre (islamisch)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Islamischer Religionsunterricht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/520"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#editorialNote" : [ {
+    "@language" : "de",
+    "@value" : "EAF 28009 hat hauptsächlich christliche Themen, aber auch einen Abschnitt mit nicht-christlichen Religionen"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Religionslehre (katholische)"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Katholischer Religionsunterricht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28009"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/520"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/520"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1027",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Russisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20006"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800507"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20006"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1028",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sachunterricht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Heimatunterricht"
+  }, {
+    "@language" : "de",
+    "@value" : "Sachkunde"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28010"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/28010"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1029",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sexualerziehung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/560"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/560"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1030",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Spanisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20007"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800508"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sport"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/28011"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/600"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/600"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1032",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Türkisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/20008"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/2800504"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/20008"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1033",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Wirtschaftskunde"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs-playground/eaf-sachgebietssystematik/700"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/discipline/700"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1034",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hebräisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1035",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Japanisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1036",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Neugriechisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1037",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Polnisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1038",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Portugiesisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1039",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000079"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sorbisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Wendisch"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1040",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Astronomie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1041",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Deutsche Gebärdensprache"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gesellschaftswissenschaften"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1043",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Psychologie"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1044",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ernährung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1045",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Erziehungswissenschaften"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Pädagogik"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1046",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Medienbildung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://w3id.org/kim/schulfaecher/s1047",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hauswirtschaft"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ]
+}, {
+  "@id" : "http://www.w3.org/2000/01/rdf-schema#label",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2001/XMLSchema#date",
+  "@type" : [ "http://www.w3.org/2000/01/rdf-schema#Datatype" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#Concept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#altLabel",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broadMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#broader",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#closeMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#definition",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#editorialNote",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#exactMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#example",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#hasTopConcept",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#inScheme",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrowMatch",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#narrower",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#related",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "http://www.w3.org/2004/02/skos/core#topConceptOf",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://d-nb.info/standards/elementset/gnd#gndIdentifier",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000043",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Niedersachsen"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000044",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Nordrhein-Westfalen"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000045",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hamburg"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000046",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Rheinland-Pfalz"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000047",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sachsen"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000048",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berlin"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000050",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hessen"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000051",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bayern"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000052",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mecklenburg-Vorpommern"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000053",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sachsen-Anhalt"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000054",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Schleswig-Holstein"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000055",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Saarland"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000056",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bremen"
+  } ]
+}, {
+  "@id" : "https://edu.yovisto.com/resource/bb/curriculum/EDU_00000057",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Brandenburg"
+  } ]
+}, {
+  "@id" : "https://orcid.org/0000-0001-7192-7143",
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "Jörg Waitelonis"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Ontology" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@value" : "2023-10-18"
+  } ],
+  "http://purl.org/dc/terms/creator" : [ {
+    "@id" : "https://orcid.org/0000-0001-7192-7143"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "en",
+    "@value" : "This ontology is a formal representation that captures the fundamental concepts and their relationships to one another in the field of curriculum design and implementation. It provides a structured framework for organizing and understanding the key elements that make up a general curriculum. \n\nCurrent development is managed via GitHub: https://github.com/yovisto/curriculum\nFeel free to give feedback, contribute, or raise issues.\n\nThis work has been developed in the context of the ITsJOINTLY project https://its.jointly.info/, funded by German Federal Ministry of Education and Research and European Union.\n\nThe model is developed based on the structure of the framework curricula for the states of Berlin and Brandenburg in Germany (https://bildungsserver.berlin-brandenburg.de/rlp-online). It is intended to serve as a starting point for formally opening up the structures of other states' curricula and competency frameworks related to curricula. \n\nThis ontology includes concepts that enable a high-level description of a curriculum. Thereby three main components are put in relation to each other: subjects, competencies, learning content. \n\nThe model is inspired by the \"Datenmodell zur Abbildung von Lehrplänen\" https://dini-ag-kim.github.io/modell_lehrplaene/draft/ and reuses their dini:Curriculum and dini:CurriculumItem. Both extend the SKOS model in that the curriculum itself is to be understood as a subclass of skos:ConceptScheme and the individual components are subordinated to the curriculum as skos:Concept. Likewise, the herewith introduced classes are fitted in as subclasses, and the newly defined object properties inherit from skos:narrow and skos:broader to maintain the SKOS hierarchy.\n\nAn overview is shown in the following image:\n\n![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0a.jpg)\n\nUse of scope with curriculum or curriculum items:\n\n![Overview](https://raw.githubusercontent.com/yovisto/curriculum/main/docs/overview1.1.0b.jpg)\n\nThe ontology imports https://w3id.org/kim/educationalLevel/ for the educational levels wich also links to ISCED levels (International Standard Classification of Education, https://uis.unesco.org/en/topic/international-standard-classification-education-isced). Furthermore type of schools are reused from https://w3id.org/kim/schularten/, school subjects from http://w3id.org/kim/schulfaecher/, graduate levels from https://w3id.org/kim/schulabschluesse ."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/licenses/by/4.0/"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "en",
+    "@value" : "Curriculum Ontology"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionIRI" : [ {
+    "@id" : "https://w3id.org/curriculum/1.1.0"
+  } ],
+  "http://www.w3.org/2002/07/owl#versionInfo" : [ {
+    "@value" : "v1.1.0"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000001",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lehrplan"
+  }, {
+    "@language" : "en",
+    "@value" : "curriculum"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/dini/dini-ns/Curriculum"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Curriculum aggregates a set of curriculum items, each providing means for the systematic planning and structuring of teaching and learning materials, as well as the instructional methods used within an education system or educational institution. It can be considered as a detailed plan that outlines the learning objectives, teaching materials, instructional strategies, assessment criteria, and time frame for a particular course, subject, or educational level. A curriculum refers to a specific subject, school type, grade level(s) and form of expression (major/minor, 1st/2nd/3rd foreign language, etc.)."
+  }, {
+    "@language" : "de",
+    "@value" : "Lehrplan umfasst eine Reihe von Lehrplan-Elementen, die jeweils als Mittel für die systematische Planung und Strukturierung von Lehr- und Lernmaterialien sowie die in einem Bildungssystem oder einer Bildungseinrichtung verwendeten Lehrmethoden dienen. Der Lehrplan kann als Leitfaden betrachtet werden, der die Lernziele, Lehrmaterialien, Unterrichtsstrategien, Beurteilungskriterien und den Zeitrahmen für einen bestimmten Kurs, ein Fach oder eine Bildungsstufe umreißt. Der Lehrplan bezieht sich auf ein bestimmtes Unterrichtsfach, Schulform, Klassenstufe(n) und Ausprägungsform (Hauptfach/Nebenfach, 1./2./3. Fremdsprache, usw.)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000002",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Curriculum item is referrring to a curriculum. It aggregates the things that are to be understood as part of a curriculum. These include, for example, teaching and learning materials, teaching methods, learning objectives, assessment criteria, time frame, subject, education level, etc."
+  }, {
+    "@language" : "de",
+    "@value" : "Das Lehrplanelement bezieht sich auf einen Lehrplan. Es fasst die Dinge zusammen, die als Teil eines Lehrplan zu verstehen sind. Hierzu gehören z.B. Lehr- und Lernmaterialien, Lehrmethoden, Lernziele, Beurteilungskriterien, Zeitrahmen, Fach, Bildungsstufe, etc."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lehrplanelement"
+  }, {
+    "@language" : "en",
+    "@value" : "curriculum item"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "https://w3id.org/dini/dini-ns/CurriculumItem"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "a curriculum item is some thing, which is related to a curriculum"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000003",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kompetenzelement"
+  }, {
+    "@language" : "en",
+    "@value" : "competence item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Ist ein Lehrplanelement, das sich auf Kompetenzen bezieht."
+  }, {
+    "@value" : "a competence item is a curriculum item, which is related to competences"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000004",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kompetenzbereich"
+  }, {
+    "@language" : "en",
+    "@value" : "competence area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000003"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A competence area is a competence item, which groups specific competences together."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Kompetenzbereich ist zu verstehen als ein Kompetenzelement, das bestimmte Kompetenzen zu einer Gruppe zusammenfasst."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "en",
+    "@value" : "dealing with expertise"
+  }, {
+    "@language" : "en",
+    "@value" : "probelm solving"
+  }, {
+    "@language" : "en",
+    "@value" : "reading competencies"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000005",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "Competence is generally understood as the combination of knowledge and skills in coping with the demands of action. Persons are considered competent if they are able to regenerate currently required actions on the basis of knowledge, skills and abilities. \nInstances of this class provide text that describes a particular competence (e.g. \"reading\")."
+  }, {
+    "@language" : "de",
+    "@value" : "operationalisierbar und meßbar"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kompetenz"
+  }, {
+    "@language" : "en",
+    "@value" : "competence"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000003"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "competence is a competence item, which expresses a capability an individuum already inheres or aquires throughout a learning process"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@language" : "en",
+    "@value" : "realizable entity"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000006",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lehrplanteil"
+  }, {
+    "@language" : "en",
+    "@value" : "curriculum part"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Hauptteil"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "A curriculum section is a curriculum element used to divide the curriculum into major parts."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Lehrplanteil ist ein Lehrplanelement, das zur Unterteilung des Lehrplans in Hauptkapitel dient."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000007",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "An organizational element to group topic and learning content related items."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Themenelement"
+  }, {
+    "@language" : "en",
+    "@value" : "topic item"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Ein Organisationselement zur Gruppierung von themen- und lerninhaltsbezogenen Elementen."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000008",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lerninhalt"
+  }, {
+    "@language" : "en",
+    "@value" : "learning content"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Learning content that is taught as part of teaching. The learning content can be linked to competences that the learner can acquire while learning the content."
+  }, {
+    "@language" : "de",
+    "@value" : "Lerninhalt der im Rahmen des Unterrichts vermittelt wird. Der Lerninhalt kann mit Kompetenzen verknüpft sein, die die lernende Person beim Lernen des Inhalts erlangen kann."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000009",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Thema"
+  }, {
+    "@language" : "en",
+    "@value" : "topic"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A concrete topic of school teaching that can be taught through particular learning content."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein konkretes Thema des Unterricht, das durch Lerninhalte vermittelt werden kann."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000010",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Themenfeld"
+  }, {
+    "@language" : "en",
+    "@value" : "topic area"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000007"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A topic area includes one or more topics that are subject of teaching."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Themenfeld umfasst ein oder meherere Themen die im Unterricht behandelt werden."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000011",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Schulabschluss"
+  }, {
+    "@language" : "en",
+    "@value" : "school graduation"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnung für die erfolgreich abgeschlossene Ausbildung an einer Schule."
+  }, {
+    "@language" : "en",
+    "@value" : "Designation for successfully completed education at a German school."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000013",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "exercise"
+  }, {
+    "@language" : "de",
+    "@value" : "Übung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "A concrete action that helps to learn a skill."
+  }, {
+    "@language" : "de",
+    "@value" : "Eine konkrete Maßnahme, die dazu beiträgt, eine Kompetenz zu erlernen."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000014",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lernmaterial"
+  }, {
+    "@language" : "en",
+    "@value" : "learning material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000002"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Konkrete Mittel (z.B. in Form von Dokumenten), um bestimmte Kompetenzen zu erlernen."
+  }, {
+    "@language" : "en",
+    "@value" : "Some concrete means (e.g in form of documents) to acquire particular competences."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@value" : "generically dependent continuant"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000015",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bundesland"
+  }, {
+    "@language" : "en",
+    "@value" : "federal state"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000016",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Niveau"
+  }, {
+    "@language" : "en",
+    "@value" : "level"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet Entwicklungsstufen in der Bildung, also den Grad des Ausgebildetseins."
+  }, {
+    "@language" : "en",
+    "@value" : "Denotes stages of development in education, i.e. the degree of being educated."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000091"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000017",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Für Grundschulen und Grundstufen der Gemeinschaftsschulen sowie an\nweiterführenden Schulen mit den Jahrgangsstufen 5 und 6 gilt:\n\n* Schulanfangsphase = Niveaustufen A, B, in Teilen C\n* Jahrgangsstufen 3 – 4 = Niveaustufe C, in Teilen D\n* Jahrgangsstufe 5 = Niveaustufen C – D\n* Jahrgangsstufe 6 = Niveaustufe D, in Teilen E\n\nSchülerinnen und Schüler mit dem sonderpädagogischen Förderbedarf Lernen\nwerden auf folgenden Niveaustufen unterrichtet:\n* Jahrgangsstufe 3 = Niveaustufe B, in Teilen C\n* Jahrgangsstufen 4 – 6 = Niveaustufe C\n* Jahrgangsstufen 7 – 8 = Niveaustufe D\n* Jahrgangsstufen 9 – 10 = Niveaustufen D – E\n\nFür die Integrierte Sekundarschule gilt:\ngrundlegendes Niveau:\n* Jahrgangsstufen 7 – 8 = Niveaustufen D – E, in Teilen F\n* Jahrgangsstufen 9 – 10 = Niveaustufe F, in Teilen G\n* erweitertes Niveau:\n* Jahrgangsstufen 7 – 8 = Niveaustufe E, in Teilen F\n* Jahrgangsstufen 9 – 10 = Niveaustufen F – G"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "BB Stufe"
+  }, {
+    "@language" : "en",
+    "@value" : "bb educational grade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000016"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Berlin/Brandenburg grouping of educational levels in stages A-G."
+  }, {
+    "@language" : "de",
+    "@value" : "Unterteilung der Jahrgangsstufen in Niveaustufen A-G in Berlin/Brandenburg Lehrplänen."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000018",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Die Klassenstufen werden grundsätzlich jahresweise aufsteigend durchgezählt (eine Ausnahme bilden in der gymnasialen Oberstufe die Einführungs- und Qualifikationsphasen). Schüler/innen verschiedener Klassenstufen, die aus schulorganisatorischen Gründen in einer Klasse zusammengefasst werden, bilden eine „klassenstufenübergreifende Klasse“ (s. unten). Klassen, die sich aus Schüler/innen mit unterschiedlichem Bildungsniveau zusammensetzen und deren Schüler/innen keiner Klassenstufe zugeordnet werden können, werden unter „keiner Klassenstufe/keinem Schuljahrgang zugeordnet“ gezählt (Beispiel: Vorbereitungsklassen für ausländische Jugendliche). Der Begriff „Klassenstufe“ wird in den beruflichen Schulen nur bei den Schularten verwendet, die primär zur Hochschul- bzw. Fachhochschulreife führen (Fachoberschulen, Fachgymnasien sowie Berufsoberschulen/Technische Oberschulen). In diesen Schularten werden die Klassenstufen aufsteigend von Klassenstufe 11 angezählt (Fachgymnasien in Baden-Württemberg beginnen in Form von Wirtschaftsgymnasien mit Klassenstufe 8). In allen anderen beruflichen Schularten werden die Schüler/innen nach „Schuljahrgängen“ nachgewiesen. Auch der Schuljahrgang kennzeichnet das klassenspezifische Bildungsniveau, allerdings bezogen auf Berufsvorbereitung, Berufsausbildung bzw. Berufsfortbildung. Die Schulbesuchsdauer kann ein bis vier Schuljahrgänge umfassen."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Jahrgangsstufe"
+  }, {
+    "@language" : "en",
+    "@value" : "educational grade"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000016"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Begriff \"Klassenstufe“ („Jahrgangsstufe“, „Schuljahrgang“) kennzeichnet das\njeweilige klassenspezifische Bildungsniveau, das die Schüler/innen eines Klassenverbandes erreicht haben."
+  }, {
+    "@language" : "en",
+    "@value" : "Educational grade denotes the respective class-specific level achieved by the students in a class group."
+  }, {
+    "@language" : "de",
+    "@value" : "Klassenlevel"
+  }, {
+    "@language" : "en",
+    "@value" : "the year of school"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "de",
+    "@value" : "7. Klasse"
+  }, {
+    "@language" : "de",
+    "@value" : "Klasse 5"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000019",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "KIM Stufe"
+  }, {
+    "@language" : "en",
+    "@value" : "KIM educational level"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000016"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Educational level: A value list for the level in the german educational system as the teaching/learning context for which a learning object is designated. Imported from https://github.com/dini-ag-kim/educationalLevel/blob/main/educationalLevel.ttl"
+  }, {
+    "@language" : "de",
+    "@value" : "Educational level: Eine Wertelliste für die Stufe im Bildungssystem als Lehr-/Lernkontext, für den ein Lernobjekt ausgewiesen ist. Importiert aus https://github.com/dini-ag-kim/educationalLevel/blob/main/educationalLevel.ttl"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000094" : [ {
+    "@value" : "In der Readme wird Version 1.0 vom 02.05.2022 beschrieben. Die Quelle hat allerdings keine (GitHub) Versionierung, d.h. die Inhalte  könnten sich unter Umständen verändern."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000020",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "http://w3id.org/kim/schulfaecher/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Schulfach"
+  }, {
+    "@language" : "en",
+    "@value" : "subject"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Ausdruck für die thematische Gliederung dessen, was in der Schule als mehr oder weniger abgegrenzte Einheit gelehrt wird."
+  }, {
+    "@language" : "en",
+    "@value" : "Expression for the thematic outline of what is taught in school as a more or less delimited unit."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000097"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000021",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Geltungsbereich"
+  }, {
+    "@language" : "en",
+    "@value" : "curriculum scope"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Geltungsbereich definiert die Bezogenheit des Lehrplans oder einzelner Lehrplanelemente auf Zielsetzung, Methoden, Schulform oder anderen Bedingungen."
+  }, {
+    "@language" : "en",
+    "@value" : "The scope defines the relationship of the curriculum or individual curriculum elements to objectives, methods, type of school or other conditions."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@value" : "role"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000022",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000072"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Kann z.B. als Geltungsbereich verwendet werden, um auszudrücken, dass sich der Lehrplan(element) auf ein bestimmtes Bundesland bezieht."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bundeslandbezogen"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet den Bezug auf ein oder mehrere bestimmte Bundesländer."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000023",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000075"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Erste Fremdsprache"
+  }, {
+    "@language" : "en",
+    "@value" : "first foreign language"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000024",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000075"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Zweite Fremdsprache"
+  }, {
+    "@language" : "en",
+    "@value" : "second foreign language"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000025",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000075"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Dritte Fremdsprache"
+  }, {
+    "@language" : "en",
+    "@value" : "third foreign language"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000026",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000073"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "early beginner"
+  }, {
+    "@language" : "de",
+    "@value" : "frühbeginnend"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000027",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe komplett der Sekundarstufe II zugeordnet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "de",
+    "@value" : "Defkat 2022, Abschnitt 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Einführungsphase"
+  }, {
+    "@language" : "en",
+    "@value" : "introductory phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000016"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid11"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Grade 10 and 11. In the gymnasiale Oberstufe (upper level of the Gymnasium), the years 10/11 to 12/13 are not counted by grade; instead, they are reported as the \"introductory phase\" (E) and the two-year \"qualification phase\" (Q1 and Q2)."
+  }, {
+    "@language" : "de",
+    "@value" : "Klassenstufe 10 und 11. In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000028",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000074"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "de",
+    "@value" : "Defkat2022, Abschnitt 4.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Leistungskurs"
+  }, {
+    "@language" : "en",
+    "@value" : "advanced course"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Represents an increased level of requirement related to a course. Advanced courses usually comprise at least four hours per week."
+  }, {
+    "@language" : "de",
+    "@value" : "Repräsentiert ein erhöhtes Anforderungsniveau bezogen auf einen Kurs. Leistungskurse umfassen in der Regel mindestens vier Wochenstunden."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@value" : "role"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000029",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000074"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "de",
+    "@value" : "Defkat2022, Abschnitt 4.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Grundkurs"
+  }, {
+    "@language" : "en",
+    "@value" : "basic course"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Represents a basic level of requirement related to a course. Basic courses usually comprise up to three hours per week."
+  }, {
+    "@language" : "de",
+    "@value" : "Repräsentiert ein grundlegendes Anforderungsniveau bezogen auf einen Kurs. Grundkurse umfassen in der Regel bis zu drei Wochenstunden."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@value" : "role"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000031",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Thüringen"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000032",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000072"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Kann z.B. im Zusammenhang mit Geltungsbereich verwendet werden, um auszudrücken, dass sich ein Lehrplan(element) auf alles Bundesländer bezieht, bzw. bundesweit gilt."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Nationalbezogen"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "bundesweit"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet den Bezug auf alle Bundesländer."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000033",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen. Ungeachtet der möglicherweise abweichenden länderspezifischen Ausweisung der Einführungsphase als Sekundarstufe I werden in den Statistiken der länderübergreifenden Ebene der Kultusministerkonferenz die Stufen E bis Q2 grundsätzlich der Sekundarstufe II zugeordnet (ab dem Berichtsjahr 2008/09). Damit ist die gymnasiale Oberstufe komplett der Sekundarstufe II zugeordnet."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@language" : "de",
+    "@value" : "Defkat 2022, Abschnitt 2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Qualifikationsphase"
+  }, {
+    "@language" : "en",
+    "@value" : "qualification phase"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000016"
+  } ],
+  "http://www.w3.org/2002/07/owl#equivalentClass" : [ {
+    "@id" : "_:genid14"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Grade 12 and 13. In the gymnasiale Oberstufe (upper level of the Gymnasium), the years 10/11 to 12/13 are not counted by grade; instead, they are reported as the \"introductory phase\" (E) and the two-year \"qualification phase\" (Q1 and Q2)."
+  }, {
+    "@language" : "de",
+    "@value" : "Klassenstufe 12 und 13. In der gymnasialen Oberstufe wird nicht nach Jahrgangsstufen gezählt, sondern die Jahrgangsstufen 10/11 bis 12/13 werden als „Einführungsphase“ (E) und als zweijährige „Qualifikationsphase“ (Q1 und Q2) ausgewiesen."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000097"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000034",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Schulart"
+  }, {
+    "@language" : "en",
+    "@value" : "type of school"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Allgemeiner Typ der Schule. Basierend auf der Wertelliste (https://w3id.org/kim/schularten/) für Schularten im deutschen Schulsystem. Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."
+  }, {
+    "@value" : "General type of school. Based on the list of values (https://w3id.org/kim/schularten/) for types of school in the German school system. A school type is characterized by the fact that it has an independent character with regard to curricula, educational goals and qualification level. It does not have to be an independent administrative organizational unit."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000035",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Zusatzmaterial"
+  }, {
+    "@language" : "en",
+    "@value" : "additional material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000014"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Documents which refer to additional resources to learn with."
+  }, {
+    "@language" : "de",
+    "@value" : "Dokumente, die auf zusätzliche Ressourcen zum Lernen verweisen."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000036",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Wahlpflichtfach"
+  }, {
+    "@language" : "en",
+    "@value" : "compulsory elective subject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "An additional required subject that may be selected from a group of alternative subjects."
+  }, {
+    "@language" : "de",
+    "@value" : "Ein Wahlpflichfach ist ein zusätzliches Pflichtfach, das aus einer Gruppe von alternativen Fächern ausgewählt werden kann."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000078" : [ {
+    "@value" : "role"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000094" : [ {
+    "@value" : "eigentlich kein Fach als solches, sondern eine Rolle"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000037",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000073"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Die spätbeginnende Fremdsprache ist geprägt durch eine steilere Progression und eine stärkere Betonung der mündlichen Ausdrucksfähigkeit. vgl. https://www.lehrplanplus.bayern.de/fachprofil/gymnasium/spanisch/auspraegung/spanisch"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "late beginner"
+  }, {
+    "@language" : "de",
+    "@value" : "spätbeginnend"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000038",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000072"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "Kann z.B. im Zusammenhang mit Geltungsbereich verwendet werden, um auszudrücken, dass sich ein Lehrplan(element) nur auf eine konkrete Schule bezieht."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Schulintern"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet den Bezug auf die konkrete Schule."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000039",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "de",
+    "@value" : "bezieht sich auf Geltungsbereich"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "_:genid1"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "gilt für"
+  }, {
+    "@language" : "en",
+    "@value" : "has  scope"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000040"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "hat Geltungsbereich"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Mit dieser Relation kann zu einem Lehrplan oder Lehrplanelement ein Geltungsbereich angegeben werden."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000040",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "ist Geltungsbereich von"
+  }, {
+    "@language" : "en",
+    "@value" : "scope of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "_:genid4"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2002/07/owl#topObjectProperty"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000041",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000071"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cross disciplinary"
+  }, {
+    "@language" : "de",
+    "@value" : "fachübergreifend"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Bezeichnet, dass sich der Lehrplan bzw. das Lehrplanelement nicht auf ein konkretes Fach bezieht, sondern übergreifend zu verstehen ist."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000042",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000071"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "cross educational level"
+  }, {
+    "@language" : "de",
+    "@value" : "klassenstufenübergreifend"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Bezeichnet, dass sich ein Lehrplan oder ein Lehrplanelement nicht auf eine konkrete Klassenstufe bezieht."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000048",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000015"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Baden-Württemberg"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000051",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kompetenzfeld von"
+  }, {
+    "@language" : "en",
+    "@value" : "competence area of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000062"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000052",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has parent competence area"
+  }, {
+    "@language" : "de",
+    "@value" : "has übergeordnetes Kompetenzfeld"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000051"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000063"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000053",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kompetent von"
+  }, {
+    "@language" : "en",
+    "@value" : "competence of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000061"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000054",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Inhalt von"
+  }, {
+    "@language" : "en",
+    "@value" : "content of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000064"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000055",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "exercise of"
+  }, {
+    "@language" : "de",
+    "@value" : "Übung von"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000065"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000056",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Material von"
+  }, {
+    "@language" : "en",
+    "@value" : "material of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000066"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000057",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Teil von"
+  }, {
+    "@language" : "en",
+    "@value" : "part of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000067"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000058",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/EDU_00000003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Standard von"
+  }, {
+    "@language" : "en",
+    "@value" : "standard of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000053"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000068"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000059",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Themenfeld von"
+  }, {
+    "@language" : "en",
+    "@value" : "topic area of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000070"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000060",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Thema von"
+  }, {
+    "@language" : "en",
+    "@value" : "topic of"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#broader"
+  } ],
+  "http://www.w3.org/2002/07/owl#inverseOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000069"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000061",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has competence"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Kompetenz"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000005"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000062",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has competence area"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Kompetenzfeld"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000063",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has competence subarea"
+  }, {
+    "@language" : "de",
+    "@value" : "hat untergeordnetes Kompetenzfeld"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000004"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000062"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000064",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has content"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Inhalt"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000008"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000065",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has exercise"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Übung"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000013"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000066",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has material"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Material"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000014"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000067",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000001"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has part"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Teil"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000006"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000068",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has standard"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Standard"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "http://purl.obolibrary.org/obo/EDU_00000003"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000061"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000069",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has topic"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Thema"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000009"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000070",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "has topic area"
+  }, {
+    "@language" : "de",
+    "@value" : "hat Themenfeld"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#range" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000010"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subPropertyOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#narrower"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000071",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fach- und Klassenbezug"
+  }, {
+    "@language" : "en",
+    "@value" : "subject and class reference"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet den übergreifenden Bezug der Lehrpläne zu Fächern und Klassenstufen im Allgemeinen."
+  }, {
+    "@language" : "en",
+    "@value" : "Refers to the overarching relationship of curricula to subjects and grade levels in general."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000097"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000072",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lokaler Bezug"
+  }, {
+    "@language" : "en",
+    "@value" : "locale reference"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnet den Bezug hinsichtlich der Örtlichkeit."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates the reference in terms of locality."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#example" : [ {
+    "@language" : "de",
+    "@value" : "auf Bundesland bezogen"
+  }, {
+    "@language" : "de",
+    "@value" : "auf alle Bundesländer bezogen (national, bundesweit)"
+  }, {
+    "@language" : "de",
+    "@value" : "schulintern"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000073",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Beginn"
+  }, {
+    "@language" : "en",
+    "@value" : "begin"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000088"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000094" : [ {
+    "@value" : "Gibt es hierfür eine offizielle Definition?\n(bei spätbeginnend ist bereits ein Vorschlag hinterlegt, dieser ist allerdings nur auf Fremdsprachen bezogen.)"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000074",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#isDefinedBy" : [ {
+    "@value" : "Defkat2022, Abschnitt 4.2"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kursanforderung"
+  }, {
+    "@language" : "en",
+    "@value" : "course depth"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "en",
+    "@value" : "Distinction between \"basic\" and \"advanced\" courses. Courses with a basic requirement level generally comprise up to three hours per week. Courses with a higher requirement level require at least four hours of instruction per week."
+  }, {
+    "@language" : "de",
+    "@value" : "Unterscheidung in „Grund- und Leistungskurse“. In der gymnasialen Oberstufe wird der Unterricht in der Regel in Kursen erteilt. Die Unterscheidung in „Grund- und Leistungskurse“ ist in der neugefassten „Vereinbarung zur Gestaltung der gymnasialen Oberstufe in der Sekundarstufe II“ durch Kurse mit verschiedenen Anspruchsebenen ersetzt worden. Kurse mit grundlegen dem Anforderungsniveau umfassen in der Regel bis zu drei Wochenstunden. Kurse mit erhöhtem Anforderungsniveau setzen mindestens vierstündigen Unterricht in der Woche voraus."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000075",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fremdsprachenbezug"
+  }, {
+    "@language" : "en",
+    "@value" : "foreign language reference"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Angabe, ob eine Fremdsprache als erste, zweite, oder dritte Fremdsprache gelernt wird."
+  }, {
+    "@language" : "en",
+    "@value" : "Indication of whether a foreign language is learned as a first, second, or third foreign language."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000077",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "bfoEquivalentClass"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000078",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "bfoSuperclass"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000079",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fremdsprachfach"
+  }, {
+    "@language" : "en",
+    "@value" : "foreign language subject"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2002/07/owl#disjointWith" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000080"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Fach, in dem eine Fremdsprache unterrichtet wird."
+  }, {
+    "@language" : "en",
+    "@value" : "Subject in which a foreign language is taught."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000080",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#comment" : [ {
+    "@language" : "en",
+    "@value" : "The acronym MINT is made up of the first letters of the German terms for mathematics (Mathematik), IT (Informatik), science (Naturwissenschaften) and technology (Technik). It is roughly equivalent to STEM (science, technology, engineering, technology)."
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "MINT subject"
+  }, {
+    "@language" : "de",
+    "@value" : "MINT-Fach"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000020"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "MINT Fächer sind die Fächer Mathematik, Informatik, Naturwissenschaften und Technik."
+  }, {
+    "@language" : "en",
+    "@value" : "MINT subjects are the subjects of mathematics, computer science, natural sciences and technology."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000084",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Lingualität"
+  }, {
+    "@language" : "en",
+    "@value" : "linguality"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Gibt an, ob der Unterricht mono-, bi- oder multilingual erfolgt."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates whether instruction is monolingual, bilingual, or multilingual."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000091"
+  } ],
+  "https://w3id.org/curriculum/EDU_00000094" : [ {
+    "@value" : "es ist unklar worauf sich diese Information wirklich bezieht: Wird der Unterricht bi-lingual gehalten? Dann wäre dies ja eine Eigenschaft des Unterrichts. d.h. der Lehrplan 'schreibt vor', dass der Unterricht \"bi-lingual\" gehalten werden soll. D.h. der Lehrplan als \"Plan\" spezifiziert, wie der Unterricht \"Prozess\" gehalten werden soll."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000085",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000084"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "bilingual"
+  }, {
+    "@language" : "en",
+    "@value" : "bilingual"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Gibt an, dass der Unterricht bilingual erfolgt."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000086",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kurationsstatus"
+  }, {
+    "@language" : "en",
+    "@value" : "curation status"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Bezeichnent den Kuratierungsstatus einzelner Ontologie-Klassen, -Properties und -Individuen. Instanzen werden als Objekt des Annotation Property \"curation status\" (EDU:00000092) verwendet."
+  }, {
+    "@language" : "en",
+    "@value" : "Indicates the curation status of individual ontology classes, properties and individuals. Instances are used as objects of the annotation property \"curation status\" (EDU:00000092)."
+  } ],
+  "https://w3id.org/curriculum/EDU_00000092" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000087"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000087",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "ready for release"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000088",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "uncurated"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "Nothing done yet beyond assigning a unique class ID and proposing a preferred term."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000089",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "metadata incomplete"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000090",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "metadata complete"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000091",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "requires discussion"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000092",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "curation status"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000094",
+  "@type" : [ "http://www.w3.org/2002/07/owl#AnnotationProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "curation comment"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000095",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000084"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "monolingual"
+  }, {
+    "@language" : "en",
+    "@value" : "monolingual"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Gibt an, dass der Unterricht monolingual erfolgt."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000096",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000084"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "multilingual"
+  }, {
+    "@language" : "en",
+    "@value" : "multilingual"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Gibt an, dass der Unterricht mulitlingual erfolgt."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000097",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000086"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "needs expert review"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@value" : "The entity needs a review by a domain expert."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/EDU_00000099",
+  "@type" : [ "http://www.w3.org/2002/07/owl#ObjectProperty" ],
+  "http://www.w3.org/2000/01/rdf-schema#domain" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000021"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "bezieht sich auf"
+  }, {
+    "@language" : "en",
+    "@value" : "relates to"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "hat Bezug"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Diese Relation wird genutzt, um den Geltungsbereich näher zu spezifizieren. Zu einer Instanz des Geltungsbereich können hiermit beliebige Ressourcen angegeben werden. Z.B. ein Bundesland, eine Kursanforderung, Fremdsprachenbezug o.ä."
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelA",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "A"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe A"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelB",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "B"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe B"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelC",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "C"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe C"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelD",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "D"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe D"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelE",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "E"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe E"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelF",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "F"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe F"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/bbLevelG",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000017"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "G"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Niveaustufe G"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "10"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 10"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "11"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 11"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "12"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 12"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "13"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 13"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 3"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 4"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 6"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/educationalLevel9",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000018"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@value" : "9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@value" : "Jahrgang 9"
+  } ]
+}, {
+  "@id" : "https://w3id.org/curriculum/successfullyCompleted",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty", "http://www.w3.org/2002/07/owl#FunctionalProperty" ]
+}, {
+  "@id" : "https://w3id.org/curriculum/uri",
+  "@type" : [ "http://www.w3.org/2002/07/owl#DatatypeProperty" ]
+}, {
+  "@id" : "https://w3id.org/dini/dini-ns/Curriculum",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ]
+}, {
+  "@id" : "https://w3id.org/dini/dini-ns/CurriculumItem",
+  "@type" : [ "http://www.w3.org/2002/07/owl#Class" ],
+  "http://www.w3.org/2000/01/rdf-schema#subClassOf" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/",
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2020-04-08"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "de",
+    "@value" : "Eine Wertelliste für die Stufe im Bildungssystem als Lehr-/Lernkontext, für den Lernobjekt ausgewiesen ist."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2020-04-08"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-03-23"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "de",
+    "@value" : "Bildungsstufe"
+  }, {
+    "@language" : "en",
+    "@value" : "Educational level"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_0"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_1"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_4"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_5"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_A"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_B"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_C"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Early childhood education"
+  }, {
+    "@language" : "de",
+    "@value" : "Elementarbereich"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Elementarstufe"
+  }, {
+    "@language" : "de",
+    "@value" : "Frühbereich"
+  }, {
+    "@language" : "de",
+    "@value" : "Frühkindliche Bildung"
+  }, {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 0"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/elementarbereich"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level0"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_1",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Primarbereich"
+  }, {
+    "@language" : "en",
+    "@value" : "Primary education"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 1"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 1"
+  }, {
+    "@language" : "de",
+    "@value" : "Primarstufe"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/grundschule"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level1"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_2",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Lower secondary education"
+  }, {
+    "@language" : "de",
+    "@value" : "Sekundarbereich I"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 2"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 2"
+  }, {
+    "@language" : "de",
+    "@value" : "Sekundarstufe I"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/sekundarstufe_1"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_3",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sekundarbereich II"
+  }, {
+    "@language" : "en",
+    "@value" : "Upper secondary education"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 3"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 3"
+  }, {
+    "@language" : "de",
+    "@value" : "Sekundarstufe II"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/sekundarstufe_2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Post-secondary non-tertiary education"
+  }, {
+    "@language" : "de",
+    "@value" : "Postsekundarer nicht-tertiärer Bereich"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Berufliche Bildung"
+  }, {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 4"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/berufliche_bildung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level4"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_5",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Kurzes tertiäres Bildungsprogramm"
+  }, {
+    "@language" : "en",
+    "@value" : "Short-cycle tertiary education"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 5"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Erste Stufe der tertiären Bildung, die nicht direkt zu einer höheren Forschungsqualifikation führt"
+  }, {
+    "@language" : "en",
+    "@value" : "First stage of tertiary education, not leading directly to an advanced research qualification"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-2011/level5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_6",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Bachelor oder äquivalent"
+  }, {
+    "@language" : "en",
+    "@value" : "Bachelor or equivalent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 6"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/hochschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_A"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-2011/level6"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_7",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Master oder äquivalent"
+  }, {
+    "@language" : "en",
+    "@value" : "Master or equivalent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 7"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/hochschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_A"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-2011/level7"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_8",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Doctoral or equivalent"
+  }, {
+    "@language" : "de",
+    "@value" : "Promotion oder äquivalent"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "ISCED 2011, Level 8"
+  }, {
+    "@language" : "en",
+    "@value" : "ISCED 2011, Level 8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broadMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/hochschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#broader" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_A"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level6"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#inScheme" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_A",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hochschule"
+  }, {
+    "@language" : "en",
+    "@value" : "University"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/hochschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "https://w3id.org/kim/isced-1997/level5"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level6"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level6"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level7"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrower" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_6"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_7"
+  }, {
+    "@id" : "https://w3id.org/kim/educationalLevel/level_8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_B",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Preparatory service"
+  }, {
+    "@language" : "de",
+    "@value" : "Vorbereitungsdienst"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Der Vorbereitungsdienst bezeichnet die zweite Phase der Lehrkräfteausbildung in Deutschland."
+  }, {
+    "@language" : "en",
+    "@value" : "The preparatory service designates the second phase of teacher training in germany."
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/educationalLevel/level_C",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000019"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "en",
+    "@value" : "Advanced training"
+  }, {
+    "@language" : "de",
+    "@value" : "Fortbildung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalContext/fortbildung"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/educationalLevel/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-09-28"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "de",
+    "@value" : "Eine Wertelliste für Schulabschlüsse in Deutschland."
+  } ],
+  "http://purl.org/dc/terms/issued" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-09-28"
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-09-28"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "de",
+    "@value" : "Schulabschlüsse"
+  } ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#ConceptScheme"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : ""
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a"
+  }, {
+    "@id" : "https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4"
+  }, {
+    "@id" : "https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a"
+  }, {
+    "@id" : "https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0"
+  }, {
+    "@id" : "https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a"
+  }, {
+    "@id" : "https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/3141d59a-6aea-4f7b-b8ba-e5051612ab5a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fachhochschulreife"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q1391297"
+  }, {
+    "@id" : "https://d-nb.info/gnd/4395719-5"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral" : [ {
+    "@id" : "https://d-nb.info/gnd/4053444-3"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4395719-5"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/669bd2d6-a4f1-4234-acdb-5f5031b1c77d",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Allgemeine Hochschulreife"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Abitur"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q708387"
+  }, {
+    "@id" : "https://d-nb.info/gnd/4049194-8"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral" : [ {
+    "@id" : "https://d-nb.info/gnd/4160223-7"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4049194-8"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/a0e105c6-0fd3-49a0-aa12-8b15a8d6da5a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fachgebundene Hochschulreife"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q1391140"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral" : [ {
+    "@id" : "https://d-nb.info/gnd/4160223-7"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/bb03cf93-e197-4942-abba-7c124f0e1ae4",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Mittlerer Schulabschluss"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Qualifizierter Sekundarabschluss I"
+  }, {
+    "@language" : "de",
+    "@value" : "Realschulabschluss"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Mittlerer Schulabschluss wird nach 10 Jahren erreicht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q1345057"
+  }, {
+    "@id" : "https://d-nb.info/gnd/4170262-1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral" : [ {
+    "@id" : "https://d-nb.info/gnd/4053444-3"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4170262-1"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/c5a9e3bc-3838-493b-ab6d-330ac1ba4b4a",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Erster allgemeinbildender Schulabschluss"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Hauptschulabschluss"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#definition" : [ {
+    "@language" : "de",
+    "@value" : "Erster Allgemeinbildender Schulabschluss wird nach 9 Jahren erreicht"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#exactMatch" : [ {
+    "@id" : "http://www.wikidata.org/entity/Q884856"
+  }, {
+    "@id" : "https://d-nb.info/gnd/4130918-2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#broaderTermGeneral" : [ {
+    "@id" : "https://d-nb.info/gnd/4053444-3"
+  } ],
+  "https://d-nb.info/standards/elementset/gnd#gndIdentifier" : [ {
+    "@value" : "4130918-2"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schulabschluesse/cf42a778-3982-4f27-8b9a-92e5875342c0",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "http://www.w3.org/2004/02/skos/core#Concept"
+  }, {
+    "@id" : "https://w3id.org/curriculum/EDU_00000011"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Ohne Schulabschluss"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schulabschluesse/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/",
+  "http://purl.org/dc/terms/created" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2021-04-22"
+  } ],
+  "http://purl.org/dc/terms/description" : [ {
+    "@language" : "de",
+    "@value" : "Eine Wertelliste für Schularten im deutschen Schulsystem. Eine Schulart zeichnet sich dadurch aus, dass sie im Hinblick auf Lehrpläne, Bildungsziele und Qualifkationsniveau einen eigenständigen Charakter besitzt. Sie muss dazu keine verwaltungstechnische eigenständige Organisationseinheit sein."
+  } ],
+  "http://purl.org/dc/terms/license" : [ {
+    "@id" : "http://creativecommons.org/publicdomain/zero/1.0/"
+  } ],
+  "http://purl.org/dc/terms/modified" : [ {
+    "@type" : "http://www.w3.org/2001/XMLSchema#date",
+    "@value" : "2022-05-24"
+  } ],
+  "http://purl.org/dc/terms/publisher" : [ {
+    "@language" : "de",
+    "@value" : "DINI-AG-KIM OER-Metadatengruppe"
+  } ],
+  "http://purl.org/dc/terms/title" : [ {
+    "@language" : "de",
+    "@value" : "Schularten"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespacePrefix" : [ {
+    "@value" : "school"
+  } ],
+  "http://purl.org/vocab/vann/preferredNamespaceUri" : [ {
+    "@value" : "https://w3id.org/kim/schularten/"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#hasTopConcept" : [ {
+    "@id" : "https://w3id.org/kim/schularten/s02"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s03"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s04"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s05"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s06"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s07"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s08"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s09"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s10"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s11"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s12"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s13"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s14"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s15"
+  }, {
+    "@id" : "https://w3id.org/kim/schularten/s16"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s02",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Grundschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_1"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level1"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level1"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/1"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/2"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/3"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/4"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s03",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Hauptschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Mittelschule"
+  }, {
+    "@language" : "de",
+    "@value" : "Mittelstufenschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/10"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/5"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/6"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/7"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/8"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s04",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Realschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/10"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/5"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/6"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/7"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/8"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s05",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gesamtschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/10"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/11"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/12"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/13"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/5"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/6"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/7"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/8"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s06",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Förderschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s07",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Oberschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s08",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gymnasium"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/10"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/11"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/12"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/13"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/5"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/6"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/7"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/8"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s09",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Gemeinschaftsschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s10",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Sekundarschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level2"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level2"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#narrowMatch" : [ {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/10"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/5"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/6"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/7"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/8"
+  }, {
+    "@id" : "http://w3id.org/openeduhub/vocabs/educationalLevel/9"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s11",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berufsfachschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s12",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berufsschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s13",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Fachoberschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s14",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Berufliches Gymnasium"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Fachgymnasium"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#closeMatch" : [ {
+    "@id" : "http://w3id.org/kim/educationalLevel/level_3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-1997/level3"
+  }, {
+    "@id" : "https://w3id.org/kim/isced-2011/level3"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s15",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Privat- und Ersatzschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Ersatzschule"
+  }, {
+    "@language" : "de",
+    "@value" : "Freie Schule"
+  }, {
+    "@language" : "de",
+    "@value" : "Privatschule"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+}, {
+  "@id" : "https://w3id.org/kim/schularten/s16",
+  "@type" : [ "http://www.w3.org/2002/07/owl#NamedIndividual" ],
+  "http://www.w3.org/1999/02/22-rdf-syntax-ns#type" : [ {
+    "@id" : "https://w3id.org/curriculum/EDU_00000034"
+  } ],
+  "http://www.w3.org/2000/01/rdf-schema#label" : [ {
+    "@language" : "de",
+    "@value" : "Abendgymnasium"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#altLabel" : [ {
+    "@language" : "de",
+    "@value" : "Kolleg"
+  } ],
+  "http://www.w3.org/2004/02/skos/core#topConceptOf" : [ {
+    "@id" : "https://w3id.org/kim/schularten/"
+  } ]
+} ]
